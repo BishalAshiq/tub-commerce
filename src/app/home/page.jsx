@@ -3,7 +3,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div>
+    <div className='full-body'>
       <div>
         <Navbar />
       </div>

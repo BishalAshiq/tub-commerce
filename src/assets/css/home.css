@@ -1,0 +1,8 @@
+.full-body {
+  margin-top: 6%;
+}
+@media only screen and (max-width: 1374px) {
+  .full-body {
+    margin-top: 7%;
+  }
+}
