@@ -6,7 +6,6 @@
 }
 
 .banner-full-div {
-  height: 50vh;
   /* filter: blur(148.0087432861328px); */
   background: linear-gradient(
     to right,
@@ -16,6 +15,8 @@
     #ebfaf9,
     #05c8be
   );
+  padding: 30px 0;
+  height: 100%;
   /* background-image: linear-gradient(to right, #51b4fa, white, #05c8be); */
 }
 
@@ -93,9 +94,22 @@
 
 @media only screen and (max-width: 1374px) {
   .full-body {
-    margin-top: 7%;
+    margin-top: 8%;
+  }
+  .banner-full-div {
+    height: 100%;
+    /* filter: blur(148.0087432861328px); */
+    background: linear-gradient(
+      to right,
+      #51b4fa,
+      #dcf0fd,
+      #ffffff,
+      #ebfaf9,
+      #05c8be
+    );
   }
 }
+
 @media only screen and (max-width: 760px) {
   .full-body {
     margin-top: 17%;
