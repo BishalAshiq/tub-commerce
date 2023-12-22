@@ -7,7 +7,7 @@ const page = () => {
       <div>
         <Navbar />
       </div>
-      <h1 className='hello'>hello</h1>
+      <h1 className='hello'>Banner will comming Soon ... </h1>
     </div>
   );
 };
