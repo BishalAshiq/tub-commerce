@@ -1,4 +1,5 @@
-import Navbar from "@/component/Navbar";
+import Homebanner from "@/component/HomeAll/Homebanner";
+import Navbar from "@/component/Navbar/Navbar";
 import React from "react";
 
 const page = () => {
@@ -7,7 +8,9 @@ const page = () => {
       <div>
         <Navbar />
       </div>
-      <h1 className='hello'>Banner will comming Soon ... </h1>
+      <div>
+        <Homebanner />
+      </div>
     </div>
   );
 };

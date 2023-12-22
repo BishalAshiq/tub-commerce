@@ -1,5 +1,5 @@
 import React from "react";
-import TubBanner from "../../public/tubIcon.png";
+import TubBanner from "../../../public/tubIcon.png";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -174,7 +174,7 @@ const Navbar = () => {
             </div>
           </div>
         </nav>
-        <div className=' sec-navbar-links-acc-div'>
+        <div className=' sec-navbar-links-acc-div '>
           <div className='container'>
             <div className='row'>
               <div className='col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9'>

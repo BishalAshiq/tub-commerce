@@ -70,6 +70,9 @@
   color: #475569;
   justify-content: space-between;
   padding: 10px 0;
+  flex-wrap: wrap;
+  align-items: start;
+  text-align: justify;
 }
 .sec-navbar-links a {
   color: #475569;
@@ -95,4 +98,10 @@
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
+}
+
+@media only screen and (max-width: 760px) {
+  .sec-navbar-links-acc-div {
+    display: none;
+  }
 }

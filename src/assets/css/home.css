@@ -1,8 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Inter:wght@100;300;400;500;700&family=Libre+Bodoni:ital@0;1&family=Libre+Franklin:wght@100;400;500;600;700;800&family=Montserrat:wght@100;400&family=Noto+Sans+Osmanya&family=Poppins:wght@100;400;500;600;700;800;900&family=Rethink+Sans&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,500;1,700&display=swap");
+
 .full-body {
-  margin-top: 6%;
+  margin-top: 5.5%;
+  /* border: 1px solid gray; */
 }
+
+.banner-full-div {
+  height: 50vh;
+  /* filter: blur(148.0087432861328px); */
+  background: linear-gradient(
+    to right,
+    #51b4fa,
+    #dcf0fd,
+    #ffffff,
+    #ebfaf9,
+    #05c8be
+  );
+  /* background-image: linear-gradient(to right, #51b4fa, white, #05c8be); */
+}
+
+.banner-text-div {
+  /* display: grid;
+  place-items: center; */
+  /* border: 1px solid gray; */
+  padding: 30px 0 0 0;
+}
+.banner-find-div {
+  display: flex;
+  /* gap: 20px; */
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  border-radius: 32.836px;
+  background: linear-gradient(90deg, #02d4b6 0%, #1663f9 100%);
+  box-shadow: 3.219px 4.507px 14.808px 0px rgba(4, 202, 189, 0.31);
+  margin: 0 101px;
+  border: none;
+  /* width: 100%; */
+  padding: 7px 17px;
+}
+.banner-text-h1 {
+  color: #1f2326;
+  text-align: center;
+
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  /* border: 1px solid gray; */
+  padding: 0 0 40px 0;
+  /* H1 */
+  /* font-family: Sora; */
+  font-size: 48px;
+  /* font-style: normal; */
+  font-weight: 800;
+  line-height: 60px; /* 126.667% */
+}
+.banner-text-toys {
+  background: linear-gradient(
+    91deg,
+    #02d4b6 66.57%,
+    #03b3fa 76.71%,
+    #1663f9 84.6%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* H1 */
+  font-family: "Poppins", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 76px;
+}
+.search-span-icon {
+  background-color: #ffd239;
+  border-radius: 100%;
+  padding: 5px;
+}
+.banner-search-input {
+  border: none;
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  border-radius: 10px;
+  outline: none;
+}
+
+.banner-icon-div {
+  display: flex;
+  justify-content: center;
+  margin: 70px 0 0 0;
+}
+
 @media only screen and (max-width: 1374px) {
   .full-body {
     margin-top: 7%;
+  }
+}
+@media only screen and (max-width: 760px) {
+  .full-body {
+    margin-top: 17%;
   }
 }
