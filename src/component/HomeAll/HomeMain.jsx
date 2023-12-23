@@ -3,6 +3,7 @@ import React from "react";
 import BleftIcon from "../../../public/Blefttoy.png";
 import BRightIcon from "../../../public/BRighttoy.png";
 import EcomBanner from "../../../public/e-comBanner.png";
+import PopularProducts from "./PopularProducts";
 
 const Homebanner = () => {
   return (
@@ -57,7 +58,7 @@ const Homebanner = () => {
           </div>
         </div>
 
-        <div>
+        <div className='banner-carousel-div'>
           <div id='carouselExampleIndicators' className='carousel slide'>
             <div className='carousel-indicators'>
               <button
@@ -79,17 +80,17 @@ const Homebanner = () => {
                 aria-label='Slide 3'></button>
             </div>
             <div className='carousel-inner'>
-              <div className='carousel-item active'>
-                <img src={EcomBanner.src} className='d-block w-100' alt='...' />
+              <div className='carousel-item active caro-img-div'>
+                <img src={EcomBanner.src} className='caro-img' alt='...' />
               </div>
-              <div className='carousel-item'>
-                <img src={EcomBanner.src} className='d-block w-100' alt='...' />
+              <div className='carousel-item caro-img-div'>
+                <img src={EcomBanner.src} className='caro-img' alt='...' />
               </div>
-              <div className='carousel-item'>
-                <img src={EcomBanner.src} className='d-block w-100' alt='...' />
+              <div className='carousel-item caro-img-div'>
+                <img src={EcomBanner.src} className='caro-img' alt='...' />
               </div>
             </div>
-            {/* <button
+            <button
               class='carousel-control-prev'
               type='button'
               data-bs-target='#carouselExampleIndicators'
@@ -108,8 +109,11 @@ const Homebanner = () => {
                 class='carousel-control-next-icon'
                 aria-hidden='true'></span>
               <span class='visually-hidden'>Next</span>
-            </button> */}
+            </button>
           </div>
+        </div>
+        <div>
+          <PopularProducts />
         </div>
       </div>
     </div>

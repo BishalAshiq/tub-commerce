@@ -1,4 +1,5 @@
-import Homebanner from "@/component/HomeAll/Homebanner";
+import Homebanner from "@/component/HomeAll/HomeMain";
+import PopularProducts from "@/component/HomeAll/PopularProducts";
 import Navbar from "@/component/Navbar/Navbar";
 import React from "react";
 
@@ -11,6 +12,9 @@ const page = () => {
       <div>
         <Homebanner />
       </div>
+      {/* <div>
+        <PopularProducts />
+      </div> */}
     </div>
   );
 };

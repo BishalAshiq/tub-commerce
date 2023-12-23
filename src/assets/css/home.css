@@ -11,7 +11,9 @@
     to right,
     #51b4fa,
     #dcf0fd,
+    #dcf0fd,
     #ffffff,
+    #ebfaf9,
     #ebfaf9,
     #05c8be
   );
@@ -89,7 +91,114 @@
 .banner-icon-div {
   display: flex;
   justify-content: center;
-  margin: 70px 0 0 0;
+  margin: 30% 0 0 0;
+}
+
+.banner-carousel-div {
+  margin: 7% 0 0 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.caro-img-div {
+  border-radius: 20px;
+}
+.caro-img {
+  border-radius: 20px;
+  display: block;
+  width: 100%;
+}
+
+/* Popur Products  */
+
+.pop-tag-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.pop-tag {
+  color: var(--Dark, #1f2326);
+
+  /* H2 */
+  font-family: Poppins;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 60px; /* 120% */
+}
+.pop-tag-color {
+  color: #01de9e;
+
+  /* H2 */
+  font-family: Poppins;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 60px;
+}
+.pop-all-btn {
+  display: inline-flex;
+  padding: 10px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 32.836px;
+  border: none;
+  background: var(--button, linear-gradient(90deg, #02d4b6 0%, #1663f9 100%));
+  box-shadow: 3.219px 4.507px 14.808px 0px rgba(4, 202, 189, 0.31);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  color: white;
+}
+.pop-full-div {
+  /* background: linear-gradient(to right, #51b4fa, #dcf0fd, #ffffff, #ebfaf9); */
+  padding: 20px 0 0 0;
+}
+.pop-cont-div {
+  background: white;
+  padding: 30px 0;
+  border-radius: 10px;
+}
+
+.single-toy {
+  width: 99%;
+}
+.toy-img-div {
+  width: 90%;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  background-color: #e5e5e5;
+}
+.toy-img {
+}
+.card-text {
+  color: #23254b;
+  font-family: Poppins;
+  font-size: 13.796px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 21.461px; /* 155.556% */
+}
+.card-text-rating {
+  color: #878787;
+  /* leading-trim: both;
+  text-edge: cap; */
+  font-family: Poppins;
+  font-size: 10.197px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16.555px; /* 180% */
+}
+.taka-view {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
 }
 
 @media only screen and (max-width: 1374px) {
