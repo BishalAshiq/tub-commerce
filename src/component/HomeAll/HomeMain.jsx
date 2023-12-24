@@ -19,8 +19,7 @@ const Homebanner = () => {
             <div className='banner-text-div'>
               <h1 className='banner-text-h1'>
                 Shop the Best <span className='banner-text-toys'>Toys</span>{" "}
-                Near <br />
-                your location
+                Near your location
               </h1>
 
               <div className='banner-find-div'>
