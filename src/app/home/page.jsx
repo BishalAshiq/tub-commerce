@@ -1,5 +1,6 @@
 import Homebanner from "@/component/HomeAll/HomeMain";
 import PopularProducts from "@/component/HomeAll/PopularProducts";
+import TopBruderToys from "@/component/HomeAll/TopBruderToys";
 import Navbar from "@/component/Navbar/Navbar";
 import React from "react";
 
@@ -12,9 +13,9 @@ const page = () => {
       <div>
         <Homebanner />
       </div>
-      {/* <div>
-        <PopularProducts />
-      </div> */}
+      <div>
+        <TopBruderToys />
+      </div>
     </div>
   );
 };
