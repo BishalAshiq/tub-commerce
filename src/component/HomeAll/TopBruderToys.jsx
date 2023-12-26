@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Slider from "react-slick";
 import Toy from "../../../public/toy_1.png";
 import BruderToy1 from "../../../public/bruderToy1.png";
@@ -95,6 +95,17 @@ const TopBruderToys = () => {
     ],
   };
 
+  const [count, setCount] = useState(0);
+
+  const incrementCount = () => {
+    setCount((prevCount) => prevCount + 1);
+  };
+
+  const decrementCount = () => {
+    if (count > 0) {
+      setCount((prevCount) => prevCount - 1);
+    }
+  };
   return (
     <div className='container'>
       <div className=' brudal-toy-head-div'>
@@ -1399,6 +1410,18 @@ const TopBruderToys = () => {
                       </svg>
                     </span>
                   </div>
+                </div>
+              </div>
+              <div className='add-to-cart-div'>
+                <button className='add-to-cart'>Add to cart</button>
+                <div className='counting-div'>
+                  <button className='count-bten' onClick={decrementCount}>
+                    -
+                  </button>
+                  <div className='mt-3'>{count}</div>
+                  <button className='count-bten' onClick={incrementCount}>
+                    +
+                  </button>
                 </div>
               </div>
             </div>
