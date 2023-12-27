@@ -418,6 +418,12 @@
   border-top-right-radius: 10%;
   background: linear-gradient(to right Bottom, white, white, #01de9fb2);
 }
+.establishe-full-div {
+  padding: 10% 0 0 0;
+  border-top-right-radius: 10%;
+  border-top-right-radius: 10%;
+  background: linear-gradient(to left Bottom, white, white, #01de9fb2);
+}
 .long-estabilize-side-pic-full-div {
   display: flex;
   justify-content: center;
@@ -536,6 +542,78 @@
   border: none;
   background-color: white;
   align-items: center;
+}
+.featured-full-div {
+  margin: 4% 0 0 0;
+}
+
+.featured-tags-div {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 2% 0;
+}
+.featured-tags-btn {
+  display: inline-flex;
+  padding: 10px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  border-radius: 32.836px;
+  background: var(--button, linear-gradient(90deg, #02d4b6 0%, #1663f9 100%));
+  box-shadow: 3.219px 4.507px 14.808px 0px rgba(4, 202, 189, 0.31);
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+.featured-tags-btn-div {
+  display: flex;
+  gap: 25px;
+}
+.buttonr-l-r {
+  border: none;
+  background: white;
+}
+.featured-tags {
+  color: var(--Dark, #1f2326);
+
+  /* H2 */
+  font-family: "Poppins", sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 60px; /* 120% */
+}
+.featured-tags-product {
+  color: #01de9e;
+
+  /* H2 */
+  font-family: "Poppins", sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 60px;
+}
+.load-more-div {
+  display: flex;
+  margin: 40px 0 0 0;
+  justify-content: center;
+}
+.load-more {
+  border-radius: 32.836px;
+  background: var(--button, linear-gradient(90deg, #02d4b6 0%, #1663f9 100%));
+  box-shadow: 3.219px 4.507px 14.808px 0px rgba(4, 202, 189, 0.31);
+  width: 210px;
+  height: 60px;
+  flex-shrink: 0;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  border: none;
+}
+
+.bestproduct-item-div {
+  display: flex;
+  gap: 10px;
+  /* flex-wrap: nowrap; */
 }
 
 @media only screen and (max-width: 1366px) {

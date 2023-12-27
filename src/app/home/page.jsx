@@ -1,3 +1,5 @@
+import BestBlack from "@/component/HomeAll/BestBlack";
+import FeaturedMoreProduct from "@/component/HomeAll/FeaturedMoreProduct";
 import Homebanner from "@/component/HomeAll/HomeMain";
 import PopularProducts from "@/component/HomeAll/PopularProducts";
 import TopBruderToys from "@/component/HomeAll/TopBruderToys";
@@ -15,6 +17,12 @@ const page = () => {
       </div>
       <div>
         <TopBruderToys />
+      </div>
+      <div>
+        <FeaturedMoreProduct />
+      </div>
+      <div>
+        <BestBlack />
       </div>
     </div>
   );

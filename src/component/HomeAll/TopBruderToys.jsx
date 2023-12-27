@@ -8,6 +8,10 @@ import CatProductone from "../../../public/catProductone.png";
 import CatProductwo from "../../../public/catProductwo.png";
 import CatProductthree from "../../../public/catProductthree.png";
 import CatProductfour from "../../../public/catProductfour.png";
+import Dolls1 from "../../../public/dolls1.png";
+import Dolls3 from "../../../public/dolls3.png";
+import Dolls4 from "../../../public/dolls4.png";
+import Dolls5 from "../../../public/dolls5.png";
 import Toythree from "../../../public/toy_3.png";
 import ToyFour from "../../../public/toy_4.png";
 import ToyFive from "../../../public/toy_5.png";
@@ -16,6 +20,7 @@ import Image from "next/image";
 
 const TopBruderToys = () => {
   const sliderRef = useRef(null);
+  const sliderRefs = useRef(null);
 
   const play = () => {
     sliderRef.current.slickPlay();
