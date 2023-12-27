@@ -144,8 +144,8 @@ const FeaturedMoreProduct = () => {
     }
   };
   return (
-    <div>
-      <div className='container featured-full-div'>
+    <div className='container'>
+      <div className='featured-full-div'>
         <div className=''>
           <div className='featured-tags-div'>
             <h3 className='featured-tags'>
