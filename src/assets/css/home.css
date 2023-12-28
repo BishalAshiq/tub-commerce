@@ -445,14 +445,17 @@
   cursor: pointer;
 }
 .long-estabilize-side-pic-div {
-  margin: -15% 0 0;
+  /* margin: -15% 0 0; */
+}
+.long-estabilize-side-pics-div {
+  margin: -10% 5px 0 0;
 }
 
 .long-estabilize-div {
   width: 30%;
   height: 30vh;
   padding: 10px;
-  margin: 40px 10px 0 0;
+  margin: 0 10px 0 0;
   background-color: white;
   /* border: 1px solid green; */
 }
