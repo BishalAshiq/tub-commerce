@@ -618,6 +618,229 @@
   gap: 10px;
   /* flex-wrap: nowrap; */
 }
+.best-full-div {
+  margin: 10% 0 5% 0;
+}
+
+.best-tag-div {
+  display: grid;
+  place-items: center;
+}
+.black-best-div {
+  margin: 5% 0 0 0;
+  padding: 5% 0 5% 0;
+  background: linear-gradient(
+    to right,
+    white,
+    /* Additional gradient colors */ /* Additional gradient colors */
+      /* Additional gradient colors */ white,
+    #ffffff,
+    #ffffff,
+    #51b4fa
+  );
+}
+.black-look-p {
+  color: #01de9e;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 150% */
+}
+.black-look-h5 {
+  color: var(--Dark, #1f2326);
+
+  /* H2 */
+  font-family: "Poppins", sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 60px; /* 120% */
+}
+.sale-text {
+  color: #01de9e;
+
+  /* H2 */
+  font-family: "Poppins", sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 60px;
+}
+.black-look-ptext {
+  color: var(--dark-1, #81879d);
+
+  /* Pera 2 */
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 144.444% */
+}
+.add-discount-div {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.adds-icons {
+  border: 1px solid gray;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  /* padding: 10px; */
+  height: 3vh;
+}
+.review-num-full-div {
+  background: #f4f8fc;
+  padding: 3% 0 3% 0;
+  margin: 0 0 20px 0;
+}
+.up50h6 {
+  color: var(--Dark, #1f2326);
+
+  /* Sub Heading 1 */
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 133.333% */
+  font-family: "Poppins", sans-serif;
+}
+.up50p {
+  color: var(--dark-1, #81879d);
+
+  /* Body 3 */
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+}
+.black-look-div {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: start;
+}
+.review-num-div {
+  display: grid;
+  place-items: center;
+  /* line-height: 0.1; */
+}
+.review-number {
+  color: #01de9e;
+
+  /* H1 */
+  font-family: "Poppins", sans-serif;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 76px; /* 126.667% */
+}
+.review-numberp {
+  color: var(--dark-1, #81879d);
+  margin: -10px 0 0 0;
+  /* Peragraph 1 */
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 140% */
+}
+.review-number1 {
+  color: var(--secondary, #f5953a);
+
+  /* H1 */
+  font-family: "Poppins", sans-serif;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 76px; /* 126.667% */
+}
+.review-number2 {
+  color: var(--secondary, #3db0e5);
+
+  /* H1 */
+  font-family: "Poppins", sans-serif;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 76px; /* 126.667% */
+}
+.review-number3 {
+  color: var(--secondary, #ff7999);
+
+  /* H1 */
+  font-family: "Poppins", sans-serif;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 76px; /* 126.667% */
+}
+.w-y-clint-h6 {
+  color: var(--Dark, #1f2326);
+
+  /* H2 */
+  font-family: "Poppins", sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 60px; /* 120% */
+}
+.clients-text {
+  color: #01de9e;
+
+  /* H2 */
+  font-family: "Poppins", sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 60px;
+}
+.w-y-clint-div {
+  display: grid;
+  place-items: center;
+}
+.w-y-clint-p {
+  color: var(--dark-1, #81879d);
+  text-align: center;
+
+  /* Peragraph 1 */
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  width: 40%;
+  line-height: 28px; /* 140% */
+}
+.card-header-text-div {
+  display: flex;
+  gap: 20px;
+}
+.author-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+.card-diiiiv {
+  padding: 20px;
+}
+.card-ptext {
+  color: var(--dark-1, #81879d);
+  font-family: "Poppins", sans-serif;
+  padding: 10px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+}
+.card-diiiiv-full {
+  width: 98% !important;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
 
 @media only screen and (max-width: 1366px) {
   .full-body {

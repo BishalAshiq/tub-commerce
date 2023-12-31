@@ -1,4 +1,5 @@
 import BestBlack from "@/component/HomeAll/BestBlack";
+import ClientsAndDiscount from "@/component/HomeAll/ClientsAndDiscount";
 import FeaturedMoreProduct from "@/component/HomeAll/FeaturedMoreProduct";
 import Homebanner from "@/component/HomeAll/HomeMain";
 import PopularProducts from "@/component/HomeAll/PopularProducts";
@@ -23,6 +24,9 @@ const page = () => {
       </div>
       <div>
         <BestBlack />
+      </div>
+      <div>
+        <ClientsAndDiscount />
       </div>
     </div>
   );

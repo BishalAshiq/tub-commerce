@@ -1,28 +1,15 @@
 "use client";
 import React, { Component } from "react";
 import { useRef, useState } from "react";
-import Slider from "react-slick";
+import blackBest from "../../../public/blackprod.png";
 import Toy from "../../../public/toy_1.png";
-import BruderToy1 from "../../../public/bruderToy1.png";
-import BruderToy2 from "../../../public/bruderToy2.png";
-import CatProductone from "../../../public/catProductone.png";
-import CatProductwo from "../../../public/catProductwo.png";
-import CatProductthree from "../../../public/catProductthree.png";
-import CatProductfour from "../../../public/catProductfour.png";
-import Dolls1 from "../../../public/dolls1.png";
-import Dolls3 from "../../../public/dolls3.png";
-import Dolls4 from "../../../public/dolls4.png";
-import Dolls5 from "../../../public/dolls5.png";
-import Toythree from "../../../public/toy_3.png";
-import ToyFour from "../../../public/toy_4.png";
-import ToyFive from "../../../public/toy_5.png";
 
 const BestBlack = () => {
   return (
     <div>
-      <div className='container'>
-        <div>
-          <div>
+      <div className=''>
+        <div className=' container best-full-div'>
+          <div className='best-tag-div'>
             <h1>Best Selling Dolls</h1>
             <p>
               Bring your products and services to the world. Get started with
@@ -396,6 +383,72 @@ const BestBlack = () => {
                       </svg>
                     </span>
                   </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className='black-best-div'>
+          <div className='container'>
+            <div className='row'>
+              <div className='col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7'>
+                <div className='black-look-div'>
+                  <p className='black-look-p'>Is Looking Bright</p>
+                  <h2 className='black-look-h5'>
+                    Black Friday <span className='sale-text'>Sale</span>
+                  </h2>
+                  <p className='black-look-ptext'>
+                    There are many variations of passages of Lorem Ipsum
+                    available, but the majority have suffered alteration in some
+                    form, by injected humour, or randomised words which don't
+                    look.
+                  </p>
+                </div>
+                <div className='row'>
+                  <div className='col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6'>
+                    <div className='add-discount-div'>
+                      <span className='adds-icons'>
+                        <svg
+                          xmlns='http://www.w3.org/2000/svg'
+                          width='16'
+                          height='16'
+                          fill='currentColor'
+                          class='bi bi-plus'
+                          viewBox='0 0 16 16'>
+                          <path d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4' />
+                        </svg>
+                      </span>
+                      <div>
+                        <h5 className='up50h6'>Up to 50% Discussion </h5>
+                        <p className='up50p'>Machine wash at 30.c</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6'>
+                    <div className='add-discount-div'>
+                      <span className='adds-icons'>
+                        <svg
+                          xmlns='http://www.w3.org/2000/svg'
+                          width='16'
+                          height='16'
+                          fill='currentColor'
+                          class='bi bi-plus'
+                          viewBox='0 0 16 16'>
+                          <path d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4' />
+                        </svg>
+                      </span>
+                      <div>
+                        <h5 className='up50h6'>Up to 50% Discussion </h5>
+                        <p className='up50p'>Machine wash at 30.c</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className='col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5'>
+                <div className=''>
+                  <img src={blackBest.src} alt='' />
                 </div>
               </div>
             </div>
