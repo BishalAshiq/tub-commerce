@@ -1,3 +1,4 @@
+import Footer from "@/component/Footer/Footer";
 import BestBlack from "@/component/HomeAll/BestBlack";
 import ClientsAndDiscount from "@/component/HomeAll/ClientsAndDiscount";
 import FeaturedMoreProduct from "@/component/HomeAll/FeaturedMoreProduct";
@@ -27,6 +28,9 @@ const page = () => {
       </div>
       <div>
         <ClientsAndDiscount />
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
   );

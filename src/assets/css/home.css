@@ -841,6 +841,97 @@
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
+.discount-banner-div {
+  margin: 0 0 0 0;
+  padding: 6% 0 12% 0;
+  background: linear-gradient(
+    to bottom,
+    white,
+    white,
+    white,
+    white,
+    /* white, */ #51b4fa,
+    #51b4fa,
+    #01de9e,
+    #05c8be
+  );
+  /* border-radius: 20px; */
+}
+.discount-banner-full-div {
+  background: linear-gradient(243deg, #03d4b7 7.82%, #1764f9 74.31%);
+  /* margin: 10px 0 0; */
+  padding: 3% 10px;
+  border-radius: 20px;
+}
+.discoount-text-div {
+  margin: 2% 0 0 4%;
+}
+.discount-banner-textp {
+  color: var(--white-1, #f0f0f0);
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 155.556% */
+  letter-spacing: -0.18px;
+}
+.discount-banner-texth5 {
+  width: 328px;
+  color: var(--White, #fff);
+
+  /* H3 */
+  font-family: "Poppins", sans-serif;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 42px; /* 123.529% */
+}
+.discount-banner-texth6 {
+  width: 396px;
+  color: var(--White, #fff);
+
+  /* Body 2 */
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+.see-all-product-btn {
+  display: inline-flex;
+  padding: 16px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 32.836px;
+  background: var(--title, #171d22);
+  box-shadow: 3.219px 4.507px 14.808px 0px rgba(4, 202, 189, 0.31);
+  color: var(--white-white, #fff);
+  margin: 2% 0 0 0;
+  /* Sub Heading 2 */
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+}
+.discoount-banenr-img-div {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.footer-div {
+  margin: -7% 0 0 0;
+  padding: 5% 0;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  background-color: white;
+}
+.footer-imgs {
+  width: 20px;
+  height: 2vh;
+}
 
 @media only screen and (max-width: 1366px) {
   .full-body {
