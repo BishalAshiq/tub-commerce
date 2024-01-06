@@ -11,15 +11,17 @@ const Footer = () => {
         <div className='container'>
           <div className='row'>
             <div className='col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3'>
-              <div>
+              <div className='foter-tag-img-div'>
                 <img src={footerImg.src} alt='' />
-                <span>TUB</span>
+                <span className='TUB'>TUB</span>
               </div>
             </div>
             <div className='col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2'>
               <div>
                 <div>
-                  <p>Product</p>
+                  <p>
+                    <strong>Product</strong>
+                  </p>
                   <p>Toys</p>
                   <p>Age</p>
                   <p>Category</p>
@@ -32,7 +34,9 @@ const Footer = () => {
             <div className='col-12 col-sm-6 col-md-2 col-lg-2 col-xl-2'>
               <div>
                 <div>
-                  <p>For Customer</p>
+                  <p>
+                    <strong>For Customer</strong>
+                  </p>
                   <p>Docs</p>
                   <p>Knowledge Base</p>
                   <p>System Status</p>
@@ -45,7 +49,9 @@ const Footer = () => {
             <div className='col-12 col-sm-6 col-md-2 col-lg-2 col-xl-2'>
               <div>
                 <div>
-                  <p>Resources</p>
+                  <p>
+                    <strong>Resources</strong>
+                  </p>
                   <p>About</p>
                   <p>Guideline</p>
                   <p>Rating</p>
@@ -58,7 +64,9 @@ const Footer = () => {
             <div className='col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3'>
               <div>
                 <div>
-                  <p>Subscribe</p>
+                  <p>
+                    <strong>Subscribe</strong>
+                  </p>
                   <div>
                     <input type='email' placeholder='Email address' />
                     <span>
