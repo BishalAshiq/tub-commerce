@@ -865,9 +865,12 @@
     white,
     white,
     white,
-    #54f7c933,
-    #a3f8e0b2
+    #54f7c936,
+    #a3f8e0bb
   );
+}
+.product-single-header-div {
+  margin: 130px 0 0 0;
 }
 
 .best-tag-div {

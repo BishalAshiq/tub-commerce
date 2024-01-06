@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Inter:wght@100;300;400;500;700&family=Libre+Bodoni:ital@0;1&family=Libre+Franklin:wght@100;400;500;600;700;800&family=Montserrat:wght@100;400&family=Noto+Sans+Osmanya&family=Poppins:wght@100;400;500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,500;1,700&display=swap");
+
+.login-full-div {
+  margin: 8% 0 0 0;
+  padding: 0 0 10% 0;
+  background: linear-gradient(
+    to bottom,
+    white,
+    white,
+    white,
+    white,
+    /* white, */ rgba(81, 180, 250, 1),
+    /* white, */ rgba(81, 180, 250, 1),
+    rgba(5, 200, 190, 1),
+    rgba(5, 200, 190, 1)
+  );
+}
+.Sign-full-div {
+  margin: 8% 0 4% 0;
+  padding: 0 0 10% 0;
+  height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    white,
+    white,
+    white,
+    white,
+    /* white, */ rgba(81, 180, 250, 1),
+    /* white, */ rgba(81, 180, 250, 1),
+    rgba(5, 200, 190, 1),
+    rgba(5, 200, 190, 1)
+  );
+}
+.log-full-div {
+  /* border: 1px solid gray; */
+  padding: 20px 30px;
+  width: 501px;
+  height: 612px;
+  flex-shrink: 0;
+  /* border-radius: 20px; */
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 39px 104px 0px rgba(0, 94, 255, 0.09);
+}
+.Sig-full-div {
+  /* border: 1px solid gray; */
+  padding: 20px 30px;
+  width: 501px;
+  height: 866px;
+  flex-shrink: 0;
+  /* border-radius: 20px; */
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 39px 104px 0px rgba(0, 94, 255, 0.09);
+}
+.loginSign-div {
+  border-radius: 20px;
+  display: flex;
+  width: 96%;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(184deg, #1663f9 3.41%, #3dc7e5 81.28%);
+}
+.loginSign-logo-div {
+  border-radius: 20px;
+  display: flex;
+  width: 96%;
+
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(184deg, #1663f9 3.41%, #3dc7e5 81.28%);
+}
+.loginSign-logo {
+  margin: 20% 0 0 0;
+}
+
+.or-hrs-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.hrs {
+  border: 1px solid #f2f2f2;
+  width: 50%;
+}
+.logsign-lebel {
+  color: #1a2133;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px; /* 257.143% */
+}
+.logSign-input {
+  border: none;
+  width: 100%;
+  outline: none;
+  background: rgba(225, 225, 225, 0.09);
+}
+.logSign-inp-div {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #f4f4f4;
+  background: rgba(225, 225, 225, 0.09);
+}
+.login-input-lebl {
+  margin: 20px 0;
+}
+.check-text-div {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+.sing-texts {
+  color: #005eff;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+}
+.log-footer {
+  margin: 20%px 0 0 0 !important;
+}
+.log-sign-btn {
+  display: inline-flex;
+  margin: 20px 0;
+  padding: 11.348px 22.696px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  gap: 7.093px;
+  border-radius: 42.555px;
+  background: #156cfa;
+  color: var(--white-white, #fff);
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 17.022px; /* 141.85% */
+}
+
+.social-logSig-btn {
+  border: none;
+  background-color: white;
+  color: #000;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px; /* 157.143% */
+}
+
+.social-logSig-div {
+  display: flex;
+  gap: 130px;
+  border-radius: 6px;
+  border: 1px solid #e8e8e8;
+  background: #fff;
+  box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.06);
+  padding: 10px;
+  margin: 10px 0;
+}
+.socialapp-logSig-div {
+  display: flex;
+  gap: 130px;
+  border-radius: 6px;
+  border: 1px solid #e8e8e8;
+  background: #000000;
+  box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.06);
+  padding: 10px;
+  margin: 10px 0;
+}
+.socialapp-logSig-btn {
+  border: none;
+  background-color: rgb(0, 0, 0);
+  color: #ffffff;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px; /* 157.143% */
+}

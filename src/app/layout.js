@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../assets/css/main.css";
 import "../assets/css/home.css";
+import "../assets/css/products.css";
+import "../assets/css/logSign.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
