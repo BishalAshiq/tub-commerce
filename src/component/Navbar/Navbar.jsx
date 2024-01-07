@@ -10,7 +10,9 @@ const Navbar = () => {
         <nav className='navbar navbar-expand-lg navbar-full-div'>
           <div className='container'>
             <div className=''>
-              <Image src={TubBanner} height={34} width={74} alt='' />
+              <Link href='/'>
+                <Image src={TubBanner} height={34} width={74} alt='' />
+              </Link>
             </div>
             <button
               className='navbar-toggler'
