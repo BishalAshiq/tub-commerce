@@ -1,3 +1,4 @@
+import Layout from "@/component/AddCartIcon/layout";
 import Footer from "@/component/Footer/Footer";
 import BestBlack from "@/component/HomeAll/BestBlack";
 import ClientsAndDiscount from "@/component/HomeAll/ClientsAndDiscount";
