@@ -301,6 +301,7 @@ const page = () => {
                     <div className='col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6'>
                       <div>
                         <p>Original Price</p>
+                        <br />
                         <p>Savings</p>
                         <p>Shipping</p>
                         <p>Estimated Sales Tax</p>
