@@ -564,8 +564,8 @@ const BestBlack = () => {
                 </div>
               </div>
               <div className='col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5'>
-                <div className=''>
-                  <img src={blackBest.src} alt='' />
+                <div className='blk-fri-off-img-div'>
+                  <img className='blk-fri-off-img' src={blackBest.src} alt='' />
                 </div>
               </div>
             </div>

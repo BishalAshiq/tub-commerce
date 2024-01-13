@@ -3,6 +3,7 @@ import React from "react";
 import logSignLogo from "../../../public/logiSignUpLogo.png";
 import GoogG from "../../../public/GoogG.png";
 import Footer from "@/component/Footer/Footer";
+import Link from "next/link";
 
 const page = () => {
   return (
@@ -116,7 +117,9 @@ const page = () => {
 
                 <p>
                   Don’t have an account?{" "}
-                  <strong className='sing-texts'>Sign Up</strong>
+                  <Link href='/signUp'>
+                    <strong className='sing-texts'>Sign Up</strong>
+                  </Link>
                 </p>
 
                 <div className='or-hrs-div'>
@@ -127,7 +130,7 @@ const page = () => {
 
                 <div className='social-logSig-div'>
                   <div>
-                    <img src={GoogG.src} alt='' />
+                    <img className='site-img' src={GoogG.src} alt='' />
                   </div>
                   <button className='social-logSig-btn'>
                     Continue with Google
@@ -135,7 +138,7 @@ const page = () => {
                 </div>
                 <div className='socialapp-logSig-div'>
                   <div>
-                    <img src={GoogG.src} alt='' />
+                    <img className='site-img' src={GoogG.src} alt='' />
                   </div>
                   <button className='socialapp-logSig-btn'>
                     Continue with Apple
@@ -145,7 +148,7 @@ const page = () => {
             </div>
             <div className='col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7'>
               <div className='loginSign-div'>
-                <img src={logSignLogo.src} alt='' />
+                <img className='login-img' src={logSignLogo.src} alt='' />
               </div>
             </div>
           </div>

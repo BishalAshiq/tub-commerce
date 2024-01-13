@@ -104,9 +104,24 @@ body {
   font-style: normal;
   font-weight: 400;
 }
+.login-img {
+  width: 100%;
+}
 
 @media only screen and (max-width: 760px) {
   .sec-navbar-links-acc-div {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 1367px) {
+  .banner-text-div {
+    width: 470px;
+  }
+
+  .banner-find-div {
+  }
+  .login-img {
+    width: 100%;
   }
 }

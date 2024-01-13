@@ -154,7 +154,7 @@ const page = () => {
                         </svg>
                       </span>
                     </div>
-                    <div>
+                    <div className='select-icon'>
                       <span>
                         {" "}
                         <svg
