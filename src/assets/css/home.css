@@ -91,7 +91,12 @@
   border-radius: 10px;
   outline: none;
 }
-
+.banner-icon {
+  display: flex;
+  width: 200px;
+  justify-content: center;
+  /* margin: 30% 0 0 0; */
+}
 .banner-icon-div {
   display: flex;
   justify-content: center;

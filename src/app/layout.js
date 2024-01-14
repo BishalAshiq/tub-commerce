@@ -5,6 +5,7 @@ import "../assets/css/main.css";
 import "../assets/css/home.css";
 import "../assets/css/products.css";
 import "../assets/css/logSign.css";
+import "../assets/css/customerdashboard.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 

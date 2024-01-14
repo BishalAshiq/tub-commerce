@@ -58,7 +58,7 @@ const BestBlack = () => {
   return (
     <div>
       <div className='best-full-div'>
-        <div className='container'>
+        <div className='container' data-aos='fade-up'>
           <div className='  '>
             <div className='best-tag-div'>
               <h1>Best Selling Dolls</h1>

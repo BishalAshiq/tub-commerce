@@ -1,11 +1,19 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import BleftIcon from "../../../public/Blefttoy.png";
 import BRightIcon from "../../../public/BRighttoy.png";
 import EcomBanner from "../../../public/e-comBanner.png";
 import PopularProducts from "./PopularProducts";
+import { useEffect } from "react";
+import AOS from "aos";
 
 const Homebanner = () => {
+  useEffect(() => {
+    // Refresh AOS when the component updates (e.g., when new content is loaded)
+    AOS.refresh();
+  }, []);
+
   return (
     <div className=' banner-full-div'>
       <div className='container'>
@@ -57,7 +65,7 @@ const Homebanner = () => {
           </div>
         </div>
 
-        <div className='banner-carousel-div'>
+        <div className='banner-carousel-div' data-aos='fade-right'>
           <div id='carouselExampleIndicators' className='carousel slide'>
             <div className='carousel-indicators'>
               <button
