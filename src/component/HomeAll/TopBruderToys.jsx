@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
 import Toy from "../../../public/toy_1.png";
 import BruderToy1 from "../../../public/bruderToy1.png";
@@ -17,6 +17,7 @@ import ToyFour from "../../../public/toy_4.png";
 import ToyFive from "../../../public/toy_5.png";
 // import CatProductfour from "../../../public/catProductfour.png";
 import Image from "next/image";
+import axiosInstance from "@/utils/axios";
 
 const TopBruderToys = () => {
   const sliderRef = useRef(null);
@@ -112,6 +113,16 @@ const TopBruderToys = () => {
       setCount((prevCount) => prevCount - 1);
     }
   };
+
+
+  const [categories, setCategories] = useState([]);
+  useEffect(() => {
+    axiosInstance.get('/categories/featured').then((res) => {
+      setCategories(res.data.data);
+    })
+  }, []);
+
+  console.log(categories);
   return (
     <div className=' '>
       <div className='backgrad'>
@@ -602,6 +613,26 @@ const TopBruderToys = () => {
             </div>
             <Slider ref={sliderRef} {...settingsTwo}>
               {/* Slides content */}
+              {
+                categories.length > 0 &&
+                categories.map((item, i) => (
+                  <div>
+                  <div className='Top-single-toy'>
+                    <div className='tbrudal-img-div'>
+                      <img
+                        className='categories-img'
+                        src={item.icon}
+                        alt=''
+                      />
+                    </div>
+
+                    <div className='ShopTop-view'>
+                      <span className='Top-span'>{item.name}</span>
+                    </div>
+                  </div>
+                  </div>
+                ))
+              }
               <div className='Top-single-toy'>
                 <div className='tbrudal-img-div'>
                   <img
@@ -692,7 +723,7 @@ const TopBruderToys = () => {
                 <div className='ShopTop-view'>
                   <span className='Top-span'>Dorongan</span>
                 </div>
-              </div>
+              </div> 
               {/* Add more slides as needed */}
             </Slider>
             <div className='buttons-left-right-div'>
