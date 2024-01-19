@@ -1,9 +1,32 @@
-import React from "react";
+"use client";
+
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import Modal from "@mui/material/Modal";
+import { useRef, useState } from "react";
 import ProductReviewer from "./ProductReviewer";
 import MoreProduct from "./MoreProduct";
 import Footer from "../Footer/Footer";
+import ProductReview from "./ProductReview";
+
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 900,
+  bgcolor: "background.paper",
+  border: "2px solid #000",
+  boxShadow: 24,
+  p: 4,
+};
 
 const ProductInformation = () => {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   return (
     <div>
       <div className='container product-tagh5-div'>
@@ -101,7 +124,20 @@ const ProductInformation = () => {
             <span className='prod-base-text'>Based on 27 Reviews</span>
           </div>
           <div>
-            <button className='prod-base-rev-btn'>Write a Review</button>
+            <button onClick={handleOpen} className='prod-base-rev-btn'>
+              Write a Review
+            </button>
+            <Modal
+              open={open}
+              onClose={handleClose}
+              aria-labelledby='modal-modal-title'
+              aria-describedby='modal-modal-description'>
+              <Box sx={style}>
+                <div>
+                  <ProductReview />
+                </div>
+              </Box>
+            </Modal>
           </div>
         </div>
         <hr />
