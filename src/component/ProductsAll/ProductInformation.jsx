@@ -23,7 +23,7 @@ const style = {
   p: 4,
 };
 
-const ProductInformation = () => {
+const ProductInformation = ({ product }) => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -32,22 +32,12 @@ const ProductInformation = () => {
       <div className='container product-tagh5-div'>
         <div>
           <h5 className='product-tagh5'>About this product</h5>
-          <p className='product-ptext'>
-            Redefine your expectation of comfort and style at work with Genuine
-            Dickies Women’s Stretch Twill Straight Leg Pants. The straight
-            construction sits close to the body through the hip and thigh,
-            providing the perfect feminine fit and clean appearance for the
-            ultimate professional look. The stretch twill fabrication is rinsed
-            for extra softness and offers premium stretch and added comfort,
-            keeping you moving freely through your dynamic workday. Plus, the
-            built-in tummy panel means the days of a gapping waistband are
-            behind you. With two functional rear welt pockets, you’ll find
-            storage for your cards or cellphone, making these pants a closet
-            essential that will stand up to every shift.
+          <p className='product-ptext' dangerouslySetInnerHTML={{ __html: product?.description }}>
+            {/* {product?.description} */}
           </p>
         </div>
 
-        <div>
+        {/* <div>
           <h5 className='product-tagh5'>Features</h5>
           <p className='product-ptext'>
             Work Pants; Service Pants; Genuine Dickies Pants; Women's Pants;
@@ -66,15 +56,15 @@ const ProductInformation = () => {
         <div>
           <h5 className='product-tagh5'>Gender</h5>
           <p className='product-ptext'>Men</p>
-        </div>
+        </div> */}
         <div>
           <h5 className='product-tagh5'>Brand</h5>
-          <p className='product-ptext'>Tayson</p>
+          <p className='product-ptext'>{product?.brand?.name}</p>
         </div>
-        <div>
+        {/* <div>
           <h5 className='product-tagh5'>Model</h5>
           <p className='product-ptext'>AP401RBK 12 RG</p>
-        </div>
+        </div> */}
         <div>
           <p className='product-ptext'>
             <strong>Note:</strong> Lorem ipsum dolor sit amet, consectetur
@@ -153,7 +143,7 @@ const ProductInformation = () => {
       <div>
         <Footer />
       </div>
-    </div>
+    </div >
   );
 };
 

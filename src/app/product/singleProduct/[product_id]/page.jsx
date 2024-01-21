@@ -1,16 +1,19 @@
 "use client";
 import Navbar from "@/component/Navbar/Navbar";
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 import { useRef, useState } from "react";
-import singleProduct from "../../../../public/singlproduct.png";
-import singleProductpone from "../../../../public/singlproductp1.png";
-import singleProductptwo from "../../../../public/singlproductp2.png";
-import singleProductpthree from "../../../../public/singlproductp3.png";
-import singleProductpfour from "../../../../public/singlproductp4.png";
+import singleProduct from "../../../../../public/singlproduct.png";
+import singleProductpone from "../../../../../public/singlproductp1.png";
+import singleProductptwo from "../../../../../public/singlproductp2.png";
+import singleProductpthree from "../../../../../public/singlproductp3.png";
+import singleProductpfour from "../../../../../public/singlproductp4.png";
 import Image from "next/image";
 import ProductInformation from "@/component/ProductsAll/ProductInformation";
+import { useParams } from "next/navigation";
+import axiosInstance from "@/utils/axios";
 
 const page = () => {
+  const params = useParams();
   const [count, setCount] = useState(0);
 
   const incrementCount = () => {
@@ -22,6 +25,20 @@ const page = () => {
       setCount((prevCount) => prevCount - 1);
     }
   };
+
+  const [product, setProduct] = useState(null);
+
+  useEffect(() => {
+    axiosInstance.get('/products/' + params.product_id).then((res) => {
+      setProduct(res.data.data[0]);
+    })
+  }, [])
+
+
+
+
+
+
   return (
     <div>
       <div>
@@ -34,10 +51,16 @@ const page = () => {
               <div className='row'>
                 <div className='col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2'>
                   <div className='singl-small-full-product-div'>
-                    <div className='singl-small-img-product-div'>
-                      <img src={singleProductpone.src} alt='' />
-                    </div>
-                    <div className='singl-small-img-product-div'>
+                    {
+                      product?.photos.length > 0 &&
+                      product.photos.map((item) => (
+                        <div className='singl-small-img-product-div'>
+                          <img src={item.path} alt='' />
+                        </div>
+                      ))
+                    }
+
+                    {/* <div className='singl-small-img-product-div'>
                       <img src={singleProductptwo.src} alt='' />
                     </div>
                     <div className='singl-small-img-product-div'>
@@ -48,14 +71,14 @@ const page = () => {
                     </div>
                     <div className='singl-small-text-product-div'>
                       <p>+2</p>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
                 <div className='col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10'>
                   <div className='singl-big-product-div'>
                     <img
                       className='singl-big-product'
-                      src={singleProduct.src}
+                      src={product?.thumbnail_image}
                       alt=''
                     />
                   </div>
@@ -65,9 +88,9 @@ const page = () => {
             <div className='col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5'>
               <div>
                 <h4 className='product-estab-tags'>
-                  Note: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                  {product?.name}
                 </h4>
-                <p className='product-estab-text'>Kids-Toy</p>
+                <p className='product-estab-text'>{product?.brand?.name}</p>
 
                 <span className='ong-estab-review'>
                   <svg
@@ -107,7 +130,7 @@ const page = () => {
                     <div className='ong-estab-prcolSiz'>Size:</div>
                   </div>
                   <div className='col-11 col-sm-11 col-md-11 col-lg-11 col-xl-11 '>
-                    <div className='price-number'> $580</div>
+                    <div className='price-number'>  {product?.stroked_price}</div>
                     <div>
                       <span>
                         <svg
@@ -228,7 +251,7 @@ const page = () => {
           </div>
         </div>
         <div>
-          <ProductInformation />
+          <ProductInformation product={product} />
         </div>
       </div>
     </div>

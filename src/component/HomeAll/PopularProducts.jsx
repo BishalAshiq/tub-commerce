@@ -29,14 +29,14 @@ const PopularProducts = () => {
     autoplay: true,
     autoplaySpeed: 3500,
   };
-
+  // 
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axiosInstance.get('/products/featured').then((res) => {
+    axiosInstance.get('/products/todays-deal').then((res) => {
       setProducts(res.data.data);
     })
-  })
+  }, [])
   return (
     <div className='pop-full-div'>
       <div className='container pop-cont-div'>
@@ -217,9 +217,11 @@ const PopularProducts = () => {
                     </div>
 
                     <div className='taka-view'>
-                      <span className='taka-view-span'>৳  {item.stroked_price}</span>
+                      <span className='taka-view-span'>
+                        {item.stroked_price}</span>
+                      {/* ৳  */}
                       <span className='taka-view-span2'>
-                        <Link href="/product/singleProduct">
+                        <Link href={`/product/singleProduct/${item.id}`}>
                           View Details
                         </Link>
                         <span>
