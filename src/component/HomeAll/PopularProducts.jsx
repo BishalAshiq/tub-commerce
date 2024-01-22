@@ -44,7 +44,7 @@ const PopularProducts = () => {
           <h1 className='pop-tag'>
             Popular <span className='pop-tag-color'>Products</span>
           </h1>
-          <button className='pop-all-btn'>
+          <Link href={'/product/allProducts'} className='pop-all-btn'>
             See all Products
             <span>
               <svg
@@ -61,7 +61,7 @@ const PopularProducts = () => {
                 />
               </svg>
             </span>
-          </button>
+          </Link>
         </div>
 
         <div className='toy-slider-div'>
