@@ -8,6 +8,7 @@ import "../assets/css/logSign.css";
 import "../assets/css/customerdashboard.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import AddToCart from "@/component/CartFloating/AddToCart";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,8 @@ export default function RootLayout({ children }) {
     <html lang='en'>
       <body>
         {children}
+        <AddToCart />
+
         <script
           src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js'
           integrity='sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r'

@@ -194,3 +194,44 @@
   width: 23px;
   height: 23px;
 }
+
+@media only screen and (max-width: 1366px) {
+  .Sign-full-div {
+    margin: 10% 0 4% 0;
+    padding: 0 0 10% 0;
+    height: 150vh;
+    background: linear-gradient(
+      to bottom,
+      white,
+      white,
+      white,
+      white,
+      /* white, */ rgba(81, 180, 250, 1),
+      /* white, */ rgba(81, 180, 250, 1),
+      rgba(5, 200, 190, 1),
+      rgba(5, 200, 190, 1)
+    );
+  }
+  .login-full-div {
+    margin: 10% 0 0 0;
+  }
+  .loginSign-div {
+    margin: 0 0 0 10%;
+    width: 90%;
+  }
+  .loginSign-logo-div {
+    border-radius: 20px;
+    display: flex;
+    width: 96%;
+    margin: 0 0 0 10%;
+    padding: 10px 0;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(184deg, #1663f9 3.41%, #3dc7e5 81.28%);
+  }
+  .loginSign-logo {
+    width: 100%;
+    margin: 0 0 0 0;
+  }
+}
