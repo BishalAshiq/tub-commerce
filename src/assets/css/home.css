@@ -1361,11 +1361,16 @@
 .cart-icon {
   cursor: pointer;
   display: flex;
-  align-items: center;
+  gap: 10px;
+  /* align-items: center; */
   justify-content: center;
   text-align: center;
   margin: 20px 0 0 0;
   transition: all 0.4s;
+}
+
+.view-cart-floating {
+  margin: -5px 0 0 0;
 }
 
 .cart-dropdown {
@@ -1380,4 +1385,102 @@
   padding: 10px;
   display: flex;
   flex-direction: column;
+}
+
+/* Responsiveness  */
+
+@media only screen and (max-width: 1366px) {
+  .cart-dropdown {
+    position: absolute;
+    top: 0;
+    /* bottom: 50px; */
+    right: 100%; /* Position the dropdown to the left of the cart icon */
+    margin: -9px 0 0 0;
+    min-width: 1116px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .add-to-cart {
+    position: fixed;
+    bottom: 52px;
+    right: 20px;
+    margin: 0 0 10px 0;
+    z-index: 999;
+    background-color: white;
+  }
+  .cart-amount-div {
+    display: flex;
+    justify-content: end;
+    color: black;
+    align-items: center;
+    border: 1px solid rgb(207, 206, 206);
+    border-radius: 20px;
+    width: 200px;
+    padding: 15px 30px 0 0;
+    gap: 20px;
+  }
+  .cart-amount-pone {
+    color: var(--Texts-Dark, var(--title, #171d22));
+
+    /* Button 1 */
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px; /* 166.667% */
+  }
+  .cart-amount-pTwo {
+    color: var(--Texts-Dark, var(--title, #171d22));
+
+    /* Button 1 */
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px; /* 166.667% */
+  }
+
+  .cart-amount-full-div {
+    display: flex;
+    justify-content: end;
+    color: black;
+    align-items: center;
+  }
+  .floating-add-cart-img {
+    width: 60px;
+    height: 40;
+  }
+  .floating-add-cart-img-div {
+    position: relative;
+    display: inline-block;
+  }
+
+  .floating-add-cart-img {
+    width: 100%; /* Adjust the width as needed */
+    height: auto;
+    margin: 0 10px 0 10px;
+  }
+  .cart-icon {
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    /* align-items: center; */
+    justify-content: center;
+    text-align: center;
+    margin: 20px 0 0 0;
+    transition: all 0.4s;
+  }
+
+  .cart-icons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px; /* Adjust padding as needed */
+    cursor: pointer;
+  }
 }
