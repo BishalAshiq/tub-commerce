@@ -936,7 +936,7 @@ const TopBruderToys = () => {
                     </div>
                   </div>
                   <div className='add-to-cart-div'>
-                    <button className='add-to-cart'>Add to cart</button>
+                    <button className='adds-to-cart'>Add to cart</button>
                     <div className='counting-div'>
                       <button className='count-bten' onClick={decrementCount}>
                         -

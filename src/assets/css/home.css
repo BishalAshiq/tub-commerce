@@ -157,6 +157,13 @@
   gap: 10px;
   align-items: center;
 }
+.nav-tag-img-div {
+  display: flex;
+  justify-content: start;
+  gap: 10px;
+  /* align-items: center; */
+}
+
 .TUB {
   color: #000;
   /* leading: both; */
@@ -168,6 +175,42 @@
   font-style: normal;
   font-weight: 700;
   line-height: 42.824px; /* 140% */
+}
+.NavImage {
+  width: 40px;
+  height: 32px;
+  flex-shrink: 0;
+}
+.Nav-TUB {
+  /* text-decoration: none; */
+  color: #000;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 140% */
+}
+.Nav-TUB a {
+  text-decoration: none;
+}
+.adds-to-cart {
+  width: 210px;
+  height: 60px;
+  flex-shrink: 0;
+  border-radius: 32.836px;
+  background: var(--button, linear-gradient(90deg, #02d4b6 0%, #1663f9 100%));
+  box-shadow: 3.219px 4.507px 14.808px 0px rgba(4, 202, 189, 0.31);
+  color: var(--Texts-White, #fff);
+  text-align: center;
+  border: none;
+  margin: 30px 0 0 0;
+  /* Button 1 */
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px; /* 166.667% */
 }
 .pop-all-btn {
   display: inline-flex;
@@ -772,11 +815,20 @@
 .counting-div {
   display: flex;
   gap: 20px;
+  justify-content: center;
+  /* align-items: center; */
+  border: 1px solid var(--Shapes-Color-Light-Grey, #e2e8eb);
+
+  height: 6vh;
+  border-radius: 20px;
+  width: 150px;
+  margin: 22px 0 0 0;
 }
 
 .add-to-cart-div {
   display: flex;
   gap: 20px;
+  align-items: center;
 }
 .add-to-cart {
   border-radius: 32.836px;
@@ -796,6 +848,9 @@
 }
 .featured-full-div {
   margin: 4% 0 4% 0;
+}
+.discoount-banenr-img {
+  width: 90%;
 }
 
 .featured-tags-div {
@@ -1386,10 +1441,25 @@
   display: flex;
   flex-direction: column;
 }
+.Add-to-cart-div {
+  display: flex;
+  justify-content: center;
+}
 
 /* Responsiveness  */
 
 @media only screen and (max-width: 1366px) {
+  .Top-single-toy {
+    position: relative;
+    width: 93% !important;
+    border: none;
+    margin: 20px 0;
+    height: 41vh;
+
+    background-color: white !important;
+    /* box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px; */
+    border-radius: 10px;
+  }
   .cart-dropdown {
     position: absolute;
     top: 0;

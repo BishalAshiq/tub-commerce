@@ -1,5 +1,5 @@
 import React from "react";
-import TubBanner from "../../../public/tubIcon.png";
+import NavImg from "../../../public/tubLogo.png";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -11,7 +11,10 @@ const Navbar = () => {
           <div className='container'>
             <div className=''>
               <Link href='/'>
-                <Image src={TubBanner} height={34} width={74} alt='' />
+                <div className='nav-tag-img-div'>
+                  <img className='NavImage' src={NavImg.src} alt='' />
+                  <p className='Nav-TUB'>TUB</p>
+                </div>
               </Link>
             </div>
             <button

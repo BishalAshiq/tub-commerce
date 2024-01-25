@@ -148,11 +148,10 @@ const FeaturedMoreProduct = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axiosInstance.get('/products/featured').then((res) => {
+    axiosInstance.get("/products/featured").then((res) => {
       setProducts(res.data.data);
-    })
-  }, [])
-
+    });
+  }, []);
 
   return (
     <div className=''>
@@ -221,14 +220,16 @@ const FeaturedMoreProduct = () => {
           </div>
           <div>
             <Slider ref={sliderRef} {...settings}>
-
-              {
-                products.length > 0 &&
+              {products.length > 0 &&
                 products.map((item, i) => (
                   <div>
                     <div className='single-toy'>
                       <div className='toy-img-div'>
-                        <img className='toy-img' src={item.thumbnail_image} alt='' />
+                        <img
+                          className='toy-img'
+                          src={item.thumbnail_image}
+                          alt=''
+                        />
                       </div>
                       <div className='card-t-div'>
                         <span className='card-text'>{item.name}</span>
@@ -268,7 +269,9 @@ const FeaturedMoreProduct = () => {
                       </div>
 
                       <div className='taka-view'>
-                        <span className='taka-view-span'>{item.stroked_price}</span>
+                        <span className='taka-view-span'>
+                          {item.stroked_price}
+                        </span>
                         <span className='taka-view-span2'>
                           View Details
                           <span>
@@ -288,8 +291,7 @@ const FeaturedMoreProduct = () => {
                       </div>
                     </div>
                   </div>
-                ))
-              }
+                ))}
               <div>
                 <div className='single-toy'>
                   <div className='toy-img-div'>
@@ -2157,7 +2159,7 @@ const FeaturedMoreProduct = () => {
                     </div>
                   </div>
                   <div className='add-to-cart-div'>
-                    <button className='add-to-cart'>Add to cart</button>
+                    <button className='adds-to-cart'>Add to cart</button>
                     <div className='counting-div'>
                       <button className='count-bten' onClick={decrementCount}>
                         -

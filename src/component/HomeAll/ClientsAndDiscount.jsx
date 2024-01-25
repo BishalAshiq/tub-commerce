@@ -313,7 +313,11 @@ const ClientsAndDiscount = () => {
           <div className='row'>
             <div className='col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6'>
               <div className='discoount-banenr-img-div'>
-                <img src={Discount.src} alt='' />
+                <img
+                  className='discoount-banenr-img'
+                  src={Discount.src}
+                  alt=''
+                />
               </div>
             </div>
             <div className='col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6'>
