@@ -9,30 +9,35 @@ import "../assets/css/customerdashboard.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import AddToCart from "@/component/CartFloating/AddToCart";
+import StoreProvider from "@/redux/provider";
+import { Toaster } from "react-hot-toast";
 
 // const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "tub-ecommerce",
-  description: "",
+  title: "Tub-Ecommerce",
+  description: "Best Toy Business in bangladesh",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
-      <body>
-        {children}
-        <AddToCart />
+      <StoreProvider>
+        <body>
 
-        <script
-          src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js'
-          integrity='sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r'
-          crossorigin='anonymous'></script>
-        <script
-          src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js'
-          integrity='sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+'
-          crossorigin='anonymous'></script>
-      </body>
+          {children}
+          <AddToCart />
+          <Toaster />
+          <script
+            src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js'
+            integrity='sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r'
+            crossorigin='anonymous'></script>
+          <script
+            src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js'
+            integrity='sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+'
+            crossorigin='anonymous'></script>
+        </body>
+      </StoreProvider>
     </html>
   );
 }

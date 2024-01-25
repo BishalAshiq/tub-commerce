@@ -11,10 +11,13 @@ import Image from "next/image";
 import ProductInformation from "@/component/ProductsAll/ProductInformation";
 import { useParams } from "next/navigation";
 import axiosInstance from "@/utils/axios";
+import { useDispatch } from "react-redux";
+import { addToCartFn } from "@/redux/features/cart/cartSlice";
+import toast from "react-hot-toast";
 
 const page = () => {
   const params = useParams();
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
 
   const incrementCount = () => {
     setCount((prevCount) => prevCount + 1);
@@ -35,6 +38,14 @@ const page = () => {
   }, [])
 
 
+  const dispatch = useDispatch();
+
+  const handleAddToCart = (e) => {
+    e.preventDefault();
+    dispatch(addToCartFn(product));
+    toast.success("Product added to cart");
+
+  };
 
 
 
@@ -239,7 +250,7 @@ const page = () => {
                       +
                     </button>
                   </div>
-                  <button className='add-to-cart'>Add to cart</button>
+                  <button type="button" className='product-add-to-cart' onClick={handleAddToCart}>Add to cart</button>
                 </div>
 
                 <div className='pro-che-aWhi-div'>
@@ -257,5 +268,7 @@ const page = () => {
     </div>
   );
 };
+
+
 
 export default page;

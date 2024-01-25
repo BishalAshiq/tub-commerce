@@ -73,6 +73,18 @@
   flex-shrink: 0;
 }
 
+
+.product-add-to-cart {
+  border-radius: 32.836px;
+  border-radius: 30px;
+  background: var(--button, linear-gradient(90deg, #02d4b6 0%, #1663f9 100%));
+  width: 210px;
+  border: none;
+  color: white;
+  height: 60px;
+  flex-shrink: 0;
+}
+
 .singl-big-product-div {
   display: flex;
   justify-content: center;
@@ -80,6 +92,7 @@
   height: 62vh;
 }
 .singl-big-product {
+  object-fit: contain;
   width: 80%;
   height: 60%;
   margin: 50px 0 0 0;
