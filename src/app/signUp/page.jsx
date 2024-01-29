@@ -1,11 +1,247 @@
+"use client";
 import Navbar from "@/component/Navbar/Navbar";
-import React from "react";
+import React, { useState } from "react";
 import logSignLogo from "../../../public/logiSignUpLogo.png";
 import GoogG from "../../../public/GoogG.png";
 import Footer from "@/component/Footer/Footer";
 import Link from "next/link";
 
 const page = () => {
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    mobile_number: "",
+    location: "",
+  });
+
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+
+    if (name === "password") {
+      checkPasswordStrength(value);
+    }
+
+    setRegisterInputState({
+      ...registerInputState,
+      [name]: value,
+    });
+  };
+
+
+  const submitRegistration = (e) => {
+    e.preventDefault();
+    if (registerInputState.first_name === "") {
+      toast("First name is required", {
+        type: "error",
+        position: "top-right",
+        style: {
+          background: "",
+          color: "red",
+        },
+      });
+    }
+    else if (registerInputState.last_name === "") {
+      toast("Last name is required", {
+        type: "error",
+        position: "top-right",
+        style: {
+          background: "",
+          color: "red",
+        },
+      });
+    }
+    else if (registerInputState.email === "") {
+      toast("Email is required", {
+        type: "error",
+        position: "top-right",
+        style: {
+          background: "",
+          color: "red",
+        },
+      });
+    }
+    else if (registerInputState.day === "" || registerInputState.month === "" || registerInputState.year === "") {
+      toast("Date is invalid.Provide date all required", {
+        type: "error",
+        position: "top-right",
+        style: {
+          background: "",
+          color: "red",
+        },
+      });
+    }
+    else if (registerInputState.password === "") {
+      toast("Please provide password", {
+        type: "error",
+        position: "top-right",
+        style: {
+          background: "",
+          color: "red",
+        },
+      });
+    }
+    else if (isValid === false) {
+      toast("Password must contain at least one uppercase letter, one lowercase letter, one number, and one symbol", {
+        type: "error",
+        position: "top-right",
+        style: {
+          background: "",
+          color: "red",
+        },
+      });
+    }
+    else if (password.length < 8) {
+      toast("Password at least 8 characters should be long", {
+        type: "error",
+        position: "top-right",
+        style: {
+          background: "",
+          color: "red",
+        },
+      });
+    }
+
+    else if (registerInputState.gender === "") {
+      toast(" Gender is required", {
+        type: "error",
+        position: "top-right",
+        style: {
+          background: "",
+          color: "red",
+        },
+      });
+    }
+    else if (registerInputState.isAccept === false) {
+      toast("Please checked accept the terms and conditions", {
+        type: "error",
+        position: "top-right",
+        style: {
+          background: "",
+          color: "red",
+        },
+      });
+    }
+    // if (strength >= 60 && registerInputState.password.length >= 8) { // Check both criteria
+    else {
+      axiosInstance.post(`api/signup`, registerInputState).then((res) => {
+        if (res.data.status === 200) {
+          toast(res.data.message, {
+            type: "success",
+            position: "top-right",
+          });
+          router.push("/login");
+        } else if (res.data.status === 400) {
+          toast(res.data.error, {
+            type: "error",
+            position: "top-right",
+            style: {
+              background: "",
+              color: "red",
+            },
+          });
+        } else if (res.data.status === 404) {
+          console.log("yes 404", res.data.errors);
+          res.data.errors.forEach((item, i) => {
+            return toast(item.msg, {
+              type: "error",
+              position: "top-right",
+              style: {
+                background: "",
+                color: "red",
+              },
+            });
+          });
+        } else {
+          toast(res.data.error, {
+            type: "error",
+            position: "top-right",
+            style: {
+              background: "",
+              color: "red",
+            },
+          });
+        }
+      });
+      // }
+      // else {
+      //   toast("Password must be both strong and at least 8 characters in length.", {
+      //     type: "error",
+      //     position: "top-right",
+      //     style: {
+      //       background: "",
+      //       color: "red",
+      //     },
+      //   });
+      // }
+    }
+  };
+
+  
+  const handleLogin = async (e) => {
+    setError("");
+    e.preventDefault();
+
+    axiosInstance.post('api/login', formData, {
+      withCredentials: true,
+    }).then(res => {
+
+      if (res.data.status == 200) {
+        // router.push("/newsfeed");
+
+
+        // setCookiesAuthRender(res.data)
+        if (typeof window !== "undefined") {
+
+          localStorage.setItem('refreshToken', res.data.refreshToken);
+          localStorage.setItem('userInfo', JSON.stringify(res.data.user));
+          localStorage.setItem('fullname', res.data.user[0].first_name + ' ' + res.data.user[0].last_name);
+          localStorage.setItem('username', res.data.user[0].username);
+          localStorage.setItem('userId', res.data.user[0]._id);
+        }
+
+        // setTimeout(() => {
+        //   window.location.reload();
+        // }, 3500)
+
+
+        // if (typeof window === "undefined") {
+        //   // Redirect to the newsfeed page if the login is successful
+        //   return {
+        //     redirect: {
+        //       destination: "/newsfeed",
+        //       permanent: false,
+        //     },
+        //   };
+        // }
+        window.location.replace("/newsfeed");
+        // window.location.reload();
+
+
+      } else if (res.data.status == 401) {
+        toast.error("Login failed. Please check your email and password.", {
+          position: "top-right",
+          style: {
+            background: "white",
+            color: "black",
+          },
+        });
+      }
+      else {
+        toast.error("Login failed. Invalid Credentials.", {
+          position: "top-right",
+          style: {
+            background: "white",
+            color: "black",
+          },
+        });
+      }
+    })
+
+
+  };
+
   return (
     <div>
       <div>
@@ -38,6 +274,7 @@ const page = () => {
                         type='name'
                         placeholder='enter your full name'
                         alt=''
+                        required
                       />
                     </div>
                   </div>
@@ -78,10 +315,58 @@ const page = () => {
                         className='logSign-input'
                         type='email'
                         placeholder='enter your email'
+                        required
                         alt=''
                       />
                     </div>
                   </div>
+
+                  <div className='login-input-lebl'>
+                    <lebel className='logsign-lebel'>Mobile Number</lebel>
+                    <div className='logSign-inp-div'>
+                      <span>
+                        <svg
+                          xmlns='http://www.w3.org/2000/svg'
+                          width='24'
+                          height='24'
+                          viewBox='0 0 24 24'
+                          fill='none'>
+                          <g clip-path='url(#clip0_138_540)'>
+                            <path
+                              d='M19 5H5C3.89543 5 3 5.89543 3 7V17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V7C21 5.89543 20.1046 5 19 5Z'
+                              stroke='#156CFA'
+                              stroke-width='1.5'
+                              stroke-linecap='round'
+                              stroke-linejoin='round'
+                            />
+                            <path
+                              d='M3 7L12 13L21 7'
+                              stroke='#156CFA'
+                              stroke-width='1.5'
+                              stroke-linecap='round'
+                              stroke-linejoin='round'
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id='clip0_138_540'>
+                              <rect width='24' height='24' fill='white' />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </span>
+                      <input
+                        className='logSign-input'
+                        type='email'
+                        placeholder='Enter Your Mobile Number'
+                        alt=''
+                        required
+                      />
+                    </div>
+                  </div>
+
+
+
+
                   <div className='login-input-lebl'>
                     <lebel className='logsign-lebel'>Password</lebel>
                     <div className='logSign-inp-div'>
@@ -103,6 +388,7 @@ const page = () => {
                         type='password'
                         placeholder='enter your password'
                         alt=''
+                        required
                       />
                     </div>
                   </div>
@@ -136,6 +422,7 @@ const page = () => {
                       type='checkbox'
                       value=''
                       id='flexCheckDefault'
+                      required
                     />
                     <lebel>
                       I agree to the <strong>terms and conditions</strong>
