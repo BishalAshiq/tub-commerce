@@ -68,7 +68,11 @@ const Footer = () => {
                     <strong>Subscribe</strong>
                   </p>
                   <div>
-                    <input type='email' placeholder='Email address' />
+                    <input
+                      className='footer-Inputs'
+                      type='email'
+                      placeholder='Email address'
+                    />
                     <span>
                       <svg
                         xmlns='http://www.w3.org/2000/svg'

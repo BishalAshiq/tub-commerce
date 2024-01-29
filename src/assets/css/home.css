@@ -1265,7 +1265,11 @@
 }
 .footer-imgs {
   width: 20px;
-  height: 2vh;
+  height: 50px;
+}
+.footer-Inputs {
+  height: 42px;
+  outline: none;
 }
 
 @media only screen and (max-width: 1366px) {
