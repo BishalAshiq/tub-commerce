@@ -11,6 +11,9 @@ import Image from "next/image";
 import ProductInformation from "@/component/ProductsAll/ProductInformation";
 import { useParams } from "next/navigation";
 import axiosInstance from "@/utils/axios";
+import { useDispatch } from "react-redux";
+import { addToCartFn } from "@/redux/features/cart/cartSlice";
+import toast from "react-hot-toast";
 
 const page = () => {
   const params = useParams();
@@ -250,7 +253,12 @@ const page = () => {
                       +
                     </button>
                   </div>
-                  <button className='add-to-cart'>Add to cart</button>
+                  <button
+                    type='button'
+                    className='product-add-to-cart'
+                    onClick={handleAddToCart}>
+                    Add to cart
+                  </button>
                 </div>
 
                 <div className='pro-che-aWhi-div'>
