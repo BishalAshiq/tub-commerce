@@ -656,7 +656,7 @@ const TopBruderToys = () => {
                     </div>
                   </div>
                 ))}
-              <div className='Top-single-toy'>
+              {/* <div className='Top-single-toy'>
                 <div className='tbrudal-img-div'>
                   <img
                     className='categories-img'
@@ -746,7 +746,7 @@ const TopBruderToys = () => {
                 <div className='ShopTop-view'>
                   <span className='Top-span'>Dorongan</span>
                 </div>
-              </div>
+              </div> */}
               {/* Add more slides as needed */}
             </Slider>
             <div className='buttons-left-right-div'>
