@@ -14,7 +14,26 @@ import axiosInstance from "@/utils/axios";
 
 const page = () => {
   const params = useParams();
+
+  const [product, setProduct] = useState(null);
   const [count, setCount] = useState(0);
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  useEffect(() => {
+    axiosInstance.get("/products/" + params.product_id).then((res) => {
+      setProduct(res.data.data[0]);
+    });
+  }, [params.product_id]);
+
+  useEffect(() => {
+    if (product && product.thumbnail_image) {
+      setSelectedImage(product.thumbnail_image);
+    }
+  }, [product]);
+
+  const handleSmallImageClick = (imagePath) => {
+    setSelectedImage(imagePath);
+  };
 
   const incrementCount = () => {
     setCount((prevCount) => prevCount + 1);
@@ -25,19 +44,6 @@ const page = () => {
       setCount((prevCount) => prevCount - 1);
     }
   };
-
-  const [product, setProduct] = useState(null);
-
-  useEffect(() => {
-    axiosInstance.get('/products/' + params.product_id).then((res) => {
-      setProduct(res.data.data[0]);
-    })
-  }, [])
-
-
-
-
-
 
   return (
     <div>
@@ -51,14 +57,14 @@ const page = () => {
               <div className='row'>
                 <div className='col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2'>
                   <div className='singl-small-full-product-div'>
-                    {
-                      product?.photos.length > 0 &&
+                    {product?.photos.length > 0 &&
                       product.photos.map((item) => (
-                        <div className='singl-small-img-product-div'>
+                        <div
+                          className='singl-small-img-product-div'
+                          onClick={() => handleSmallImageClick(item.path)}>
                           <img src={item.path} alt='' />
                         </div>
-                      ))
-                    }
+                      ))}
 
                     {/* <div className='singl-small-img-product-div'>
                       <img src={singleProductptwo.src} alt='' />
@@ -78,7 +84,11 @@ const page = () => {
                   <div className='singl-big-product-div'>
                     <img
                       className='singl-big-product'
-                      src={product?.thumbnail_image}
+                      src={
+                        selectedImage ||
+                        (product && product.thumbnail_image) ||
+                        ""
+                      }
                       alt=''
                     />
                   </div>
@@ -87,9 +97,7 @@ const page = () => {
             </div>
             <div className='col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5'>
               <div>
-                <h4 className='product-estab-tags'>
-                  {product?.name}
-                </h4>
+                <h4 className='product-estab-tags'>{product?.name}</h4>
                 <p className='product-estab-text'>{product?.brand?.name}</p>
 
                 <span className='ong-estab-review'>
@@ -130,7 +138,10 @@ const page = () => {
                     <div className='ong-estab-prcolSiz'>Size:</div>
                   </div>
                   <div className='col-11 col-sm-11 col-md-11 col-lg-11 col-xl-11 '>
-                    <div className='price-number'>  {product?.stroked_price}</div>
+                    <div className='price-number'>
+                      {" "}
+                      {product?.stroked_price}
+                    </div>
                     <div>
                       <span>
                         <svg
