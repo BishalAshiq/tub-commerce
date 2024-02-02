@@ -7,23 +7,19 @@
 
 .banner-full-div {
   /* filter: blur(148.0087432861328px); */
-  background: linear-gradient(to right Bottom,
-      white,
-      /* Additional gradient colors */
-      #51b4fa,
-      #dcf0fd,
-      #ffffff,
-      #05c8be,
-      #ebfaf9,
-      /* #51b4fa, */
-      #ebfaf9,
-      /* #05c8be,
-    #05c8be, */
-      /* Bottom side with white color */
-      white,
-      white
-      /* white */
-    );
+  background: linear-gradient(
+    to right Bottom,
+    white,
+    /* Additional gradient colors */ #51b4fa,
+    #dcf0fd,
+    #ffffff,
+    #05c8be,
+    #ebfaf9,
+    /* #51b4fa, */ #ebfaf9,
+    /* #05c8be,
+    #05c8be, */ /* Bottom side with white color */ white,
+    white /* white */
+  );
 
   padding: 30px 0 0 0;
   height: 100%;
@@ -70,10 +66,12 @@
 }
 
 .banner-text-toys {
-  background: linear-gradient(91deg,
-      #02d4b6 66.57%,
-      #03b3fa 76.71%,
-      #1663f9 84.6%);
+  background: linear-gradient(
+    91deg,
+    #02d4b6 66.57%,
+    #03b3fa 76.71%,
+    #1663f9 84.6%
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -172,15 +170,12 @@
   gap: 10px;
   align-items: center;
 }
-<<<<<<< HEAD
 .nav-tag-img-div {
   display: flex;
   justify-content: start;
   gap: 10px;
-  /* align-items: center; */
+  align-items: center;
 }
-=======
->>>>>>> 7c2cbe13c9361152dba9184072947bca2fbf66d5
 
 .TUB {
   color: #000;
@@ -195,7 +190,6 @@
   line-height: 42.824px;
   /* 140% */
 }
-<<<<<<< HEAD
 .NavImage {
   width: 40px;
   height: 32px;
@@ -232,10 +226,7 @@
   font-weight: 600;
   line-height: 30px; /* 166.667% */
 }
-=======
-
->>>>>>> 7c2cbe13c9361152dba9184072947bca2fbf66d5
-.pop-all-btn {
+=======>>>>>>>7c2cbe13c9361152dba9184072947bca2fbf66d5 .pop-all-btn {
   display: inline-flex;
   padding: 10px 32px;
   justify-content: center;
@@ -494,7 +485,8 @@
   margin: 5% 0 0 0;
 }
 
-.brudal-toy-img1-div {}
+.brudal-toy-img1-div {
+}
 
 .brudal-toy-Img-div {
   display: flex;
@@ -573,18 +565,20 @@
 }
 
 .backgrad {
-  background: linear-gradient(to top right,
-      #51b4fa,
-      #dcf0fd,
-      #dcf0fd,
-      #ffffff,
-      #ffffff,
-      #ffffff,
-      #ffffff,
-      #ffffff,
-      #ffffff,
-      #ffffff,
-      #ffffff);
+  background: linear-gradient(
+    to top right,
+    #51b4fa,
+    #dcf0fd,
+    #dcf0fd,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #ffffff
+  );
   padding: 20px 0 40px 0;
   /* border: 1px solid gray; */
 }
@@ -624,20 +618,22 @@
 }
 
 .Categ-Home-full-div {
-  background: linear-gradient(to bottom right,
-      #51b4fa,
-      #dcf0fd,
-      #dcf0fd,
-      #ffffff,
-      #ffffff,
-      #ffffff,
-      #ffffff,
-      #ffffff,
-      #ffffff,
-      #ffffff,
-      #ffffff,
-      #ffffff,
-      #ffffff);
+  background: linear-gradient(
+    to bottom right,
+    #51b4fa,
+    #dcf0fd,
+    #dcf0fd,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #ffffff
+  );
 }
 
 .top-brud-tag {
@@ -763,24 +759,28 @@
   margin: 3% 0;
   /* border-top-right-radius: 10%; */
   /* border-top-right-radius: 10%; */
-  background: linear-gradient(to right,
-      white,
-      white,
-      white,
-      #54f7c933,
-      #a3f8e0b2);
+  background: linear-gradient(
+    to right,
+    white,
+    white,
+    white,
+    #54f7c933,
+    #a3f8e0b2
+  );
 }
 
 .establishe-full-div {
   padding: 10% 0 6% 0;
   border-top-right-radius: 10%;
   border-top-right-radius: 10%;
-  background: linear-gradient(to left,
-      white,
-      white,
-      white,
-      #54f7c933,
-      #a3f8e0b2);
+  background: linear-gradient(
+    to left,
+    white,
+    white,
+    white,
+    #54f7c933,
+    #a3f8e0b2
+  );
 }
 
 .long-estabilize-side-pic-full-div {
@@ -926,8 +926,6 @@
   flex-shrink: 0;
 }
 
-
-
 .add-to-cart {
   border-radius: 32.836px;
   background: var(--button, linear-gradient(90deg, #02d4b6 0%, #1663f9 100%));
@@ -944,7 +942,8 @@
   align-items: center;
 }
 
-.feather-back {}
+.feather-back {
+}
 
 .featured-full-div {
   margin: 4% 0 4% 0;
@@ -1032,19 +1031,21 @@
 
 .best-full-div {
   /* margin: 10% 0 5% 0; */
-  background: linear-gradient(to left top,
-      white,
-      white,
-      white,
-      #7ac3f8,
-      #ddf0fd,
-      white,
-      white,
-      white,
-      white,
-      white,
-      #54f7c936,
-      #a3f8e0bb);
+  background: linear-gradient(
+    to left top,
+    white,
+    white,
+    white,
+    #7ac3f8,
+    #ddf0fd,
+    white,
+    white,
+    white,
+    white,
+    white,
+    #54f7c936,
+    #a3f8e0bb
+  );
 }
 
 .product-single-header-div {
@@ -1059,18 +1060,18 @@
 .black-best-div {
   margin: 5% 0 0 0;
   padding: 5% 0 5% 0;
-  background: linear-gradient(to right,
-      white,
-      /* Additional gradient colors */
-      /* Additional gradient colors */
-      /* Additional gradient colors */
-      white,
-      #ffffff,
-      #ffffff,
-      #ffffff,
-      #abd9fc00,
-      #e5f3fd,
-      #51b4fa44);
+  background: linear-gradient(
+    to right,
+    white,
+    /* Additional gradient colors */ /* Additional gradient colors */
+      /* Additional gradient colors */ white,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #abd9fc00,
+    #e5f3fd,
+    #51b4fa44
+  );
 }
 
 .black-look-p {
@@ -1328,16 +1329,17 @@
 .discount-banner-div {
   margin: 0 0 0 0;
   padding: 6% 0 12% 0;
-  background: linear-gradient(to bottom,
-      white,
-      white,
-      white,
-      white,
-      /* white, */
-      #51b4fa,
-      #51b4fa,
-      #01de9e,
-      #05c8be);
+  background: linear-gradient(
+    to bottom,
+    white,
+    white,
+    white,
+    white,
+    /* white, */ #51b4fa,
+    #51b4fa,
+    #01de9e,
+    #05c8be
+  );
   /* border-radius: 20px; */
 }
 
@@ -1439,28 +1441,25 @@
 
   .banner-full-div {
     /* filter: blur(148.0087432861328px); */
-    background: linear-gradient(to right Bottom,
-        white,
-        /* Additional gradient colors */
-        #51b4fa,
-        /* Additional gradient colors */
-        #51b4fa,
-        /* Additional gradient colors */
-        #51b4fa,
-        #dcf0fd,
-        #ffffff,
-        #ffffff,
-        #05c8be,
-        #05c8be,
-        #05c8be,
-        #ebfaf9,
-        #ebfaf9,
-        /* #05c8be,
-      #05c8be, */
-        /* Bottom side with white color */
-        white,
-        white,
-        white);
+    background: linear-gradient(
+      to right Bottom,
+      white,
+      /* Additional gradient colors */ #51b4fa,
+      /* Additional gradient colors */ #51b4fa,
+      /* Additional gradient colors */ #51b4fa,
+      #dcf0fd,
+      #ffffff,
+      #ffffff,
+      #05c8be,
+      #05c8be,
+      #05c8be,
+      #ebfaf9,
+      #ebfaf9,
+      /* #05c8be,
+      #05c8be, */ /* Bottom side with white color */ white,
+      white,
+      white
+    );
     padding: 30px 0;
     height: 100%;
     /* background-image: linear-gradient(to right, #51b4fa, white, #05c8be); */

@@ -19,7 +19,6 @@ const page = () => {
   const params = useParams();
 
   const [product, setProduct] = useState(null);
-  const [count, setCount] = useState(0);
   const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
@@ -37,6 +36,7 @@ const page = () => {
   const handleSmallImageClick = (imagePath) => {
     setSelectedImage(imagePath);
   };
+  const [count, setCount] = useState(1);
 
   const incrementCount = () => {
     setCount((prevCount) => prevCount + 1);
@@ -46,6 +46,20 @@ const page = () => {
     if (count > 0) {
       setCount((prevCount) => prevCount - 1);
     }
+  };
+
+  useEffect(() => {
+    axiosInstance.get("/products/" + params.product_id).then((res) => {
+      setProduct(res.data.data[0]);
+    });
+  }, []);
+
+  const dispatch = useDispatch();
+
+  const handleAddToCart = (e) => {
+    e.preventDefault();
+    dispatch(addToCartFn(product));
+    toast.success("Product added to cart");
   };
 
   return (
