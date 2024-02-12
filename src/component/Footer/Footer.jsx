@@ -12,52 +12,88 @@ const Footer = () => {
           <div className='row'>
             <div className='col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3'>
               <div className='foter-tag-img-div'>
-                <img src={footerImg.src} alt='' />
+                <img className='tub-img-footer' src={footerImg.src} alt='' />
                 <span className='TUB'>TUB</span>
               </div>
             </div>
             <div className='col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2'>
               <div>
-                <div>
+                <div className='f-anchortext-div'>
                   <p>
                     <strong>Product</strong>
                   </p>
-                  <p>Toys</p>
-                  <p>Age</p>
-                  <p>Category</p>
-                  <p>All Products</p>
-                  <p>Listing</p>
-                  <p>Pricing</p>
+                  <a href='#' className='f-anchortext'>
+                    Toys
+                  </a>
+                  <a href='#' className='f-anchortext'>
+                    Age
+                  </a>
+                  <a href='#' className='f-anchortext'>
+                    Category
+                  </a>
+                  <a href='#' className='f-anchortext'>
+                    All Products
+                  </a>
+                  <a href='#' className='f-anchortext'>
+                    Listing
+                  </a>
+                  <a href='#' className='f-anchortext'>
+                    Pricing
+                  </a>
                 </div>
               </div>
             </div>
             <div className='col-12 col-sm-6 col-md-2 col-lg-2 col-xl-2'>
               <div>
-                <div>
+                <div className='f-anchortext-div'>
                   <p>
                     <strong>For Customer</strong>
                   </p>
-                  <p>Docs</p>
-                  <p>Knowledge Base</p>
-                  <p>System Status</p>
-                  <p>All Products</p>
-                  <p>Tutorials</p>
-                  <p>Security</p>
+                  <a href='#' className='f-anchortext'>
+                    Docs
+                  </a>
+                  <a href='#' className='f-anchortext'>
+                    Knowledge Base
+                  </a>
+                  <a href='#' className='f-anchortext'>
+                    System Status
+                  </a>
+                  <a href='#' className='f-anchortext'>
+                    All Products
+                  </a>
+                  <a href='#' className='f-anchortext'>
+                    Tutorials
+                  </a>
+                  <a href='#' className='f-anchortext'>
+                    Security
+                  </a>
                 </div>
               </div>
             </div>
             <div className='col-12 col-sm-6 col-md-2 col-lg-2 col-xl-2'>
               <div>
-                <div>
+                <div className='f-anchortext-div'>
                   <p>
                     <strong>Resources</strong>
                   </p>
-                  <p>About</p>
-                  <p>Guideline</p>
-                  <p>Rating</p>
-                  <p>All Products</p>
-                  <p>Brands</p>
-                  <p>Contact Us</p>
+                  <a href='#' className='f-anchortext'>
+                    About
+                  </a>
+                  <a href='#' className='f-anchortext'>
+                    Guideline
+                  </a>
+                  <a href='#' className='f-anchortext'>
+                    Rating
+                  </a>
+                  <a href='#' className='f-anchortext'>
+                    All Products
+                  </a>
+                  <a href='#' className='f-anchortext'>
+                    Brands
+                  </a>
+                  <a href='#' className='f-anchortext'>
+                    Contact Us
+                  </a>
                 </div>
               </div>
             </div>
@@ -67,8 +103,12 @@ const Footer = () => {
                   <p>
                     <strong>Subscribe</strong>
                   </p>
-                  <div>
-                    <input type='email' placeholder='Email address' />
+                  <div className='f-subscribe-inputs-div'>
+                    <input
+                      className='footer-Inputs'
+                      type='email'
+                      placeholder='Email address'
+                    />
                     <span>
                       <svg
                         xmlns='http://www.w3.org/2000/svg'
@@ -102,9 +142,9 @@ const Footer = () => {
                       </svg>
                     </span>
                   </div>
-                  <div>
-                    <p>8/10</p>
-                    <p>Overall rating</p>
+                  <div className='footer-ratio-div'>
+                    <span className='footer-ratio-text'>8/10</span>
+                    <span className='footer-ratio-text'>Overall rating</span>
                     <svg
                       xmlns='http://www.w3.org/2000/svg'
                       width='104'
@@ -138,22 +178,28 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <hr />
+        <hr className='hrfs' />
 
         <div className='container'>
           <div className='row'>
             <div className='col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4'>
-              <Link href='#'>Platform</Link>
-              <Link href='#'>Products</Link>
-              <Link href='#'>Brands</Link>
+              <div className='footer-platForm-anchor'>
+                <Link href='#'>Platform</Link>
+                <Link href='#'>Products</Link>
+                <Link href='#'>Brands</Link>
+              </div>
             </div>
             <div className='col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4'>
-              © 2023 UTB I All Rights Reserved
+              <p className='reserved-text'>© 2023 UTB I All Rights Reserved</p>
             </div>
             <div className='col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4'>
-              <div>
-                <img className='footer-imgs' src={footericon.src} alt='' />
-                <img className='footer-imgs' src={footericont.src} alt='' />
+              <div className='footer-imgs-full-div'>
+                <div className='footer-imgs-div'>
+                  <img className='footer-imgs' src={footericon.src} alt='' />
+                </div>
+                <div className='footer-imgs-div'>
+                  <img className='footer-imgs' src={footericont.src} alt='' />
+                </div>
               </div>
             </div>
           </div>
