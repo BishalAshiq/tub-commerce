@@ -966,6 +966,7 @@
 .featured-tags-div {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin: 0 0 2% 0;
 }
 
@@ -1658,6 +1659,13 @@
 }
 
 @media only screen and (max-width: 500px) {
+  /* body {
+    overflow-x: hidden;
+  }
+   */
+  .banner-text-div {
+    margin: 0 -30px 0 -145px;
+  }
   .banner-icon {
     display: flex;
     width: 60px;
@@ -1687,10 +1695,105 @@
     visibility: hidden;
   }
   .banner-search-input {
-    margin: 0 90px 0 0;
+    margin: 0 132px 0 0;
   }
   .find-p {
     visibility: hidden;
+  }
+  .brudal-toy-imgs {
+    width: 49%;
+    height: 241px;
+    margin-left: -30px;
+  }
+  .top-brud-textp {
+    width: 340px;
+    text-align: center;
+    margin: 0 0 80px 0;
+  }
+  .brudal-toy-head-text {
+    margin: 20px;
+  }
+  .top-brud-tag {
+    color: var(--Dark, #1f2326);
+
+    /* H2 */
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 60px;
+    /* 120% */
+  }
+  .featured-tags-btn {
+    height: 2vh;
+  }
+  .featured-tags-btn-two {
+    display: flex;
+  }
+  .w-y-clint-p {
+    color: var(--dark-1, #81879d);
+    text-align: center;
+
+    /* Peragraph 1 */
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    width: 100%;
+    line-height: 28px;
+    /* 140% */
+  }
+  .w-y-clint-h6 {
+    color: var(--Dark, #1f2326);
+
+    /* H2 */
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 60px;
+    /* 120% */
+  }
+  .clients-text {
+    color: #01de9e;
+
+    /* H2 */
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 60px;
+  }
+  .client-review-mob {
+    margin: 0 0 20px 0;
+  }
+  .foter-tag-img-div {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    margin: 0 0 20px 0;
+  }
+  .footer-search-div {
+    display: grid;
+    place-items: center;
+    margin: 20px 0 0 0;
+  }
+  .add-to-cart {
+    position: fixed;
+    bottom: 20px;
+    right: 70px;
+    margin: 0 0 10px 0;
+    z-index: 999;
+    background-color: white;
+  }
+  .footer-ratio-div {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 30px 0 0 0;
   }
 }
 @media only screen and (max-width: 760px) {
