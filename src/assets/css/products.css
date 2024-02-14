@@ -73,7 +73,6 @@
   flex-shrink: 0;
 }
 
-
 .product-add-to-cart {
   border-radius: 32.836px;
   border-radius: 30px;
@@ -657,5 +656,25 @@ img {
   .AllProducts-div {
     margin: 9% 0 0 0;
     padding: 2% 0% 5% 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .AllProducts-div {
+    width: 110%;
+    margin: 15px 0 0 0;
+  }
+  .AllProduct-Caard-div {
+    display: grid;
+    gap: 0;
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+  }
+  .all-filter-header-div {
+    display: flex;
+    align-items: center;
+  }
+  .show-pro-p {
+    margin: 2px 0 0 0;
   }
 }

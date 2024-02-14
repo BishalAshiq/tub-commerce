@@ -199,7 +199,7 @@
   .Sign-full-div {
     margin: 10% 0 4% 0;
     padding: 0 0 10% 0;
-    height: 150vh;
+    height: 160vh;
     background: linear-gradient(
       to bottom,
       white,
@@ -211,6 +211,9 @@
       rgba(5, 200, 190, 1),
       rgba(5, 200, 190, 1)
     );
+  }
+  .Sig-full-div {
+    height: 155vh;
   }
   .login-full-div {
     margin: 10% 0 0 0;
@@ -233,5 +236,61 @@
   .loginSign-logo {
     width: 100%;
     margin: 0 0 0 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .Sign-full-div {
+    height: 214vh;
+    width: 132%;
+  }
+  .footer-div {
+    width: 110%;
+  }
+  .loginSign-logo-div {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .loginSign-div {
+    width: 100%;
+    margin: 20px 0 0 0;
+  }
+  .login-full-div {
+    width: 100%;
+  }
+  .Sig-full-div {
+    height: 112vh;
+  }
+
+  .log-full-div {
+    /* border: 1px solid gray; */
+    padding: 20px 30px;
+    width: 100%;
+    height: 612px;
+    flex-shrink: 0;
+    /* border-radius: 20px; */
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0px 39px 104px 0px rgba(0, 94, 255, 0.09);
+  }
+  .social-logSig-div {
+    display: flex;
+    gap: 50px;
+    border-radius: 6px;
+    border: 1px solid #e8e8e8;
+    background: #fff;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.06);
+    padding: 10px;
+    margin: 10px 0;
+  }
+  .socialapp-logSig-div {
+    display: flex;
+    gap: 50px;
+    border-radius: 6px;
+    border: 1px solid #e8e8e8;
+    background: #000000;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.06);
+    padding: 10px;
+    margin: 10px 0;
   }
 }
