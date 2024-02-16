@@ -5,6 +5,8 @@ import logSignLogo from "../../../public/logiSignUpLogo.png";
 import GoogG from "../../../public/GoogG.png";
 import Footer from "@/component/Footer/Footer";
 import Link from "next/link";
+import axiosInstance from "@/utils/axios";
+import toast from "react-hot-toast";
 
 const page = () => {
 
@@ -12,6 +14,7 @@ const page = () => {
     name: "",
     email: "",
     mobile_number: "",
+    password: "",
     location: "",
   });
 
@@ -19,9 +22,6 @@ const page = () => {
   const handleInputChange = (e) => {
     const { name, value } = e.target;
 
-    // if (name === "password") {
-    //   checkPasswordStrength(value);
-    // }
 
     setFormData({
       ...formData,
@@ -32,149 +32,26 @@ const page = () => {
 
   const submitRegistration = (e) => {
     e.preventDefault();
-    if (registerInputState.first_name === "") {
-      toast("First name is required", {
-        type: "error",
-        position: "top-right",
-        style: {
-          background: "",
-          color: "red",
-        },
-      });
+    if (formData.name == "") {
+      toast.error("Name added is required");
     }
-    else if (registerInputState.last_name === "") {
-      toast("Last name is required", {
-        type: "error",
-        position: "top-right",
-        style: {
-          background: "",
-          color: "red",
-        },
-      });
+    else if (formData.mobile_number == "") {
+      toast.error("Mobile Number is required");
     }
-    else if (registerInputState.email === "") {
-      toast("Email is required", {
-        type: "error",
-        position: "top-right",
-        style: {
-          background: "",
-          color: "red",
-        },
-      });
+    else if (formData.email == "") {
+      toast.error("Email added is required");
     }
-    else if (registerInputState.day === "" || registerInputState.month === "" || registerInputState.year === "") {
-      toast("Date is invalid.Provide date all required", {
-        type: "error",
-        position: "top-right",
-        style: {
-          background: "",
-          color: "red",
-        },
-      });
+    else if (formData.password == "") {
+      toast.error("Password added is required");
     }
-    else if (registerInputState.password === "") {
-      toast("Please provide password", {
-        type: "error",
-        position: "top-right",
-        style: {
-          background: "",
-          color: "red",
-        },
-      });
-    }
-    else if (isValid === false) {
-      toast("Password must contain at least one uppercase letter, one lowercase letter, one number, and one symbol", {
-        type: "error",
-        position: "top-right",
-        style: {
-          background: "",
-          color: "red",
-        },
-      });
-    }
-    else if (password.length < 8) {
-      toast("Password at least 8 characters should be long", {
-        type: "error",
-        position: "top-right",
-        style: {
-          background: "",
-          color: "red",
-        },
-      });
-    }
-
-    else if (registerInputState.gender === "") {
-      toast(" Gender is required", {
-        type: "error",
-        position: "top-right",
-        style: {
-          background: "",
-          color: "red",
-        },
-      });
-    }
-    else if (registerInputState.isAccept === false) {
-      toast("Please checked accept the terms and conditions", {
-        type: "error",
-        position: "top-right",
-        style: {
-          background: "",
-          color: "red",
-        },
-      });
-    }
-    // if (strength >= 60 && registerInputState.password.length >= 8) { // Check both criteria
     else {
-      axiosInstance.post(`api/signup`, registerInputState).then((res) => {
+      axiosInstance.post(`/auth/signup`, formData).then((res) => {
         if (res.data.status === 200) {
-          toast(res.data.message, {
-            type: "success",
-            position: "top-right",
-          });
-          router.push("/login");
-        } else if (res.data.status === 400) {
-          toast(res.data.error, {
-            type: "error",
-            position: "top-right",
-            style: {
-              background: "",
-              color: "red",
-            },
-          });
-        } else if (res.data.status === 404) {
-          console.log("yes 404", res.data.errors);
-          res.data.errors.forEach((item, i) => {
-            return toast(item.msg, {
-              type: "error",
-              position: "top-right",
-              style: {
-                background: "",
-                color: "red",
-              },
-            });
-          });
+          toast.success(res.data.message);
         } else {
-          toast(res.data.error, {
-            type: "error",
-            position: "top-right",
-            style: {
-              background: "",
-              color: "red",
-            },
-          });
+          toast.error("Something went wrong!");
         }
       });
-      // }
-      // else {
-      //   toast("Password must be both strong and at least 8 characters in length.", {
-      //     type: "error",
-      //     position: "top-right",
-      //     style: {
-      //       background: "",
-      //       color: "red",
-      //     },
-      //   });
-      // }
     }
   };
 
@@ -278,7 +155,7 @@ const page = () => {
                         alt=''
                         name="name"
                         onChange={handleInputChange}
-                        required
+
                       />
                     </div>
                   </div>
@@ -319,7 +196,7 @@ const page = () => {
                         className='logSign-input'
                         type='email'
                         placeholder='Enter your email'
-                        required
+
                         name="email"
                         onChange={handleInputChange}
                         alt=''
@@ -362,12 +239,12 @@ const page = () => {
                       </span>
                       <input
                         className='logSign-input'
-                        type='email'
+                        type='text'
                         placeholder='Enter Your Mobile Number'
                         alt=''
                         onChange={handleInputChange}
                         name="mobile_number"
-                        required
+
                       />
                     </div>
                   </div>
@@ -398,7 +275,7 @@ const page = () => {
                         name="password"
                         onChange={handleInputChange}
                         alt=''
-                        required
+
                       />
                     </div>
                   </div>
@@ -420,7 +297,7 @@ const page = () => {
                       </span>
                       <input
                         className='logSign-input'
-                        type='email'
+                        type='text'
                         placeholder='Enter your location'
                         name="location"
                         onChange={handleInputChange}
@@ -434,7 +311,7 @@ const page = () => {
                       type='checkbox'
                       value=''
                       id='flexCheckDefault'
-                      required
+
                     />
                     <lebel>
                       I agree to the <strong>terms and conditions</strong>
