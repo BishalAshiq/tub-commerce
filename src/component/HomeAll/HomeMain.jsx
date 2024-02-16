@@ -1,18 +1,26 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import BleftIcon from "../../../public/Blefttoy.png";
 import BRightIcon from "../../../public/BRighttoy.png";
 import EcomBanner from "../../../public/e-comBanner.png";
 import PopularProducts from "./PopularProducts";
 import { useEffect } from "react";
 import AOS from "aos";
+import axiosInstance from "@/utils/axios";
 
 const Homebanner = () => {
+  const [banners, setBanners] = useState([]);
   useEffect(() => {
-    // Refresh AOS when the component updates (e.g., when new content is loaded)
     AOS.refresh();
+
+    axiosInstance.get('/sliders').then((res) => {
+      setBanners(res.data.data);
+    })
+
   }, []);
+
+  console.log(banners, banners.length);
 
   return (
     <div className=' banner-full-div'>
@@ -87,15 +95,21 @@ const Homebanner = () => {
                 aria-label='Slide 3'></button>
             </div>
             <div className='carousel-inner'>
-              <div className='carousel-item active caro-img-div'>
+              {
+                banners.length > 0 &&
+                  banners.map((item) => (
+                    <div className='carousel-item active caro-img-div'>
+                      <img src={item.photo} className='caro-img' alt='...' />
+                    </div>
+                  ))
+              }
+
+              {/* <div className='carousel-item caro-img-div'>
                 <img src={EcomBanner.src} className='caro-img' alt='...' />
               </div>
               <div className='carousel-item caro-img-div'>
                 <img src={EcomBanner.src} className='caro-img' alt='...' />
-              </div>
-              <div className='carousel-item caro-img-div'>
-                <img src={EcomBanner.src} className='caro-img' alt='...' />
-              </div>
+              </div> */}
             </div>
             <button
               class='carousel-control-prev'

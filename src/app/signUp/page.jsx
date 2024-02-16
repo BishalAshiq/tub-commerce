@@ -19,12 +19,12 @@ const page = () => {
   const handleInputChange = (e) => {
     const { name, value } = e.target;
 
-    if (name === "password") {
-      checkPasswordStrength(value);
-    }
+    // if (name === "password") {
+    //   checkPasswordStrength(value);
+    // }
 
-    setRegisterInputState({
-      ...registerInputState,
+    setFormData({
+      ...formData,
       [name]: value,
     });
   };
@@ -178,7 +178,7 @@ const page = () => {
     }
   };
 
-  
+
   const handleLogin = async (e) => {
     setError("");
     e.preventDefault();
@@ -242,6 +242,8 @@ const page = () => {
 
   };
 
+  console.log(formData);
+
   return (
     <div>
       <div>
@@ -252,7 +254,7 @@ const page = () => {
           <div className='row'>
             <div className='col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5'>
               <div className='Sig-full-div'>
-                <form>
+                <form onSubmit={submitRegistration} >
                   <div className='login-input-lebl'>
                     <lebel className='logsign-lebel'>Name</lebel>
                     <div className='logSign-inp-div'>
@@ -271,9 +273,11 @@ const page = () => {
                       </span>
                       <input
                         className='logSign-input'
-                        type='name'
-                        placeholder='enter your full name'
+                        type='text'
+                        placeholder='Enter your full name'
                         alt=''
+                        name="name"
+                        onChange={handleInputChange}
                         required
                       />
                     </div>
@@ -314,8 +318,10 @@ const page = () => {
                       <input
                         className='logSign-input'
                         type='email'
-                        placeholder='enter your email'
+                        placeholder='Enter your email'
                         required
+                        name="email"
+                        onChange={handleInputChange}
                         alt=''
                       />
                     </div>
@@ -359,6 +365,8 @@ const page = () => {
                         type='email'
                         placeholder='Enter Your Mobile Number'
                         alt=''
+                        onChange={handleInputChange}
+                        name="mobile_number"
                         required
                       />
                     </div>
@@ -386,7 +394,9 @@ const page = () => {
                       <input
                         className='logSign-input'
                         type='password'
-                        placeholder='enter your password'
+                        placeholder='Enter your password'
+                        name="password"
+                        onChange={handleInputChange}
                         alt=''
                         required
                       />
@@ -411,7 +421,9 @@ const page = () => {
                       <input
                         className='logSign-input'
                         type='email'
-                        placeholder='enter your email'
+                        placeholder='Enter your location'
+                        name="location"
+                        onChange={handleInputChange}
                         alt=''
                       />
                     </div>
