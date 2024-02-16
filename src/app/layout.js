@@ -11,6 +11,11 @@ import "slick-carousel/slick/slick-theme.css";
 import AddToCart from "@/component/CartFloating/AddToCart";
 import StoreProvider from "@/redux/provider";
 import { Toaster } from "react-hot-toast";
+import SwiperCore, { Navigation } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+
+SwiperCore.use([Navigation]);
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +29,6 @@ export default function RootLayout({ children }) {
     <html lang='en'>
       <StoreProvider>
         <body>
-
           {children}
           <AddToCart />
           <Toaster />

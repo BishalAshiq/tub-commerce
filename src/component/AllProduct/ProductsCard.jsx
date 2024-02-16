@@ -17,20 +17,19 @@ const ProductsCard = () => {
     setAge(event.target.value);
   };
 
-
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axiosInstance.get('/products?page=1').then((res) => {
+    axiosInstance.get("/products?page=1").then((res) => {
       setProducts(res.data.data);
       console.log("resd", res.data.data);
-    })
-  }, [])
+    });
+  }, []);
   return (
     <div>
       <div>
         <div className='all-filter-header-div'>
-          <p>Showing All 12 Results</p>
+          <p className='show-pro-p'>Showing All 12 Results</p>
           <div className='all-short-div'>
             <span>Sort By:</span>
             <FormControl sx={{ m: 1, minWidth: 120 }} size='small'>
@@ -55,39 +54,33 @@ const ProductsCard = () => {
 
         <div>
           <div className='AllProduct-Caard-div'>
-            {
-              products.length > 0 &&
+            {products.length > 0 &&
               products.map((item, i) => (
-
                 <div>
                   <div className='single-toy-div'>
                     <div className='toy-img-div'>
                       <div className='text-overlay'>
                         <div className='top-left-text'>
-                          {
-                            item.has_discount && (
-                              <>
-                                <span>
-                                  <svg
-                                    xmlns='http://www.w3.org/2000/svg'
-                                    width='7'
-                                    height='7'
-                                    viewBox='0 0 7 7'
-                                    fill='none'>
-                                    <circle
-                                      cx='3.52298'
-                                      cy='3.35312'
-                                      r='2.29935'
-                                      fill='#75C552'
-                                    />
-                                  </svg>
-                                </span>
-
-
-                                {item.discount}{" "}
-                              </>
-                            )
-                          }
+                          {item.has_discount && (
+                            <>
+                              <span>
+                                <svg
+                                  xmlns='http://www.w3.org/2000/svg'
+                                  width='7'
+                                  height='7'
+                                  viewBox='0 0 7 7'
+                                  fill='none'>
+                                  <circle
+                                    cx='3.52298'
+                                    cy='3.35312'
+                                    r='2.29935'
+                                    fill='#75C552'
+                                  />
+                                </svg>
+                              </span>
+                              {item.discount}{" "}
+                            </>
+                          )}
                         </div>
                         <div className='fil-top-right-text'>
                           <svg
@@ -110,7 +103,11 @@ const ProductsCard = () => {
                           </svg>
                         </div>
                       </div>
-                      <img className='toy-img' src={item.thumbnail_image} alt='' />
+                      <img
+                        className='toy-img'
+                        src={item.thumbnail_image}
+                        alt=''
+                      />
                     </div>
                     <div className='card-t-div'>
                       <span className='card-text'>{item.name}</span>
@@ -150,7 +147,10 @@ const ProductsCard = () => {
                     </div>
 
                     <div className='taka-view'>
-                      <span className='taka-view-span'> {item.stroked_price}</span>
+                      <span className='taka-view-span'>
+                        {" "}
+                        {item.stroked_price}
+                      </span>
                       {/* <span className='taka-view-span2'>
                     View Details
                     <span>
@@ -174,10 +174,7 @@ const ProductsCard = () => {
                     </div>
                   </div>
                 </div>
-              ))
-            }
-
-
+              ))}
           </div>
         </div>
       </div>

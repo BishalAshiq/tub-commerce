@@ -55,7 +55,7 @@ const Homebanner = () => {
                     />
                   </svg>
                 </span>
-                Find your product
+                <span className='find-p'> Find your product</span>
                 <div>
                   <input
                     className='banner-search-input'

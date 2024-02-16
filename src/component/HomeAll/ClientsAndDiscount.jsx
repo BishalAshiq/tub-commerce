@@ -11,6 +11,32 @@ const ClientsAndDiscount = () => {
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
     <div className=''>
@@ -59,7 +85,7 @@ const ClientsAndDiscount = () => {
             </div>
 
             <div>
-              <div>
+              <div className='client-review-mob'>
                 <Slider {...settings}>
                   <div className='card-diiiiv-full'>
                     <div className='row card-diiiiv'>
@@ -313,7 +339,11 @@ const ClientsAndDiscount = () => {
           <div className='row'>
             <div className='col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6'>
               <div className='discoount-banenr-img-div'>
-                <img src={Discount.src} alt='' />
+                <img
+                  className='discoount-banenr-img'
+                  src={Discount.src}
+                  alt=''
+                />
               </div>
             </div>
             <div className='col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6'>

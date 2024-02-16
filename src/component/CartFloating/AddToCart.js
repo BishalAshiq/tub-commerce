@@ -32,9 +32,12 @@ const AddToCart = () => {
   const dispatch = useDispatch();
 
   const cartItems = useSelector((state) => state.cart.items);
-  console.log("cartItems", cartItems)
+  console.log("cartItems", cartItems);
 
-  const subtotal = cartItems.reduce((acc, item) => acc + 1 * item?.calculable_price, 0);
+  const subtotal = cartItems.reduce(
+    (acc, item) => acc + 1 * item?.calculable_price,
+    0
+  );
   const discount = cartItems.reduce((acc, item) => acc + 1 * item?.discount, 0); // You may need to update this based on your logic
   const tax = cartItems.reduce((acc, item) => acc + 1 * item?.tax, 0); // You may need to update this based on your logic
   const total = subtotal - discount + tax;
@@ -60,8 +63,8 @@ const AddToCart = () => {
             <div className='col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6'>
               <div className='Add-to-cart-div'>
                 {cartItems.length === 0 && (
-                  <div>
-                    <h5 className="text-center">Your cart is empty</h5>
+                  <div className=' empty-card-div'>
+                    <h5 className=' empty-card'>Your cart is empty</h5>
                   </div>
                 )}
                 {cartItems.map((item, i) => (
@@ -101,7 +104,6 @@ const AddToCart = () => {
                       </svg>
                     </div>
                   </div>
-
                 ))}
                 {/* <div className='floating-add-cart-img-div'>
                   <img
@@ -185,7 +187,6 @@ const AddToCart = () => {
                     <p className='cart-amount-pTwo'>৳{subtotal}</p>
                   </div>
                 </Link>
-
               </div>
             </div>
           </div>
