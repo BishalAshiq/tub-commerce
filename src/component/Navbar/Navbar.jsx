@@ -5,10 +5,10 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <div>
+    <div className=''>
       <div className='fixed-top'>
         <nav className='navbar navbar-expand-lg navbar-full-div'>
-          <div className='container'>
+          <div className='container '>
             <div className='sssasd'>
               <Link href='/'>
                 <div className='nav-tag-img-div'>
@@ -18,7 +18,7 @@ const Navbar = () => {
               </Link>
             </div>
             <button
-              className='navbar-toggler'
+              className='navbar-toggler for-mob-nav'
               type='button'
               data-bs-toggle='collapse'
               data-bs-target='#navbarSupportedContent'
@@ -181,7 +181,7 @@ const Navbar = () => {
         </nav>
         <div className=' sec-navbar-links-acc-div '>
           <div className='container'>
-            <div className='row'>
+            <div className='row '>
               <div className='col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9'>
                 <div className='sec-navbar-links'>
                   <Link href='/'>All Toys</Link>
