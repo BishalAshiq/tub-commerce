@@ -70,7 +70,7 @@ const FeaturedMoreProduct = () => {
               </h3>
               <div className='featured-tags-btn-div'>
                 <button className='featured-tags-btn'>
-                  See all Products{" "}
+                 <span className="seeAllProdText"> See all Products{" "}</span>
                   <span>
                     <svg
                       xmlns='http://www.w3.org/2000/svg'
@@ -90,6 +90,7 @@ const FeaturedMoreProduct = () => {
                 <div className='featured-tags-btn-two'>
                   <button className='buttonr-l-r' onClick={play}>
                     <svg
+                    className="btn-next-svg"
                       xmlns='http://www.w3.org/2000/svg'
                       width='56'
                       height='56'
@@ -106,6 +107,7 @@ const FeaturedMoreProduct = () => {
                   </button>
                   <button className='buttonr-l-r' onClick={pause}>
                     <svg
+                    className="btn-next-svg"
                       xmlns='http://www.w3.org/2000/svg'
                       width='56'
                       height='56'

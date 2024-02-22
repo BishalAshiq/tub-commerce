@@ -43,25 +43,25 @@ const ClientsAndDiscount = () => {
       <div className='review-num-full-div'>
         <div className='container'>
           <div className='row'>
-            <div className='col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3'>
+            <div className='col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3'>
               <div className='review-num-div'>
                 <h3 className='review-number'>36+</h3>
                 <p className='review-numberp'>User Trust</p>
               </div>
             </div>
-            <div className='col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3'>
+            <div className='col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3'>
               <div className='review-num-div'>
                 <h3 className='review-number1'>42k+</h3>
                 <p className='review-numberp'>Brand Vision</p>
               </div>
             </div>
-            <div className='col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3'>
+            <div className='col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3'>
               <div className='review-num-div'>
                 <h3 className='review-number2'>8k+</h3>
                 <p className='review-numberp'>Achievement</p>
               </div>
             </div>
-            <div className='col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3'>
+            <div className='col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3'>
               <div className='review-num-div'>
                 <h3 className='review-number3'>20k+</h3>
                 <p className='review-numberp'>Products</p>
