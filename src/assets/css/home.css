@@ -1666,6 +1666,28 @@
     overflow-x: hidden;
   }
    */
+
+
+   .cart-dropdown {
+    position: absolute;
+    bottom: 0; /* Position at the bottom of the page */
+    right: 0;
+    left: 0;
+    top: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease; /* Add smooth transition */
+    transform: translateY(-100%); /* Initially move the dropdown off-screen */
+    z-index: 999; /* Ensure the dropdown is above other content */
+}
+.cart-dropdown.visible {
+    transform: translateY(0); /* Move the dropdown to the visible position */
+}
   .for-mob-nav {
     /* margin: 0 43px 0 0; */
   }
