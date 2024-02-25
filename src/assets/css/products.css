@@ -240,6 +240,7 @@
     #01de9e,
     #05c8be
   );
+  width: 100%;
   padding: 0 0 60px 0;
   /* margin: 0 0 10% 0; */
 }
@@ -664,6 +665,16 @@ img {
     width: 110%;
     margin: 15px 0 0 0;
   }
+  .singl-big-product-div{
+    width: 306px;
+    height: 716px;
+    margin: 0 0 27px 0;
+  }
+  .singl-big-product{
+    margin: 0px 0 0 72px;
+    width: 235px;
+    height: 209px;
+  }
   .AllProduct-Caard-div {
     display: grid;
     gap: 0;
@@ -676,5 +687,17 @@ img {
   }
   .show-pro-p {
     margin: 2px 0 0 0;
+  }
+
+
+  .reviwer-card-div {
+    display: grid;
+    place-items: center;
+    margin: 0 0 0 30px;
+    grid-template-columns: repeat(1, 1fr); /* Two columns with equal width */
+    gap: 16px;
+  }
+  .more-prod-fulldiv{
+    width: 426px;
   }
 }
