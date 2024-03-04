@@ -653,6 +653,59 @@ img {
   line-height: 30px; /* 150% */
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* Flash Sale Page -----¬¬~~__--==++ */
+.flash-sale-tags-div{
+  margin: 105px 0 20px 0;
+  padding: 20px 0;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: start;
+  /* border: 1px solid gray; */
+  background: linear-gradient(45deg, rgba(2, 212, 182, 1) 0%, rgba(22, 99, 249, 1) 100%);
+color: white;
+}
+
+.flash-sale-timezons{
+  background: white;
+  color: black;
+  padding: 0 5px;
+  border-radius: 5px;
+  font-size: 18px;
+  margin: 0 10px;
+  font-weight: 800;
+}
+.all-pro-btn-flash-div{
+  display: flex;
+  justify-content: center;
+  margin: 0 10px;
+}
+.all-pro-btn-flash{
+  width: 100%;
+  background: linear-gradient(45deg, rgba(2, 212, 182, 1) 0%, rgba(22, 99, 249, 1) 100%);
+  border-radius: 20px;
+  border: none;
+  color: white;
+  padding: 10px 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+
+
+
 @media only screen and (max-width: 1366px) {
   .AllProducts-div {
     margin: 9% 0 0 0;
