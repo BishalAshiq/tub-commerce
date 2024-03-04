@@ -185,19 +185,18 @@ const Page = () => {
 
                   <div className="taka-view">
                     <span className=""> (990) ৳ 489</span>
-                    
                   </div>
-<div>
-<Box sx={{ width: 100 }}>
-                       
-                       <Slider
-                         defaultValue={0}
-                         aria-label="Default"
-                         valueLabelDisplay="auto"
-                         color="info"
-                       />
-                     </Box>
-  </div>
+                  <div className="slider-flash-Sales">
+                    <Box sx={{ width: 100 }}>
+                      <Slider
+                        defaultValue={0}
+                        aria-label="Default"
+                        valueLabelDisplay="auto"
+                        color="info"
+                      />
+                    </Box>
+                    <span>2 sold</span>
+                  </div>
                   <div className="all-pro-btn-flash-div">
                     <button className="all-pro-btn-flash">Buy Now</button>
                   </div>

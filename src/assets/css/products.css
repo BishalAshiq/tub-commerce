@@ -652,9 +652,18 @@ img {
   font-weight: 500;
   line-height: 30px; /* 150% */
 }
+.review-modal-textarea{
+  width: 100%;
+  margin: 10px 0;
+  outline: none;
+  padding: 10px;
+}
 
-
-
+.upload-text-div{
+  display:flex;
+  justify-content: end;
+  margin: 0 10px 0 0;
+}
 
 
 
@@ -703,6 +712,9 @@ color: white;
   font-weight: 600;
 }
 
+.slider-flash-Sales{
+  margin: 10px 0 10px 15px;
+}
 
 
 
