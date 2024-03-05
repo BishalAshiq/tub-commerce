@@ -357,6 +357,137 @@
 .Account-Settings-full-div {
   margin: 120px 0 0 0;
 }
+
+/* ---- Order Details ------ */
+.order-details-div {
+  background: linear-gradient(
+    to bottom,
+    white,
+    white,
+    white,
+    white,
+    white,
+    white,
+    white,
+    white,
+    white,
+    white,
+    white,
+    white,
+    white,
+    #70c4ff,
+    #51b4fa 
+  );
+  margin: 140px 0 100px 0;
+  padding: 0 0 80px 0;
+}
+.ord-details-right-side-text {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  text-align: center;
+}
+.full-order-div{
+  margin: 50px 30px 20px 30px;
+}
+.ord-tag {
+  /* //styleName: H2; */
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 52px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.ord-textP {
+  width: 470px;
+  height: 60px;
+  top: 253px;
+  left: 135px;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgba(89, 99, 106, 1);
+
+  /* //styleName: body; */
+}
+.ord-textPp {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgba(23, 29, 34, 1);
+}
+
+.od-Sum-tags {
+  width: 425.5px;
+  height: 30px;
+  top: 400px;
+  left: 206px;
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.od-textinside {
+  font-family: "Poppins", sans-serif;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  width: 388.35px;
+  height: 30px;
+  top: 445.56px;
+  left: 206px;
+}
+
+.checkout-btn-order-div{
+  margin: 40px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.checkout-btn-order{
+  width: 1029px;
+height: 58.17px;
+top: 706.35px;
+left: 206px;
+border-radius: 29.08px;
+border-radius: 30px;
+ 
+  border-radius: 30px;
+  background: var(--button, linear-gradient(90deg, #02d4b6 0%, #1663f9 100%));
+  color: var(--Texts-White, #fff);
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px; /* 166.667% */
+  border: none;
+  padding: 10px 15px;
+}
+.opacity-texts{
+ 
+font-family: "Roboto", sans-serif;
+font-size: 14px;
+font-weight: 400;
+line-height: 33px;
+letter-spacing: 0em;
+text-align: left;
+color: rgba(89, 99, 106, 1);
+
+}
+
 @media only screen and (max-width: 1366px) {
   .individiual-info-card-div {
     /* margin: 120px 0 0 0; */
