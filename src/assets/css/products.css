@@ -718,6 +718,99 @@ color: white;
 
 
 
+
+/* Account-Manager  */
+
+.Account-Settings-full-div{
+  background: linear-gradient(
+    to bottom,
+    white,
+    white,
+    white,
+    white,
+    white,
+    white,
+    white,
+    white,
+    white,
+    white,
+    white,
+    white,
+    white,
+    #70c4ff,
+    #51b4fa
+  );
+  padding: 0 0 130px 0;
+}
+
+.author-img-div{
+  display:flex;
+  justify-content: end;
+  align-items:end;
+}
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.author-image {
+  width: 100px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 100%;
+}
+
+.svg-container {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  background: white;
+  /* border: 1px solid gray; */
+  padding: 10px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  border-radius: 100%;
+  cursor:pointer;
+}
+
+.svg-icon {
+  width: 30px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+.accounts-input{
+  width: 100%;
+  margin: 15px 0;
+  padding: 10px;
+  outline: none;
+  border: 1px solid rgba(226, 232, 235, 1);
+}
+.accounts-bttn-div{
+  display: flex;
+  gap: 10px;
+  justify-content: end;
+  align-items: center
+}
+
+.accounts-bttn-cancel{
+  border: 1px solid rgba(226, 232, 235, 1);
+  border-radius: 20px;
+  background: white;
+  padding: 10px 20px;
+  font-family: "Poppins", sans-serif;
+  color: black;
+  font-weight: 500;
+  font-size: 14px;
+}
+.accounts-bttn-sve-details{
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(45deg, rgba(2, 212, 182, 1) 0%, rgba(22, 99, 249, 1) 100%);
+  padding: 10px 20px;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+
 @media only screen and (max-width: 1366px) {
   .AllProducts-div {
     margin: 9% 0 0 0;
