@@ -42,7 +42,7 @@ const page = () => {
             </div>
 
             <div>
-              <p>My Details</p>
+              <strong>My Details</strong>
               <div className="row">
                 <div className="col-12 col-md-12 col-lg-12 col-xl-12">
                   <input
@@ -62,73 +62,74 @@ const page = () => {
                   <input
                     className="accounts-input"
                     type="text"
-                    placeholder="Street Address"
+                    placeholder="Apt or unit"
                   />
                 </div>
                 <div className="col-12 col-md-6 col-lg-6 col-xl-6">
                   <input
                     className="accounts-input"
                     type="text"
-                    placeholder="Street Address"
+                    placeholder="City"
                   />
                 </div>
                 <div className="col-12 col-md-6 col-lg-6 col-xl-6">
                   <input
                     className="accounts-input"
                     type="text"
-                    placeholder="Street Address"
+                    placeholder="State"
                   />
                 </div>
                 <div className="col-12 col-md-6 col-lg-6 col-xl-6">
                   <input
                     className="accounts-input"
-                    type="text"
-                    placeholder="Street Address"
+                    type="number"
+                    placeholder="Zip Code"
+                  />
+                </div>
+                <div className="col-12 col-md-12 col-lg-12 col-xl-12">
+                  <input
+                    className="accounts-input"
+                    type="number"
+                    placeholder="Phone Number"
                   />
                 </div>
                 <div className="col-12 col-md-12 col-lg-12 col-xl-12">
                   <input
                     className="accounts-input"
                     type="name"
-                    placeholder="Your name"
-                  />
-                </div>
-                <div className="col-12 col-md-12 col-lg-12 col-xl-12">
-                  <input
-                    className="accounts-input"
-                    type="name"
-                    placeholder="Your name"
+                    placeholder="Email Address"
                   />
                 </div>
               </div>
 
               <div className="col-12 col-md-12 col-lg-12 col-xl-12">
-                <p>Reset</p>
+               
                 <div className="row">
+                <strong>Reset Password</strong>
                   <div className="col-12 col-md-6 col-lg-6 col-xl-6">
                     <input
                       className="accounts-input"
-                      type="text"
-                      placeholder="Street Address"
+                      type="password"
+                      placeholder="New Password"
                     />
                   </div>
                   <div className="col-12 col-md-6 col-lg-6 col-xl-6">
                     <input
                       className="accounts-input"
-                      type="text"
-                      placeholder="Street Address"
+                      type="password"
+                      placeholder="Confirm Password"
                     />
                   </div>
                 </div>
               </div>
               <div className="col-12 col-md-12 col-lg-12 col-xl-12">
-                <p>Payment</p>
+                <strong>Payment</strong>
                 <div className="row">
                   <div className="col-12 col-md-6 col-lg-6 col-xl-6">
                     <input
                       className="accounts-input"
-                      type="text"
-                      placeholder="Street Address"
+                      type="number"
+                      placeholder="*****"
                     />
                   </div>
                   <div className="col-12 col-md-6 col-lg-6 col-xl-6">

@@ -196,7 +196,7 @@ const Navbar = () => {
               </div>
               <div className='col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3'>
                 <div>
-                  <Link className='sec-navbar-links-acc' href='/login'>
+                  <Link className='sec-navbar-links-acc' href='/manageSettings'>
                     <span>
                       <svg
                         xmlns='http://www.w3.org/2000/svg'
