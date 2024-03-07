@@ -203,7 +203,7 @@ const BestBlack = () => {
                 </div>
                 <div className='row'>
                   <div className='col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6'>
-                    <div className='add-discount-div'>
+                    <div className='add-discount-div' data-aos="flip-left">
                       <span className='adds-icons'>
                         <svg
                           xmlns='http://www.w3.org/2000/svg'
@@ -222,7 +222,7 @@ const BestBlack = () => {
                     </div>
                   </div>
                   <div className='col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6'>
-                    <div className='add-discount-div'>
+                    <div className='add-discount-div' data-aos="flip-right">
                       <span className='adds-icons'>
                         <svg
                           xmlns='http://www.w3.org/2000/svg'
@@ -243,7 +243,7 @@ const BestBlack = () => {
                 </div>
               </div>
               <div className='col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5'>
-                <div className='blk-fri-off-img-div'>
+                <div className='blk-fri-off-img-div' data-aos="flip-right">
                   <img className='blk-fri-off-img' src={blackBest.src} alt='' />
                 </div>
               </div>

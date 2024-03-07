@@ -1555,6 +1555,9 @@
     height: 100%;
     /* background-image: linear-gradient(to right, #51b4fa, white, #05c8be); */
   }
+  .adds-icons{
+    height: 5vh;
+  }
 
   .banner-text-h1 {
     /* border: 1px solid gray; */
