@@ -78,22 +78,24 @@ const TopBruderToys = () => {
             <div className='row '>
               <div className='col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 '>
                 <div className='brudal-toy-Img-div'>
-                  <div className='brudal-toy-img1-div'>
+                  <div className='brudal-toy-img1-div'  data-aos="flip-left">
                     <img
                       className='brudal-toy-img'
                       src={BruderToy1.src}
                       alt='bruderToy1'
                     />
                   </div>
+                  <div className='brudal-toy-imgs' data-aos="flip-right">
                   <img
-                    className='brudal-toy-imgs'
                     src={BruderToy2.src}
                     alt='bruderToy2'
                   />
+                  </div>
+                  
                 </div>
               </div>
               <div className='col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6'>
-                <div className='brudal-toy-head-text'>
+                <div className='brudal-toy-head-text' data-aos="fade-left">
                   <h4 className='top-brud-tag'>Top Bruder Toys</h4>
                   <p className='top-brud-textp'>
                     Bring your products and services to the world. Get started
@@ -211,7 +213,7 @@ const TopBruderToys = () => {
       <div className=''>
         <div className='Categ-Home-full-div'>
           <div className='container'>
-            <div className='Categ-Home-div'>
+            <div className='Categ-Home-div' data-aos="zoom-in-down">
               <p className='top-picks'>Top Picks</p>
               <h3 className='Shop-By'>Shop By Category</h3>
               <p className='popular'>
