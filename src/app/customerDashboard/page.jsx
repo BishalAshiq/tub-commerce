@@ -137,7 +137,7 @@ const page = () => {
 
                   <td>AKN12508</td>
                   <td>IU Bhuiyan</td>
-                  <td className='d-flex gap-1'>
+                  <td className='d-flex gap-3'>
                     <span>
                       <img className='toy-img' src={toyicon.src} alt='' />
                     </span>
@@ -152,7 +152,7 @@ const page = () => {
 
                   <td>AKN12508</td>
                   <td>IU Bhuiyan</td>
-                  <td className='d-flex gap-1'>
+                  <td className='d-flex gap-3'>
                     <span>
                       <img className='toy-img' src={toyicon.src} alt='' />
                     </span>
@@ -167,7 +167,7 @@ const page = () => {
 
                   <td>AKN12508</td>
                   <td>IU Bhuiyan</td>
-                  <td className='d-flex gap-1'>
+                  <td className='d-flex gap-3'>
                     <span>
                       <img className='toy-img' src={toyicon.src} alt='' />
                     </span>
@@ -182,7 +182,7 @@ const page = () => {
 
                   <td>AKN12508</td>
                   <td>IU Bhuiyan</td>
-                  <td className='d-flex gap-1'>
+                  <td className='d-flex gap-3'>
                     <span>
                       <img className='toy-img' src={toyicon.src} alt='' />
                     </span>
