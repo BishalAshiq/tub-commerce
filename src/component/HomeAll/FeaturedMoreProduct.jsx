@@ -1194,7 +1194,7 @@ const FeaturedMoreProduct = () => {
                 )}
 
                 <div className='col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 '>
-                  <div className='long-estabilize-side-pic-full-div'>
+                  <div className='long-estabilize-side-pic-full-div' data-aos="flip-right">
                     {productsMiddle[1] != "undefined" && (
                       <div className='long-estabilize-div'>
                         <img

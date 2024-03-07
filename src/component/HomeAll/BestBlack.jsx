@@ -189,7 +189,7 @@ const BestBlack = () => {
           <div className='container'>
             <div className='row'>
               <div className='col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7'>
-                <div className='black-look-div'>
+                <div className='black-look-div' data-aos="zoom-in">
                   <p className='black-look-p'>Is Looking Bright</p>
                   <h2 className='black-look-h5'>
                     Black Friday <span className='sale-text'>Sale</span>
