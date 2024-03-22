@@ -46,7 +46,7 @@ const page = () => {
     }
     else {
       axiosInstance.post(`/auth/signup`, formData).then((res) => {
-        if (res.data.status === 200) {
+        if (res.data.status == 200) {
           toast.success(res.data.message);
         } else {
           toast.error("Something went wrong!");

@@ -39,7 +39,7 @@ const page = () => {
       axiosInstance.post(`/auth/login`, formData).then((res) => {
         if (res.status == 200) {
           toast.success(res.data.message);
-          router.push('/customerDashboard');
+          router.push('/customer-dashboard');
         } else {
           toast.error("Something went wrong!");
         }
@@ -138,9 +138,9 @@ const page = () => {
                       value=''
                       id='flexCheckDefault'
                     />
-                    <lebel>
+                    {/* <lebel>
                       I agree to the <strong>terms and conditions</strong>
-                    </lebel>
+                    </lebel> */}
                   </div>
                   <div>
                     <button className='log-sign-btn'>

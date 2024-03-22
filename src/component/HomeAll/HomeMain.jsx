@@ -14,7 +14,7 @@ const Homebanner = () => {
   useEffect(() => {
     AOS.refresh();
     AOS.init();
-    axiosInstance.get("/home").then((res) => {
+    axiosInstance.get("/sliders").then((res) => {
       setBanners(res.data.data);
     });
   }, []);
