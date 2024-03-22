@@ -657,6 +657,8 @@ img {
   margin: 10px 0;
   outline: none;
   padding: 10px;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  border-radius: 5px;
 }
 
 .upload-text-div{
@@ -664,14 +666,37 @@ img {
   justify-content: end;
   margin: 0 10px 0 0;
 }
+.upload-text-div p{
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  /* Width: 166px;
+  Height: 34px; */
+  font-size: 13px;
+  color: rgba(137, 137, 137, 1);
 
+}
+.rev-mod-upload-ico{
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  padding: 5px;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+}
+.rev-modal-des{
+  /* width: 470px; */
+/* height: 60px; */
+top: 472px;
+left: 386px;
+gap: 0px;
+opacity: 0px;
+font-family: "Poppins", sans-serif;
+font-size: 18px;
+font-weight: 400;
+line-height: 30px;
+text-align: left;
+font-size: 1.1rem;
 
-
-
-
-
-
-
+}
 
 
 /* Flash Sale Page -----¬¬~~__--==++ */

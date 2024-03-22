@@ -41,7 +41,7 @@ const ProductReview = () => {
               <h3>
                 How was the Ordering Experience, Product & Customer Support?
               </h3>
-              <p>
+              <p className="rev-modal-des">
                 Redefine your expectation of comfort and style at work with
                 Genuine Dickies Women’s Stretch Twill Straight Leg Pants. The
                 straight construction.
@@ -162,11 +162,12 @@ const ProductReview = () => {
          <div className="upload-text-div">
          <p>
               *Upload Product Photo:{" "}
-              <span>
+              <span >
                 <svg
+                className="rev-mod-upload-ico"
                   xmlns='http://www.w3.org/2000/svg'
-                  width='24'
-                  height='24'
+                  width='20'
+                  height='20'
                   viewBox='0 0 24 24'
                   fill='none'>
                   <path

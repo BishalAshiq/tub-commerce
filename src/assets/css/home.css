@@ -176,10 +176,16 @@
   gap: 10px;
   align-items: center;
 }
+
+/* .navbar-full-div {
+  display: flex;
+  align-items: center;
+} */
 .nav-tag-img-div {
   display: flex;
   justify-content: start;
   gap: 10px;
+  margin: 17px 0 0 0;
   /* align-items: center; */
 }
 .sssasd a {
@@ -200,15 +206,15 @@
   /* 140% */
 }
 .NavImage {
-  width: 40px;
-  height: 32px;
+  width: 37px;
+  height: 27px;
   flex-shrink: 0;
 }
 .Nav-TUB {
   /* text-decoration: none; */
   color: #000;
   text-align: center;
-  font-family: "Poppins", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
@@ -1555,7 +1561,7 @@
     height: 100%;
     /* background-image: linear-gradient(to right, #51b4fa, white, #05c8be); */
   }
-  .adds-icons{
+  .adds-icons {
     height: 5vh;
   }
 
@@ -1674,33 +1680,33 @@
     line-height: 60px;
     /* 120% */
   }
-  .ong-estab-tags{
+  .ong-estab-tags {
     font-size: 30px;
   }
-  .popular{
+  .popular {
     width: 100%;
     text-align: center;
-    margin: 0 20px ;
+    margin: 0 20px;
   }
-  .review-number{
+  .review-number {
     font-size: 20px;
   }
-  .review-number1{
+  .review-number1 {
     font-size: 20px;
   }
-  .review-number2{
+  .review-number2 {
     font-size: 20px;
   }
-  .review-number3{
+  .review-number3 {
     font-size: 20px;
   }
-  .review-numberp{
+  .review-numberp {
     font-size: 10px;
     margin: -30px 0 0 0;
   }
   .pop-tag {
     color: var(--Dark, #1f2326);
-  
+
     /* H2 */
     font-family: "Poppins", sans-serif;
     font-size: 25px;
@@ -1709,10 +1715,10 @@
     line-height: 60px;
     /* 120% */
   }
-  
+
   .pop-tag-color {
     color: #01de9e;
-  
+
     /* H2 */
     font-family: "Poppins", sans-serif;
     font-size: 25px;
@@ -1720,7 +1726,7 @@
     font-weight: 700;
     line-height: 60px;
   }
-  .Shop-By{
+  .Shop-By {
     font-size: 25px;
     margin: -20px 0 0 0;
   }
@@ -1788,10 +1794,10 @@
     transform: translateY(-100%);
     z-index: 999;
     height: 22vh;
-    margin: -9px 0 0 -77px;  /* Adjust as needed */
+    margin: -9px 0 0 -77px; /* Adjust as needed */
     min-width: 352px;
-}
- 
+  }
+
   .for-mob-nav {
     /* margin: 0 43px 0 0; */
   }
@@ -1957,10 +1963,7 @@
     text-align: center;
     margin: 30px 0 0 0;
   }
-
- 
 }
-
 
 @media only screen and (max-width: 760px) {
   .full-body {
