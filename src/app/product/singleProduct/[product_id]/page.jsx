@@ -159,7 +159,7 @@ const page = () => {
                       {" "}
                       {product?.stroked_price}
                     </div>
-                    <div>
+                    <div className='select-icons'>
                       <span>
                         <svg
                           xmlns='http://www.w3.org/2000/svg'

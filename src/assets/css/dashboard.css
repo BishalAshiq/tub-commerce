@@ -162,7 +162,11 @@
   justify-content: center;
 }
 .table {
+  
   width: 100%;
+}
+.customer-dasboard-table{
+  background-color: none !important; 
 }
 .table-nav {
   background-color: #f4f4f4 !important;

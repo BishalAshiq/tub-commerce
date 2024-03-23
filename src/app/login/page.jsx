@@ -131,17 +131,17 @@ const page = () => {
                       />
                     </div>
                   </div>
-                  <div className='check-text-div'>
+                  {/* <div className='check-text-div'>
                     <input
                       className='form-check-input'
                       type='checkbox'
                       value=''
                       id='flexCheckDefault'
                     />
-                    {/* <lebel>
+                    <lebel>
                       I agree to the <strong>terms and conditions</strong>
-                    </lebel> */}
-                  </div>
+                    </lebel>
+                  </div> */}
                   <div>
                     <button className='log-sign-btn'>
                       Log In

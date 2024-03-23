@@ -878,16 +878,16 @@
 
 .price-number {
   color: var(--blue-800, #072d8c);
-  text-align: center;
-  font-family: "Poppins", sans-serif;
-  width: 10%;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 24.285px;
-  /* 173.462% */
-  border-radius: 14.571px;
-  background: #e6edff;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    width: 15%;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24.285px;
+    border-radius: 14.571px;
+    background: #e6edff;
+    margin: 0 0 0 20px;
 }
 
 .ong-estab-review {
@@ -1473,15 +1473,16 @@
   line-height: 20px;
   letter-spacing: 0em;
   text-align: left;
+  margin: 4px 0;
 }
 .f-anchortext-div {
   display: flex;
   flex-direction: column;
 }
-.footer-imgs {
+/* .footer-imgs {
   width: 20px;
   height: 55px;
-}
+} */
 .hrfs {
   color: rgb(167, 167, 167);
 }
@@ -1514,6 +1515,10 @@
   letter-spacing: 0em;
   text-align: left;
 }
+
+.footer-div-firstportion{
+  padding: 40px 0 60px 0;
+}
 .banner-text-div {
   display: grid;
   place-items: center;
@@ -1533,6 +1538,19 @@
   /* width: 100%; */
   border: 1px solid gray;
   padding: 7px 17px;
+}
+
+.select-icons {
+  display: flex;
+  /* justify-content: center; */
+  gap: 30px;
+  margin: 10px 0 0 16px;
+}
+.select-icon {
+  display: flex;
+  /* justify-content: center; */
+  gap: 30px;
+  margin: 8px 0 0 16px;
 }
 
 @media only screen and (max-width: 1366px) {
@@ -1665,9 +1683,15 @@
     margin: 0 0 5px 10px;
   }
 
+  .select-icons {
+    display: flex;
+    /* justify-content: center; */
+    gap: 30px;
+    margin: 10px 0 0 21px;
+  }
   .select-icon {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     gap: 30px;
   }
 }
