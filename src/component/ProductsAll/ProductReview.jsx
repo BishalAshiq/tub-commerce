@@ -41,7 +41,7 @@ const ProductReview = () => {
               <h3>
                 How was the Ordering Experience, Product & Customer Support?
               </h3>
-              <p>
+              <p className="rev-modal-des">
                 Redefine your expectation of comfort and style at work with
                 Genuine Dickies Women’s Stretch Twill Straight Leg Pants. The
                 straight construction.
@@ -52,8 +52,8 @@ const ProductReview = () => {
             <div>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
-                width='42'
-                height='42'
+                width='22'
+                height='22'
                 viewBox='0 0 42 42'
                 fill='none'>
                 <path
@@ -63,8 +63,8 @@ const ProductReview = () => {
               </svg>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
-                width='42'
-                height='42'
+                width='22'
+                height='22'
                 viewBox='0 0 42 42'
                 fill='none'>
                 <path
@@ -74,8 +74,8 @@ const ProductReview = () => {
               </svg>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
-                width='42'
-                height='42'
+                width='22'
+                height='22'
                 viewBox='0 0 42 42'
                 fill='none'>
                 <path
@@ -85,8 +85,8 @@ const ProductReview = () => {
               </svg>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
-                width='42'
-                height='42'
+                width='22'
+                height='22'
                 viewBox='0 0 42 42'
                 fill='none'>
                 <path
@@ -94,10 +94,11 @@ const ProductReview = () => {
                   fill='#FFA804'
                 />
               </svg>
+             
               <svg
                 xmlns='http://www.w3.org/2000/svg'
-                width='42'
-                height='42'
+                width='18'
+                height='18'
                 viewBox='0 0 42 42'
                 fill='none'>
                 <g filter='url(#filter0_i_366_2054)'>
@@ -158,13 +159,15 @@ const ProductReview = () => {
             </div>
           </div>
           <div className='col-12 col-sm-12 col-md-6 col-lg-6 col-lx-6'>
-            <p>
+         <div className="upload-text-div">
+         <p>
               *Upload Product Photo:{" "}
-              <span>
+              <span >
                 <svg
+                className="rev-mod-upload-ico"
                   xmlns='http://www.w3.org/2000/svg'
-                  width='24'
-                  height='24'
+                  width='20'
+                  height='20'
                   viewBox='0 0 24 24'
                   fill='none'>
                   <path
@@ -175,9 +178,10 @@ const ProductReview = () => {
               </span>
             </p>
           </div>
+          </div>
           <div className='col-12 col-sm-12 col-md-12 col-lg-12 col-lx-12'>
             <textarea
-              className='w-100'
+              className=' review-modal-textarea'
               placeholder='Describe your experience with a few sentences. also highlight some pros and cons'></textarea>
           </div>
           <div className='col-12 col-sm-12 col-md-12 col-lg-12 col-lx-12'>

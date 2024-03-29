@@ -1,21 +1,24 @@
 import React from "react";
-import TubBanner from "../../../public/tubIcon.png";
+import NavImg from "../../../public/tubLogo.png";
 import Image from "next/image";
 import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <div>
+    <div className=''>
       <div className='fixed-top'>
         <nav className='navbar navbar-expand-lg navbar-full-div'>
-          <div className='container'>
-            <div className=''>
+          <div className='container '>
+            <div className='sssasd'>
               <Link href='/'>
-                <Image src={TubBanner} height={34} width={74} alt='' />
+                <div className='nav-tag-img-div'>
+                  <img className='NavImage' src={NavImg.src} alt='' />
+                  <p className='Nav-TUB'>TUB</p>
+                </div>
               </Link>
             </div>
             <button
-              className='navbar-toggler'
+              className='navbar-toggler for-mob-nav'
               type='button'
               data-bs-toggle='collapse'
               data-bs-target='#navbarSupportedContent'
@@ -178,7 +181,7 @@ const Navbar = () => {
         </nav>
         <div className=' sec-navbar-links-acc-div '>
           <div className='container'>
-            <div className='row'>
+            <div className='row '>
               <div className='col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9'>
                 <div className='sec-navbar-links'>
                   <Link href='/'>All Toys</Link>
@@ -193,7 +196,7 @@ const Navbar = () => {
               </div>
               <div className='col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3'>
                 <div>
-                  <Link className='sec-navbar-links-acc' href='/login'>
+                  <Link className='sec-navbar-links-acc' href='/manageSettings'>
                     <span>
                       <svg
                         xmlns='http://www.w3.org/2000/svg'

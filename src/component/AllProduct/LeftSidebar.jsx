@@ -119,7 +119,7 @@ const LeftSidebar = () => {
   return (
     <div>
       <div className=''>
-        <h2>Filters</h2>
+        <h2 className='alprod-fil-text'>Filters</h2>
         <div>
           <div>
             <FormControl
@@ -224,7 +224,7 @@ const LeftSidebar = () => {
                     aria-expanded={isAccordionExpanded1(`collapse`)}
                     aria-controls={`collapse`}
                     onClick={() => handleAccordionClicks1(`collapse`)}>
-                    <span className='kwy'>Price ( . )</span>
+                    <span className='kwy'>Price ( .)</span>
                   </div>
                   {/* </h6> */}
                 </div>

@@ -1,11 +1,56 @@
+"use client";
 import Navbar from "@/component/Navbar/Navbar";
-import React from "react";
+import React, { useState } from "react";
 import logSignLogo from "../../../public/logiSignUpLogo.png";
 import GoogG from "../../../public/GoogG.png";
 import Footer from "@/component/Footer/Footer";
 import Link from "next/link";
+import toast from "react-hot-toast";
+import axiosInstance from "@/utils/axios";
+import { useParams, useRouter } from "next/navigation";
 
 const page = () => {
+  const router = useRouter();
+  const [formData, setFormData] = useState({
+    password: "",
+    email: ""
+  });
+
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+
+
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    if (formData.email == "") {
+      toast.error("Email is required");
+    }
+    else if (formData.password == "") {
+      toast.error("Password is required");
+    } else {
+      axiosInstance.post(`/auth/login`, formData).then((res) => {
+        if (res.status == 200) {
+          toast.success(res.data.message);
+          router.push('/customer-dashboard');
+        } else {
+          toast.error("Something went wrong!");
+        }
+      });
+    }
+
+
+  }
+
+  console.log(formData);
+
   return (
     <div>
       <div>
@@ -16,7 +61,7 @@ const page = () => {
           <div className='row'>
             <div className='col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5'>
               <div className='log-full-div'>
-                <form>
+                <form onSubmit={handleLogin}>
                   <div className='login-input-lebl'>
                     <lebel className='logsign-lebel'>Email</lebel>
                     <div className='logSign-inp-div'>
@@ -55,6 +100,8 @@ const page = () => {
                         type='email'
                         placeholder='enter your email'
                         alt=''
+                        name="email"
+                        onChange={handleInputChange}
                       />
                     </div>
                   </div>
@@ -79,10 +126,12 @@ const page = () => {
                         type='Password'
                         placeholder='enter your password'
                         alt=''
+                        name="password"
+                        onChange={handleInputChange}
                       />
                     </div>
                   </div>
-                  <div className='check-text-div'>
+                  {/* <div className='check-text-div'>
                     <input
                       className='form-check-input'
                       type='checkbox'
@@ -92,7 +141,7 @@ const page = () => {
                     <lebel>
                       I agree to the <strong>terms and conditions</strong>
                     </lebel>
-                  </div>
+                  </div> */}
                   <div>
                     <button className='log-sign-btn'>
                       Log In

@@ -46,8 +46,11 @@ body {
   justify-content: end;
 }
 .nav-search-input-div {
+  display: flex;
+  align-items: center;
   border-radius: 6px;
   padding: 0 0 0 10px;
+  /* width: 200px; */
   border: 1px solid #cfcfcf;
 
   background: #fff;
@@ -108,9 +111,27 @@ body {
   width: 100%;
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 500px) {
   .sec-navbar-links-acc-div {
     display: none;
+  }
+  .nav-search-input-div {
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    padding: 0 0 0 10px;
+    width: 190px;
+    border: 1px solid #cfcfcf;
+  
+    background: #fff;
+  }
+  .nav-search-input {
+    outline: none;
+    color: #94a3b8;
+    border: none;
+    width: 160px;
+    /* padding: 9px 13px; */
+    border-radius: 6px;
   }
 }
 

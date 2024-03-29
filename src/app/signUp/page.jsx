@@ -1,11 +1,126 @@
+"use client";
 import Navbar from "@/component/Navbar/Navbar";
-import React from "react";
+import React, { useState } from "react";
 import logSignLogo from "../../../public/logiSignUpLogo.png";
 import GoogG from "../../../public/GoogG.png";
 import Footer from "@/component/Footer/Footer";
 import Link from "next/link";
+import axiosInstance from "@/utils/axios";
+import toast from "react-hot-toast";
 
 const page = () => {
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    mobile_number: "",
+    password: "",
+    location: "",
+  });
+
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+
+
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+
+  const submitRegistration = (e) => {
+    e.preventDefault();
+    if (formData.name == "") {
+      toast.error("Name added is required");
+    }
+    else if (formData.mobile_number == "") {
+      toast.error("Mobile Number is required");
+    }
+    else if (formData.email == "") {
+      toast.error("Email added is required");
+    }
+    else if (formData.password == "") {
+      toast.error("Password added is required");
+    }
+    else {
+      axiosInstance.post(`/auth/signup`, formData).then((res) => {
+        if (res.data.status == 200) {
+          toast.success(res.data.message);
+        } else {
+          toast.error("Something went wrong!");
+        }
+      });
+    }
+  };
+
+
+  const handleLogin = async (e) => {
+    setError("");
+    e.preventDefault();
+
+    axiosInstance.post('api/login', formData, {
+      withCredentials: true,
+    }).then(res => {
+
+      if (res.data.status == 200) {
+        // router.push("/newsfeed");
+
+
+        // setCookiesAuthRender(res.data)
+        if (typeof window !== "undefined") {
+
+          localStorage.setItem('refreshToken', res.data.refreshToken);
+          localStorage.setItem('userInfo', JSON.stringify(res.data.user));
+          localStorage.setItem('fullname', res.data.user[0].first_name + ' ' + res.data.user[0].last_name);
+          localStorage.setItem('username', res.data.user[0].username);
+          localStorage.setItem('userId', res.data.user[0]._id);
+        }
+
+        // setTimeout(() => {
+        //   window.location.reload();
+        // }, 3500)
+
+
+        // if (typeof window === "undefined") {
+        //   // Redirect to the newsfeed page if the login is successful
+        //   return {
+        //     redirect: {
+        //       destination: "/newsfeed",
+        //       permanent: false,
+        //     },
+        //   };
+        // }
+        window.location.replace("/newsfeed");
+        // window.location.reload();
+
+
+      } else if (res.data.status == 401) {
+        toast.error("Login failed. Please check your email and password.", {
+          position: "top-right",
+          style: {
+            background: "white",
+            color: "black",
+          },
+        });
+      }
+      else {
+        toast.error("Login failed. Invalid Credentials.", {
+          position: "top-right",
+          style: {
+            background: "white",
+            color: "black",
+          },
+        });
+      }
+    })
+
+
+  };
+
+  console.log(formData);
+
   return (
     <div>
       <div>
@@ -16,7 +131,7 @@ const page = () => {
           <div className='row'>
             <div className='col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5'>
               <div className='Sig-full-div'>
-                <form>
+                <form onSubmit={submitRegistration} >
                   <div className='login-input-lebl'>
                     <lebel className='logsign-lebel'>Name</lebel>
                     <div className='logSign-inp-div'>
@@ -35,9 +150,12 @@ const page = () => {
                       </span>
                       <input
                         className='logSign-input'
-                        type='name'
-                        placeholder='enter your full name'
+                        type='text'
+                        placeholder='Enter your full name'
                         alt=''
+                        name="name"
+                        onChange={handleInputChange}
+
                       />
                     </div>
                   </div>
@@ -77,11 +195,63 @@ const page = () => {
                       <input
                         className='logSign-input'
                         type='email'
-                        placeholder='enter your email'
+                        placeholder='Enter your email'
+
+                        name="email"
+                        onChange={handleInputChange}
                         alt=''
                       />
                     </div>
                   </div>
+
+                  <div className='login-input-lebl'>
+                    <lebel className='logsign-lebel'>Mobile Number</lebel>
+                    <div className='logSign-inp-div'>
+                      <span>
+                        <svg
+                          xmlns='http://www.w3.org/2000/svg'
+                          width='24'
+                          height='24'
+                          viewBox='0 0 24 24'
+                          fill='none'>
+                          <g clip-path='url(#clip0_138_540)'>
+                            <path
+                              d='M19 5H5C3.89543 5 3 5.89543 3 7V17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V7C21 5.89543 20.1046 5 19 5Z'
+                              stroke='#156CFA'
+                              stroke-width='1.5'
+                              stroke-linecap='round'
+                              stroke-linejoin='round'
+                            />
+                            <path
+                              d='M3 7L12 13L21 7'
+                              stroke='#156CFA'
+                              stroke-width='1.5'
+                              stroke-linecap='round'
+                              stroke-linejoin='round'
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id='clip0_138_540'>
+                              <rect width='24' height='24' fill='white' />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </span>
+                      <input
+                        className='logSign-input'
+                        type='text'
+                        placeholder='Enter Your Mobile Number'
+                        alt=''
+                        onChange={handleInputChange}
+                        name="mobile_number"
+
+                      />
+                    </div>
+                  </div>
+
+
+
+
                   <div className='login-input-lebl'>
                     <lebel className='logsign-lebel'>Password</lebel>
                     <div className='logSign-inp-div'>
@@ -101,8 +271,11 @@ const page = () => {
                       <input
                         className='logSign-input'
                         type='password'
-                        placeholder='enter your password'
+                        placeholder='Enter your password'
+                        name="password"
+                        onChange={handleInputChange}
                         alt=''
+
                       />
                     </div>
                   </div>
@@ -124,8 +297,10 @@ const page = () => {
                       </span>
                       <input
                         className='logSign-input'
-                        type='email'
-                        placeholder='enter your email'
+                        type='text'
+                        placeholder='Enter your location'
+                        name="location"
+                        onChange={handleInputChange}
                         alt=''
                       />
                     </div>
@@ -136,6 +311,7 @@ const page = () => {
                       type='checkbox'
                       value=''
                       id='flexCheckDefault'
+
                     />
                     <lebel>
                       I agree to the <strong>terms and conditions</strong>
