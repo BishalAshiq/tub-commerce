@@ -58,7 +58,17 @@ const page = () => {
 
   const handleAddToCart = (e) => {
     e.preventDefault();
-    dispatch(addToCartFn(product));
+    dispatch(addToCartFn({
+      product_id: product.id,
+      calculable_price: product.calculable_price,
+      thumbnail_image: product.thumbnail_image,
+      name: product.name,
+      quantity: 1,
+      shipping_type: "",
+      variation: "",
+      shipping_cost: 0,
+      discount: 0,
+    }));
     toast.success("Product added to cart");
   };
 

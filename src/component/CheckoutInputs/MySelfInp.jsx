@@ -51,7 +51,7 @@ function getStyles(name, personName, theme) {
         : theme.typography.fontWeightMedium,
   };
 }
-const MySelfInp = () => {
+const MySelfInp = ({ userInfo, state, pickupPoint, formData, callback }) => {
   const theme = useTheme();
   const [personName, setPersonName] = React.useState([]);
 
@@ -64,6 +64,11 @@ const MySelfInp = () => {
       typeof value === "string" ? value.split(",") : value
     );
   };
+
+  console.log("state", state, pickupPoint)
+  if (!state || !pickupPoint) {
+    return <div>Loading...</div>; // Or any other loading indicator
+  }
 
   return (
     <div>
@@ -78,13 +83,16 @@ const MySelfInp = () => {
                   type='name'
                   placeholder=' Your Name'
                   alt=''
+                  value={userInfo.name}
                 />
               </div>
               <div className='col-12 col-sm-12 col-md-12 col-lg-12 col-12'>
                 <input
                   className='checkout-input'
                   type='text'
-                  name=''
+                  name='address'
+                  onChange={callback}
+                  value={formData.address}
                   id=''
                   placeholder='Street Address'
                 />
@@ -93,8 +101,9 @@ const MySelfInp = () => {
                 <input
                   className='checkout-input'
                   type='text'
-                  name=''
-                  id=''
+                  name='unit'
+                  onChange={callback}
+                  value={formData.unit}
                   placeholder='Apt or unit'
                 />
               </div>
@@ -102,8 +111,9 @@ const MySelfInp = () => {
                 <input
                   className='checkout-input'
                   type='text'
-                  name=''
-                  id=''
+                  name='city'
+                  onChange={callback}
+                  value={formData.city}
                   placeholder='City'
                 />
               </div>
@@ -120,17 +130,17 @@ const MySelfInp = () => {
                       className='selectinp'
                       labelId='demo-multiple-name-label'
                       id='demo-multiple-name'
-                      multiple
-                      value={personName}
-                      onChange={handleChange}
+                      name="state"
+                      value={formData.state}
+                      onChange={callback}
                       input={<OutlinedInput label='Name' />}
                       MenuProps={MenuProps}>
-                      {names.map((name) => (
+                      {state.map((item, i) => (
                         <MenuItem
-                          key={name}
-                          value={name}
-                          style={getStyles(name, personName, theme)}>
-                          {name}
+                          key={i}
+                          value={item.name}
+                          style={getStyles(item.name, personName, theme)}>
+                          {item.name}
                         </MenuItem>
                       ))}
                     </Select>
@@ -141,8 +151,9 @@ const MySelfInp = () => {
                 <input
                   className='checkout-input'
                   type='text'
-                  name=''
-                  id=''
+                  name='postal_code'
+                  onChange={callback}
+                  value={formData.postal_code}
                   placeholder='Zip Code'
                 />
               </div>
@@ -150,8 +161,9 @@ const MySelfInp = () => {
                 <input
                   className='checkout-input'
                   type='text'
-                  name=''
-                  id=''
+                  name='phone'
+                  onChange={callback}
+                  value={formData.phone}
                   placeholder='Phone Number'
                 />
               </div>
@@ -169,12 +181,12 @@ const MySelfInp = () => {
                       onChange={handleChange}
                       input={<OutlinedInput label='Name' />}
                       MenuProps={MenuProps}>
-                      {names.map((name) => (
+                      {pickupPoint.map((item, i) => (
                         <MenuItem
-                          key={name}
-                          value={name}
+                          key={i}
+                          value={item.name}
                           style={getStyles(name, personName, theme)}>
-                          {name}
+                          {item.name}
                         </MenuItem>
                       ))}
                     </Select>
@@ -185,12 +197,16 @@ const MySelfInp = () => {
                 <textarea
                   className='checkout-text-input'
                   type='text'
-                  name=''
-                  id=''
+                  name='short_note'
+                  onChange={callback}
+                  value={formData.short_note}
                   placeholder='Add short note'
                 />
                 <div className='checkoutExtra-text'>
-                  <Checkbox {...label} />
+                  <Checkbox {...label}
+                    name='extra_fast_delivery'
+                    onChange={callback}
+                    value={formData.extra_fast_delivery} />
                   <label className='form-check-label' for='flexCheckDefault'>
                     Extra Fast Delivery
                   </label>

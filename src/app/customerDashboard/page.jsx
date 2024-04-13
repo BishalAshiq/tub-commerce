@@ -1,11 +1,29 @@
+"use client";
 import Navbar from "@/component/Navbar/Navbar";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import customerAthor from "../../../public/cusomer-author.png";
 import toyicon from "../../../public/order-table-icon.png";
 import Link from "next/link";
 import Footer from "@/component/Footer/Footer";
+import axiosInstance from "@/utils/axios";
 
 const page = () => {
+  const [userInfo, setUserInfo] = useState({});
+  const [order, setOrder] = useState([]);
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem("user"))
+    setUserInfo(user);
+
+    axiosInstance.get('/completed-order').then((res) => {
+      setOrder(res.data.data)
+    })
+  }, [])
+
+  function formatDate(timestamp) {
+
+    const date = new Date(timestamp * 1000);
+    return date.toLocaleDateString();
+  }
   return (
     <div>
       <div>
@@ -32,7 +50,7 @@ const page = () => {
                         <img src={customerAthor.src} alt='' />
                       </div>
                       <div className='custodash-card-img-text-div'>
-                        <h6 className='tags-def'>Ratul Ahmed</h6>
+                        <h6 className='tags-def'>{userInfo.name}</h6>
                         <span className='custodash-card-text'>
                           <span>
                             <svg
@@ -47,9 +65,9 @@ const page = () => {
                               />
                             </svg>
                           </span>
-                          rahmed357@gmail.com
+                          {userInfo.email}
                         </span>
-                       
+
                         <span className='custodash-card-text'>
                           <span>
                             <svg
@@ -64,16 +82,16 @@ const page = () => {
                               />
                             </svg>
                           </span>
-                          +880 1314 0000
+                          {userInfo.phone}
                         </span>
                         <span className='custodash-card-text'>
                           <span>
-                          <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 0.909058C6.10908 0.909058 0 2.45453 0 5.63635V14.3636C0 17.5455 6.10908 19.0909 12 19.0909C17.8909 19.0909 24 17.5454 24 14.3636V5.63631C24 2.45448 17.8909 0.909058 12 0.909058ZM21.8182 14.3636C21.8182 15.4363 17.091 16.909 12 16.909C6.90905 16.909 2.1818 15.4363 2.1818 14.3636V12.8601C4.48341 14.1122 8.28478 14.7272 12 14.7272C15.7152 14.7272 19.5166 14.1122 21.8182 12.8601V14.3636ZM21.8182 9.99995C21.8182 11.0727 17.091 12.5454 12 12.5454C6.90905 12.5454 2.1818 11.0727 2.1818 9.99995V8.49648C4.48341 9.7486 8.28478 10.3636 12 10.3636C15.7152 10.3636 19.5166 9.7486 21.8182 8.49648V9.99995ZM12 8.18176C6.90909 8.18176 2.1818 6.70904 2.1818 5.63631C2.1818 4.56357 6.90905 3.09085 12 3.09085C17.091 3.09085 21.8182 4.56357 21.8182 5.63631C21.8182 6.70904 17.0909 8.18176 12 8.18176Z" fill="#7A7A7A"/>
-</svg>
+                            <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12 0.909058C6.10908 0.909058 0 2.45453 0 5.63635V14.3636C0 17.5455 6.10908 19.0909 12 19.0909C17.8909 19.0909 24 17.5454 24 14.3636V5.63631C24 2.45448 17.8909 0.909058 12 0.909058ZM21.8182 14.3636C21.8182 15.4363 17.091 16.909 12 16.909C6.90905 16.909 2.1818 15.4363 2.1818 14.3636V12.8601C4.48341 14.1122 8.28478 14.7272 12 14.7272C15.7152 14.7272 19.5166 14.1122 21.8182 12.8601V14.3636ZM21.8182 9.99995C21.8182 11.0727 17.091 12.5454 12 12.5454C6.90905 12.5454 2.1818 11.0727 2.1818 9.99995V8.49648C4.48341 9.7486 8.28478 10.3636 12 10.3636C15.7152 10.3636 19.5166 9.7486 21.8182 8.49648V9.99995ZM12 8.18176C6.90909 8.18176 2.1818 6.70904 2.1818 5.63631C2.1818 4.56357 6.90905 3.09085 12 3.09085C17.091 3.09085 21.8182 4.56357 21.8182 5.63631C21.8182 6.70904 17.0909 8.18176 12 8.18176Z" fill="#7A7A7A" />
+                            </svg>
 
                           </span>
-                        300
+                          300
                         </span>
                       </div>
                     </div>
@@ -137,85 +155,33 @@ const page = () => {
                 <tr>
                   <th scope='col'>Order ID</th>
                   <th scope='col'>Customer</th>
-                  <th scope='col'>Order</th>
-                  <th scope='col'>Delivery Date</th>
-                  <th scope='col'>Payments Status</th>
+                  <th scope='col'>No. Order</th>
+                  <th scope='col'>Order Date</th>
+                  <th scope='col'>Delivery Status</th>
                   <th scope='col'>Total</th>
                 </tr>
               </thead>
 
               <tbody>
-                <tr>
-                  {/* <th scope='row'>AKN12508</th> */}
+                {
+                  order.map((item) => (
 
-                  <td>AKN12508</td>
-                  <td>IU Bhuiyan</td>
-                  <td className='d-flex gap-3'>
-                    <span>
-                      <img className='toy-img-customer-das' src={toyicon.src} alt='' />
-                    </span>
-                    Nike Aiforce Shoes
-                  </td>
-                  <td>09.07.2022</td>
-                  <td ><span className="paid-custo-table">Paid</span></td>
-                  <td>230</td>
-                </tr>
-                <tr>
-                  {/* <th scope='row'>AKN12508</th> */}
 
-                  <td>AKN12508</td>
-                  <td>IU Bhuiyan</td>
-                  <td className='d-flex gap-3'>
-                    <span>
-                      <img className='toy-img-customer-das' src={toyicon.src} alt='' />
-                    </span>
-                    Nike Aiforce Shoes
-                  </td>
-                  <td>09.07.2022</td>
-                  <td ><span className="paid-cash-table">Cash on Delivery</span></td>
-                  <td>230</td>
-                </tr>
-                <tr>
-                  {/* <th scope='row'>AKN12508</th> */}
+                    <tr>
 
-                  <td>AKN12508</td>
-                  <td>IU Bhuiyan</td>
-                  <td className='d-flex gap-3'>
-                    <span>
-                      <img className='toy-img-customer-das' src={toyicon.src} alt='' />
-                    </span>
-                    Nike Aiforce Shoes
-                  </td>
-                  <td>09.07.2022</td>
-                  <td ><span className="paid-custo-table">Paid</span></td>
-                  <td>230</td>
-                </tr>
-                <tr>
-                  {/* <th scope='row'>AKN12508</th> */}
 
-                  <td>AKN12508</td>
-                  <td>IU Bhuiyan</td>
-                  <td className='d-flex gap-3'>
-                    <span>
-                      <img className='toy-img-customer-das' src={toyicon.src} alt='' />
-                    </span>
-                    Nike Aiforce Shoes
-                  </td>
-                  <td>09.07.2022</td>
-                  <td ><span className="paid-cash-table">Cash on Delivery</span></td>
-                  <td>230</td>
-                </tr>
-                {/* <tr>
-                  <th scope='row'>2</th>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                </tr>
-                <tr>
-                  <th scope='row'>3</th>
-                  <td colspan='2'>Larry the Bird</td>
-                  <td>@twitter</td>
-                </tr> */}
+                      <td>TUB-INV-{item.combined_order_id}</td>
+                      <td>{item?.user?.name}</td>
+                      <td className='d-flex gap-3'>
+                        {item?.order_details.length}
+                      </td>
+                      <td>{formatDate(item.date)}</td>
+                      <td ><span className="paid-custo-table">{item.delivery_status}</span></td>
+                      <td>{item.grand_total}</td>
+                    </tr>
+                  ))
+                }
+
               </tbody>
             </table>
           </div>

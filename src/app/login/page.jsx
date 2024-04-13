@@ -39,7 +39,9 @@ const page = () => {
       axiosInstance.post(`/auth/login`, formData).then((res) => {
         if (res.status == 200) {
           toast.success(res.data.message);
-          router.push('/customer-dashboard');
+          router.push('/customerDashboard');
+          localStorage.setItem("token", res.data.access_token);
+          localStorage.setItem("user", JSON.stringify(res.data.user));
         } else {
           toast.error("Something went wrong!");
         }

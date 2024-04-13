@@ -19,6 +19,7 @@ import blackBest from "../../../public/blackprod.png";
 import axiosInstance from "@/utils/axios";
 // import Toy from "../../../public/toy_1.png";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Link from "next/link";
 
 const BestBlack = () => {
   const sliderRef = useRef(null);
@@ -159,22 +160,22 @@ const BestBlack = () => {
                           <span className='taka-view-span'>
                             {item.stroked_price}
                           </span>
-                          {/* <span className='taka-view-span2'>
-                  View Details
-                  <span>
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      width='14'
-                      height='13'
-                      viewBox='0 0 14 13'
-                      fill='none'>
-                      <path
-                        d='M7.11654 2.36176L6.39608 3.08222L9.24728 5.93852H3.02881V6.96046H9.24728L6.39608 9.81676L7.11654 10.5372L11.2043 6.44949L7.11654 2.36176Z'
-                        fill='#156CFA'
-                      />
-                    </svg>
-                  </span>
-                </span> */}
+                          <Link href={`product/singleProduct/${item.id}`} className='taka-view-span2'>
+                            View Details
+                            <span>
+                              <svg
+                                xmlns='http://www.w3.org/2000/svg'
+                                width='14'
+                                height='13'
+                                viewBox='0 0 14 13'
+                                fill='none'>
+                                <path
+                                  d='M7.11654 2.36176L6.39608 3.08222L9.24728 5.93852H3.02881V6.96046H9.24728L6.39608 9.81676L7.11654 10.5372L11.2043 6.44949L7.11654 2.36176Z'
+                                  fill='#156CFA'
+                                />
+                              </svg>
+                            </span>
+                          </Link>
                         </div>
                       </div>
                     </div>

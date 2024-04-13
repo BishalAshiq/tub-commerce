@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 
 // Limit the middleware to paths starting with `/api/`
 export const config = {
-    matcher: ['/customer-dashboard', '/checkout'],
+    matcher: ['/customer-dashboard'],
 }
 
 export function middleware(request) {

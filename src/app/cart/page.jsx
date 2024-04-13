@@ -22,14 +22,14 @@ const page = () => {
 
 
   const cartItems = useSelector((state) => state.cart.items);
-  console.log("cartItems2", cartItems);
+ 
 
   const subtotal = cartItems.reduce(
     (acc, item) => acc + 1 * item?.calculable_price,
     0
   );
-  const discount = 0; //cartItems.reduce((acc, item) => acc + 1 * item?.discount, 0); // You may need to update this based on your logic
-  const tax = 0;//cartItems.reduce((acc, item) => acc + 1 * item?.tax, 0); // You may need to update this based on your logic
+  const discount = 0; 
+  const tax = 0;
   const total = subtotal - discount + tax;
 
   return (
