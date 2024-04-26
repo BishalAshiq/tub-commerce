@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
 import axiosInstance from '@/utils/axios';
 // import { Autocomplete } from '@mantine/core';
@@ -7,6 +7,14 @@ import axiosInstance from '@/utils/axios';
 const AutoCompleteSearch = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [searchResults, setSearchResults] = useState([]);
+    const autoCompleteRef = useRef(null);
+
+    useEffect(() => {
+        document.addEventListener('click', handleClickOutside);
+        return () => {
+            document.removeEventListener('click', handleClickOutside);
+        };
+    }, []);
 
     const handleChange = async (e) => {
         const term = e.target.value;
@@ -29,10 +37,16 @@ const AutoCompleteSearch = () => {
         // Do something with the selected result, like redirecting to a details page or updating state
     };
 
+    const handleClickOutside = (event) => {
+        if (autoCompleteRef.current && !autoCompleteRef.current.contains(event.target)) {
+            setSearchResults([]);
+        }
+    };
+
+
     return (
         <form className='nav-search-input-form d-flex' role='search'>
-            <div className='nav-search-input-div ' 
-               >
+            <div className='nav-search-input-div' ref={autoCompleteRef}>
                 <svg
                     xmlns='http://www.w3.org/2000/svg'
                     width='20'

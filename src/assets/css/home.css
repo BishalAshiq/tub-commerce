@@ -354,11 +354,11 @@
 .top-right-text {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 3px;
   display: flex;
   width: 75.915px;
-  height: 15.329px;
-  padding: 1.533px 7.665px 1.533px 6.132px;
+  /* height: 15.329px; */
+  padding: 1.533px 7.665px 0.533px 6.132px;
   justify-content: center;
   align-items: center;
   gap: 4.599px;
@@ -366,6 +366,9 @@
   flex-shrink: 0;
   border-radius: 3.066px;
   background: rgba(230, 167, 30, 0.18);
+}
+.coin-points{
+  margin: 3px 0 0 0;
 }
 
 .categories-img-div {

@@ -196,7 +196,7 @@ const PopularProducts = () => {
                             </defs>
                           </svg>{" "}
                         </span>{" "}
-                        30 Points
+                        <p className="coin-points">30 Points</p>
                       </div>
                     </div>
                     <img
@@ -323,8 +323,9 @@ const PopularProducts = () => {
                         )}
                       </div>
                       <div className='top-right-text'>
-                        <span>
+                        <span >
                           <svg
+                           
                             xmlns='http://www.w3.org/2000/svg'
                             width='10'
                             height='10'
@@ -400,7 +401,7 @@ const PopularProducts = () => {
                             </defs>
                           </svg>{" "}
                         </span>{" "}
-                        30 Points
+                        <p className="coin-points">30 Points</p>
                       </div>
                     </div>
                     <img
