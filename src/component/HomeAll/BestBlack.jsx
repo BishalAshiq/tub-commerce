@@ -73,7 +73,7 @@ const BestBlack = () => {
         <div className='container' data-aos='fade-up'>
           <div className='  '>
             <div className='best-tag-div'>
-              <h1>Best Selling Products</h1>
+              <h1>Best Selling <span className="bS-Dolls-span">Dolls</span></h1>
               <p>
                 Bring your products and services to the world. Get started with
                 selling on one channel and expand everywhere online and in
@@ -160,7 +160,7 @@ const BestBlack = () => {
                           <span className='taka-view-span'>
                             {item.stroked_price}
                           </span>
-                          <Link href={`product/singleProduct/${item.id}`} className='taka-view-span2'>
+                          {/* <Link href={`product/singleProduct/${item.id}`} className='taka-view-span2'>
                             View Details
                             <span>
                               <svg
@@ -175,7 +175,7 @@ const BestBlack = () => {
                                 />
                               </svg>
                             </span>
-                          </Link>
+                          </Link> */}
                         </div>
                       </div>
                     </div>

@@ -1082,6 +1082,24 @@
   display: grid;
   place-items: center;
 }
+.best-tag-div h1{
+  font-family: "Poppins", sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 60px;
+  color: black;
+}
+.bS-Dolls-span{
+  color: #01de9e;
+
+  /* H2 */
+  font-family: "Poppins", sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 60px;
+}
 
 .black-best-div {
   margin: 5% 0 0 0;
@@ -1454,6 +1472,7 @@
   display: flex;
   justify-content: center;
   gap: 20px;
+  margin: 5px 0 0 0;
 }
 .footer-imgs-div {
   width: 38px;
@@ -2131,6 +2150,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 17px 0 0 0;
   gap: 30px;
 }
 .reserved-text {
@@ -2141,6 +2161,7 @@
   letter-spacing: -0.01em;
   text-align: center;
   color: rgba(129, 135, 157, 1);
+  margin: 17px 0 0 0;
 }
 
 /* Responsiveness  */
