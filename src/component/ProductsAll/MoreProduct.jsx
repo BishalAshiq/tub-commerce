@@ -78,8 +78,8 @@ const MoreProduct = () => {
                 More <span className='featured-tags-product'>Products</span>
               </h3>
               <div className='featured-tags-btn-div'>
-                <button className='featured-tags-btn'>
-                  See all Products{" "}
+              <Link href={"/product/allProducts"} className='featured-tags-btn'>
+                  <span className="seeAllProdText"> See all Products{" "}</span>
                   <span>
                     <svg
                       xmlns='http://www.w3.org/2000/svg'
@@ -95,7 +95,7 @@ const MoreProduct = () => {
                       />
                     </svg>
                   </span>
-                </button>
+                </Link>
                 {/* <div className='featured-tags-btn-two'>
                 <button className='buttonr-l-r' onClick={play}>
                   <svg

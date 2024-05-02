@@ -747,6 +747,7 @@ color: white;
 /* Account-Manager  */
 
 .Account-Settings-full-div{
+  margin: 150px 0 0 0;
   background: linear-gradient(
     to bottom,
     white,

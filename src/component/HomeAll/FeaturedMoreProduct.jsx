@@ -94,8 +94,8 @@ const FeaturedMoreProduct = () => {
                     <svg
                       className="btn-next-svg"
                       xmlns='http://www.w3.org/2000/svg'
-                      width='56'
-                      height='56'
+                      width='42'
+                      height='42'
                       viewBox='0 0 56 56'
                       fill='none'>
                       <path
@@ -111,8 +111,8 @@ const FeaturedMoreProduct = () => {
                     <svg
                       className="btn-next-svg"
                       xmlns='http://www.w3.org/2000/svg'
-                      width='56'
-                      height='56'
+                      width='42'
+                      height='42'
                       viewBox='0 0 56 56'
                       fill='none'>
                       <path
@@ -760,8 +760,8 @@ const FeaturedMoreProduct = () => {
                 More <span className='featured-tags-product'>Products</span>
               </h3>
               <div className='featured-tags-btn-div'>
-                <Link href={"/product/allProducts"} className='featured-tags-btn'>
-                  See all Products{" "}
+              <Link href={"/product/allProducts"} className='featured-tags-btn'>
+                  <span className="seeAllProdText"> See all Products{" "}</span>
                   <span>
                     <svg
                       xmlns='http://www.w3.org/2000/svg'

@@ -797,12 +797,12 @@ a:hover {
   display: flex;
   justify-content: center;
   /* margin-top: 30px; */
-  gap: 10px;
+  gap: 40px;
 }
 
 .established-full-div {
-  padding: 5% 0;
-  margin: 3% 0;
+  padding: 50px 0;
+  /* margin: 20px 0; */
   /* border-top-right-radius: 10%; */
   /* border-top-right-radius: 10%; */
   background: linear-gradient(to right,
@@ -942,10 +942,10 @@ a:hover {
 .counting-div {
   display: flex;
   gap: 20px;
-  justify-content: center;
+  justify-content: space-between;
   /* align-items: center; */
   border: 1px solid var(--Shapes-Color-Light-Grey, #e2e8eb);
-
+  padding: 0 18px;
   height: 6vh;
   border-radius: 20px;
   width: 150px;
@@ -1015,9 +1015,10 @@ a:hover {
   border-radius: 32.836px;
   background: var(--button, linear-gradient(90deg, #02d4b6 0%, #1663f9 100%));
   box-shadow: 3.219px 4.507px 14.808px 0px rgba(4, 202, 189, 0.31);
-  color: white;
+ 
   font-family: "Poppins", sans-serif;
 }
+
 
 .featured-tags-btn-div {
   display: flex;
@@ -1079,6 +1080,7 @@ a:hover {
 
 .best-full-div {
   /* margin: 10% 0 5% 0; */
+  padding: 60px 0 0 0;
   background: linear-gradient(to left top,
       white,
       white,
@@ -1095,7 +1097,7 @@ a:hover {
 }
 
 .product-single-header-div {
-  margin: 130px 0 0 0;
+  margin: 160px 0 0 0;
 }
 
 .best-tag-div {
@@ -1489,6 +1491,9 @@ a:hover {
   border-top-left-radius: 30px;
   background-color: white;
 }
+.second-footer{
+  padding: 31px 0;
+}
 
 .footer-imgs-full-div {
   display: flex;
@@ -1597,15 +1602,18 @@ a:hover {
 .select-icons {
   display: flex;
   /* justify-content: center; */
-  gap: 30px;
-  margin: 10px 0 0 16px;
+  gap: 15px;
+  margin: 10px 0 0 24px;
 }
 
 .select-icon {
   display: flex;
   /* justify-content: center; */
-  gap: 30px;
-  margin: 8px 0 0 16px;
+  gap: 15px;
+  margin: 5px 0 0 25px
+}
+.seeAllProdText {
+ color: white;
 }
 
 @media only screen and (max-width: 1366px) {
@@ -1739,20 +1747,21 @@ a:hover {
   }
 
   .price-number {
-    margin: 0 0 5px 10px;
+    margin: 3px 0 0px 20px;
   }
 
   .select-icons {
     display: flex;
     /* justify-content: center; */
-    gap: 30px;
-    margin: 10px 0 0 21px;
+    gap: 15px;
+    margin: 7px 0 0 26px;
   }
 
   .select-icon {
     display: flex;
     /* justify-content: center; */
-    gap: 30px;
+    gap: 15px;
+    margin: 5px 0 0 26px;
   }
 }
 
@@ -1850,18 +1859,17 @@ a:hover {
     line-height: 60px;
   }
 
-  .counting-div {
+  /* .counting-div {
     display: flex;
     gap: 20px;
     justify-content: center;
-    /* align-items: center; */
     border: 1px solid var(--Shapes-Color-Light-Grey, #e2e8eb);
 
     height: 6vh;
     border-radius: 20px;
     width: 150px;
     margin: 22px 0 0 0;
-  }
+  } */
 
   .count-bten {
     border: none;
@@ -2202,12 +2210,13 @@ a:hover {
 }
 
 .empty-card-div {
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: end;
 }
 
 .empty-card {
   color: #000;
+  
 }
 
 .countss {
@@ -2248,6 +2257,43 @@ a:hover {
   text-align: center;
   color: rgba(129, 135, 157, 1);
   margin: 17px 0 0 0;
+}
+
+.floating-add-cart-img {
+  width: 60px;
+  height: 40;
+}
+
+.floating-add-cart-img-div {
+  position: relative;
+  display: inline-block;
+}
+
+.floating-add-cart-img {
+  /* width: 100%; */
+  /* Adjust the width as needed */
+  height: auto;
+  margin: 0 10px 0 10px;
+}
+
+.cart-icon {
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  /* align-items: center; */
+  justify-content: center;
+  text-align: center;
+  margin: 20px 0 0 0;
+  transition: all 0.4s;
+}
+
+.cart-icons {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  /* Adjust padding as needed */
+  cursor: pointer;
 }
 
 /* Responsiveness  */
