@@ -19,6 +19,7 @@ import ToyFive from "../../../public/toy_5.png";
 import Image from "next/image";
 import axiosInstance from "@/utils/axios";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Link from "next/link";
 
 const TopBruderToys = () => {
   const sliderRef = useRef(null);
@@ -142,7 +143,10 @@ const TopBruderToys = () => {
                       </div>
                       <div className="tag-pri-div">
                         <div className="card-t-div">
-                          <span className="brudal-card-text ">{item.name}</span>
+                          <Link href={`/product/${item.id}`}>
+                            <span className="brudal-card-text ">{item.name}</span>
+                          </Link>
+
                           <span className="card-text-rating">
                             4.9/5{" "}
                             <span>
@@ -261,82 +265,16 @@ const TopBruderToys = () => {
                             alt=""
                           />
                         </div>
-                        <div className="ShopTop-view">
-                          <span className="Top-span">{item.name}</span>
+                        <div className={`${item.bg_color} ShopTop-view`}>
+                          <Link href={`/category/${item.slug}`}>
+                            <span className="Top-span">{item.name}</span>
+                          </Link>
+
                         </div>
                       </div>
                     </SwiperSlide>
                   ))}
-                <SwiperSlide>
-                  <div className="Top-single-toy">
-                    <div className="tbrudal-img-div">
-                      <img
-                        className="categories-img"
-                        src={CatProductone.src}
-                        alt=""
-                      />
-                    </div>
-                    <div className="ShopTop-view">
-                      <span className="Top-span">Toy4</span>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="Top-single-toy">
-                    <div className="tbrudal-img-div">
-                      <img
-                        className="categories-img"
-                        src={CatProductone.src}
-                        alt=""
-                      />
-                    </div>
-                    <div className="ShopTop-view">
-                      <span className="Top-span">Toy4</span>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="Top-single-toy">
-                    <div className="tbrudal-img-div">
-                      <img
-                        className="categories-img"
-                        src={CatProductone.src}
-                        alt=""
-                      />
-                    </div>
-                    <div className="ShopTop-view">
-                      <span className="Top-span">Toy4</span>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="Top-single-toy">
-                    <div className="tbrudal-img-div">
-                      <img
-                        className="categories-img"
-                        src={CatProductone.src}
-                        alt=""
-                      />
-                    </div>
-                    <div className="ShopTop-view">
-                      <span className="Top-span">Toy4</span>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="Top-single-toy">
-                    <div className="tbrudal-img-div">
-                      <img
-                        className="categories-img"
-                        src={CatProductone.src}
-                        alt=""
-                      />
-                    </div>
-                    <div className="ShopTop-view">
-                      <span className="Top-span">Toy4</span>
-                    </div>
-                  </div>
-                </SwiperSlide>
+
               </Swiper>
             </div>
 

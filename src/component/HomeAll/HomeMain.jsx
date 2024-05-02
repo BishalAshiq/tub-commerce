@@ -19,7 +19,7 @@ const Homebanner = () => {
     });
   }, []);
 
-  console.log(banners, banners.length);
+
   
   return (
     <div className=" banner-full-div">

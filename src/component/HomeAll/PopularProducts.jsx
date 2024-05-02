@@ -118,7 +118,7 @@ const PopularProducts = () => {
                           </span>
                         )}
                       </div>
-                      <div className='top-right-text'>
+                      {/* <div className='top-right-text'>
                         <span>
                           <svg
                             xmlns='http://www.w3.org/2000/svg'
@@ -197,7 +197,7 @@ const PopularProducts = () => {
                           </svg>{" "}
                         </span>{" "}
                         <p className="coin-points">30 Points</p>
-                      </div>
+                      </div> */}
                     </div>
                     <img
                       className='toy-img'
@@ -246,7 +246,7 @@ const PopularProducts = () => {
                     <span className='taka-view-span'>{item.stroked_price}</span>
 
                     <span className='taka-view-span2'>
-                      <Link href={`/product/singleProduct/${item.id}`}>
+                      <Link href={`/product/${item.id}`}>
                         View Details
                       </Link>
                       <span>
@@ -322,7 +322,7 @@ const PopularProducts = () => {
                           </span>
                         )}
                       </div>
-                      <div className='top-right-text'>
+                      {/* <div className='top-right-text'>
                         <span >
                           <svg
                            
@@ -402,7 +402,7 @@ const PopularProducts = () => {
                           </svg>{" "}
                         </span>{" "}
                         <p className="coin-points">30 Points</p>
-                      </div>
+                      </div> */}
                     </div>
                     <img
                       className='toy-img'

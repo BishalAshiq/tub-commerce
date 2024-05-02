@@ -186,7 +186,7 @@ const MoreProduct = () => {
 
                           <div className='taka-view'>
                             <span className='taka-view-span'>{item.stroked_price}</span>
-                            <Link href={`/product/singleProduct/${item.id}`}>
+                            <Link href={`/product/${item.id}`}>
                               <span className='taka-view-span2'>
                                 View Details
                                 <span>

@@ -67,10 +67,7 @@ const ProductInformation = ({ product }) => {
         </div> */}
         <div>
           <p className='product-ptext'>
-            <strong>Note:</strong> Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, nostrud ipsum
-            consectetur sed do.
+            <strong>Note:</strong> {product?.description}
           </p>
         </div>
       </div>
@@ -124,7 +121,7 @@ const ProductInformation = ({ product }) => {
               aria-describedby='modal-modal-description'>
               <Box sx={style}>
                 <div>
-                  <ProductReview />
+                  <ProductReview productId={product?.id} />
                 </div>
               </Box>
             </Modal>

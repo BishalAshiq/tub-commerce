@@ -120,7 +120,9 @@ const BestBlack = () => {
                       </div>
                       <div className='tag-pri-div'>
                         <div className='card-t-div'>
-                          <span className='brudal-card-text '>{item.name}</span>
+                          <Link href={`/product/${item.id}`}>
+                            <span className='brudal-card-text '>{item.name}</span>
+                          </Link>
                           <span className='card-text-rating'>
                             4.9/5{" "}
                             <span>

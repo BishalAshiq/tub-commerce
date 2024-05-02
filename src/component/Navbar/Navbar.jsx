@@ -10,9 +10,18 @@ const Navbar = () => {
     const [categories, setCategories] = useState([]);
     const [brands, setBrands] = useState([]);
     useEffect(() => {
-        axiosInstance.get("/categories/featured").then((res) => {
-            setCategories(res.data.data);
-        });
+        if (typeof window != undefined) {
+            const category = localStorage.getItem("category");
+         
+            if (category != null) {
+                axiosInstance.get("/categories/featured").then((res) => {
+                    setCategories(res.data.data);
+                    localStorage.setItem("category", res.data.data);
+                });
+            }
+
+        }
+
 
         axiosInstance.get("/brands").then((res) => {
             setBrands(res.data.data);

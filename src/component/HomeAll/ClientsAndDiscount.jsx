@@ -1,8 +1,9 @@
 "use client";
-import React, { useState, useEffect  } from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import Author from "../../../public/authoravatar.jpg";
 import Discount from "../../../public/discountpng.png";
+import axiosInstance from "@/utils/axios";
 // import React, { } from "react";
 
 const ClientsAndDiscount = () => {
@@ -13,15 +14,12 @@ const ClientsAndDiscount = () => {
   const [products, setProducts] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      // Generate random numbers for each category
-      setUserTrust(Math.floor(Math.random() * 100) * 100);
-      setBrandVision(Math.floor(Math.random() * 100) * 100);
-      setAchievement(Math.floor(Math.random() * 100) * 100);
-      setProducts(Math.floor(Math.random() * 100) * 100);
-    }, 2000); // Change the interval time as per your requirement
-
-    return () => clearInterval(interval); // Clean up the interval
+    axiosInstance.get('/web-summary').then((res) => {
+      setProducts(res.data.product);
+      setAchievement(res.data.order);
+      setBrandVision(res.data.brand);
+      setUserTrust(res.data.user);
+    })
   }, []);
 
 
@@ -63,32 +61,32 @@ const ClientsAndDiscount = () => {
     <div className=''>
       <div className='review-num-full-div'>
         <div className='container'>
-        <div className="row">
-      <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-        <div className="review-num-div">
-          <h3 className="review-number">{userTrust}k</h3>
-          <p className="review-numberp">User Trust</p>
-        </div>
-      </div>
-      <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-        <div className="review-num-div">
-          <h3 className="review-number1">{brandVision}k</h3>
-          <p className="review-numberp">Brand Vision</p>
-        </div>
-      </div>
-      <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-        <div className="review-num-div">
-          <h3 className="review-number2">{achievement}k</h3>
-          <p className="review-numberp">Achievement</p>
-        </div>
-      </div>
-      <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-        <div className="review-num-div">
-          <h3 className="review-number3">{products}k</h3>
-          <p className="review-numberp">Products</p>
-        </div>
-      </div>
-    </div>
+          <div className="row">
+            <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+              <div className="review-num-div">
+                <h3 className="review-number">{userTrust}</h3>
+                <p className="review-numberp">User Trust</p>
+              </div>
+            </div>
+            <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+              <div className="review-num-div">
+                <h3 className="review-number1">{brandVision}</h3>
+                <p className="review-numberp">Brand Vision</p>
+              </div>
+            </div>
+            <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+              <div className="review-num-div">
+                <h3 className="review-number2">{achievement}</h3>
+                <p className="review-numberp">Achievement</p>
+              </div>
+            </div>
+            <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+              <div className="review-num-div">
+                <h3 className="review-number3">{products}</h3>
+                <p className="review-numberp">Products</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -360,8 +358,8 @@ const ClientsAndDiscount = () => {
           <div className='row'>
             <div className='col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6'>
               <div className='discoount-banenr-img-div' data-aos="flip-left"
-     data-aos-easing="ease-out-cubic"
-     data-aos-duration="2000">
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000">
                 <img
                   className='discoount-banenr-img'
                   src={Discount.src}

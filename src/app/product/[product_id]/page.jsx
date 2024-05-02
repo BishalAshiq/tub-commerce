@@ -2,12 +2,6 @@
 import Navbar from "@/component/Navbar/Navbar";
 import React, { Component, useEffect } from "react";
 import { useRef, useState } from "react";
-import singleProduct from "../../../../../public/singlproduct.png";
-import singleProductpone from "../../../../../public/singlproductp1.png";
-import singleProductptwo from "../../../../../public/singlproductp2.png";
-import singleProductpthree from "../../../../../public/singlproductp3.png";
-import singleProductpfour from "../../../../../public/singlproductp4.png";
-import Image from "next/image";
 import ProductInformation from "@/component/ProductsAll/ProductInformation";
 import { useParams } from "next/navigation";
 import axiosInstance from "@/utils/axios";

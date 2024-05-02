@@ -18,6 +18,8 @@ import ToyFour from "../../../public/toy_4.png";
 import ToyFive from "../../../public/toy_5.png";
 import axiosInstance from "@/utils/axios";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Link from "next/link";
+
 
 const FeaturedMoreProduct = () => {
   const sliderRef = useRef(null);
@@ -69,8 +71,8 @@ const FeaturedMoreProduct = () => {
                 Featured <span className='featured-tags-product'>Products</span>
               </h3>
               <div className='featured-tags-btn-div'>
-                <button className='featured-tags-btn'>
-                 <span className="seeAllProdText"> See all Products{" "}</span>
+                <Link href={"/product/allProducts"} className='featured-tags-btn'>
+                  <span className="seeAllProdText"> See all Products{" "}</span>
                   <span>
                     <svg
                       xmlns='http://www.w3.org/2000/svg'
@@ -86,11 +88,11 @@ const FeaturedMoreProduct = () => {
                       />
                     </svg>
                   </span>
-                </button>
+                </Link>
                 <div className='featured-tags-btn-two'>
                   <button className='buttonr-l-r' onClick={play}>
                     <svg
-                    className="btn-next-svg"
+                      className="btn-next-svg"
                       xmlns='http://www.w3.org/2000/svg'
                       width='56'
                       height='56'
@@ -107,7 +109,7 @@ const FeaturedMoreProduct = () => {
                   </button>
                   <button className='buttonr-l-r' onClick={pause}>
                     <svg
-                    className="btn-next-svg"
+                      className="btn-next-svg"
                       xmlns='http://www.w3.org/2000/svg'
                       width='56'
                       height='56'
@@ -206,22 +208,25 @@ const FeaturedMoreProduct = () => {
                         <span className='taka-view-span'>
                           {item.stroked_price}
                         </span>
-                        <span className='taka-view-span2'>
-                          View Details
-                          <span>
-                            <svg
-                              xmlns='http://www.w3.org/2000/svg'
-                              width='14'
-                              height='13'
-                              viewBox='0 0 14 13'
-                              fill='none'>
-                              <path
-                                d='M7.11654 2.36176L6.39608 3.08222L9.24728 5.93852H3.02881V6.96046H9.24728L6.39608 9.81676L7.11654 10.5372L11.2043 6.44949L7.11654 2.36176Z'
-                                fill='#156CFA'
-                              />
-                            </svg>
+                        <Link href={`/product/${item.id}`}>
+                          <span className='taka-view-span2'>
+                            View Details
+                            <span>
+                              <svg
+                                xmlns='http://www.w3.org/2000/svg'
+                                width='14'
+                                height='13'
+                                viewBox='0 0 14 13'
+                                fill='none'>
+                                <path
+                                  d='M7.11654 2.36176L6.39608 3.08222L9.24728 5.93852H3.02881V6.96046H9.24728L6.39608 9.81676L7.11654 10.5372L11.2043 6.44949L7.11654 2.36176Z'
+                                  fill='#156CFA'
+                                />
+                              </svg>
+                            </span>
+
                           </span>
-                        </span>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -755,7 +760,7 @@ const FeaturedMoreProduct = () => {
                 More <span className='featured-tags-product'>Products</span>
               </h3>
               <div className='featured-tags-btn-div'>
-                <button className='featured-tags-btn'>
+                <Link href={"/product/allProducts"} className='featured-tags-btn'>
                   See all Products{" "}
                   <span>
                     <svg
@@ -772,7 +777,7 @@ const FeaturedMoreProduct = () => {
                       />
                     </svg>
                   </span>
-                </button>
+                </Link>
                 {/* <div className='featured-tags-btn-two'>
                 <button className='buttonr-l-r' onClick={play}>
                   <svg
@@ -891,22 +896,25 @@ const FeaturedMoreProduct = () => {
                             <span className='taka-view-span'>
                               {item.stroked_price}
                             </span>
-                            <span className='taka-view-span2'>
-                              View Details
-                              <span>
-                                <svg
-                                  xmlns='http://www.w3.org/2000/svg'
-                                  width='14'
-                                  height='13'
-                                  viewBox='0 0 14 13'
-                                  fill='none'>
-                                  <path
-                                    d='M7.11654 2.36176L6.39608 3.08222L9.24728 5.93852H3.02881V6.96046H9.24728L6.39608 9.81676L7.11654 10.5372L11.2043 6.44949L7.11654 2.36176Z'
-                                    fill='#156CFA'
-                                  />
-                                </svg>
+
+                            <Link href={`/product/${item.id}`}>
+                              <span className='taka-view-span2'>
+                                View Details
+                                <span>
+                                  <svg
+                                    xmlns='http://www.w3.org/2000/svg'
+                                    width='14'
+                                    height='13'
+                                    viewBox='0 0 14 13'
+                                    fill='none'>
+                                    <path
+                                      d='M7.11654 2.36176L6.39608 3.08222L9.24728 5.93852H3.02881V6.96046H9.24728L6.39608 9.81676L7.11654 10.5372L11.2043 6.44949L7.11654 2.36176Z'
+                                      fill='#156CFA'
+                                    />
+                                  </svg>
+                                </span>
                               </span>
-                            </span>
+                            </Link>
                           </div>
                         </div>
                       </div>
@@ -993,22 +1001,24 @@ const FeaturedMoreProduct = () => {
                             <span className='taka-view-span'>
                               {item.stroked_price}
                             </span>
-                            <span className='taka-view-span2'>
-                              View Details
-                              <span>
-                                <svg
-                                  xmlns='http://www.w3.org/2000/svg'
-                                  width='14'
-                                  height='13'
-                                  viewBox='0 0 14 13'
-                                  fill='none'>
-                                  <path
-                                    d='M7.11654 2.36176L6.39608 3.08222L9.24728 5.93852H3.02881V6.96046H9.24728L6.39608 9.81676L7.11654 10.5372L11.2043 6.44949L7.11654 2.36176Z'
-                                    fill='#156CFA'
-                                  />
-                                </svg>
+                            <Link href={`/product/${item.id}`}>
+                              <span className='taka-view-span2'>
+                                View Details
+                                <span>
+                                  <svg
+                                    xmlns='http://www.w3.org/2000/svg'
+                                    width='14'
+                                    height='13'
+                                    viewBox='0 0 14 13'
+                                    fill='none'>
+                                    <path
+                                      d='M7.11654 2.36176L6.39608 3.08222L9.24728 5.93852H3.02881V6.96046H9.24728L6.39608 9.81676L7.11654 10.5372L11.2043 6.44949L7.11654 2.36176Z'
+                                      fill='#156CFA'
+                                    />
+                                  </svg>
+                                </span>
                               </span>
-                            </span>
+                            </Link>
                           </div>
                         </div>
                       </div>
@@ -1333,7 +1343,7 @@ const FeaturedMoreProduct = () => {
           </div>
         )}
       </div>
-    </div>
+    </div >
   );
 };
 
