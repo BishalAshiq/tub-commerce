@@ -8,6 +8,7 @@ import Link from "next/link";
 import toast from "react-hot-toast";
 import axiosInstance from "@/utils/axios";
 import { useParams, useRouter } from "next/navigation";
+import Cookies from "js-cookie";
 
 const page = () => {
   const router = useRouter();
@@ -42,6 +43,9 @@ const page = () => {
           router.push('/customerDashboard');
           localStorage.setItem("token", res.data.access_token);
           localStorage.setItem("user", JSON.stringify(res.data.user));
+          Cookies.set('token', res.data.access_token, { path: '/' });
+
+
         } else {
           toast.error("Something went wrong!");
         }

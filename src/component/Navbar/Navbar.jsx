@@ -10,14 +10,17 @@ const Navbar = () => {
     const [categories, setCategories] = useState([]);
     const [brands, setBrands] = useState([]);
     useEffect(() => {
-        if (typeof window != undefined) {
+        if (typeof window !== "undefined") {
             const category = localStorage.getItem("category");
-         
-            if (category != null) {
+           
+            if (category == null) {
                 axiosInstance.get("/categories/featured").then((res) => {
                     setCategories(res.data.data);
-                    localStorage.setItem("category", res.data.data);
+                    localStorage.setItem("category", JSON.stringify(res.data.data));
+
                 });
+            } else {
+                setCategories(JSON.parse(category));
             }
 
         }
