@@ -10,6 +10,7 @@ import { addToCartFn } from "@/redux/features/cart/cartSlice";
 import toast from "react-hot-toast";
 
 const page = () => {
+
   const params = useParams();
 
   const [product, setProduct] = useState(null);
