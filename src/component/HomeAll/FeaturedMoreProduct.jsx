@@ -503,7 +503,7 @@ const FeaturedMoreProduct = () => {
         {productsMiddle.length > 0 && (
           <div className='  established-full-div'>
             <div className='container'>
-              <div className='row'>
+              <div className='row children-mob'>
                 {productsMiddle[0] != "undefined" && (
                   <div className='col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 '>
                     <h4 className='ong-estab-tags'>{productsMiddle[0].name}</h4>

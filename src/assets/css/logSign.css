@@ -40,7 +40,7 @@
   /* border-radius: 20px; */
   border-radius: 10px;
   background: #fff;
-  box-shadow: 0px 39px 104px 0px rgba(0, 94, 255, 0.09);
+  box-shadow: 0px 39px 104px 0px rgb(0 0 0 / 37%);
 }
 .Sig-full-div {
   /* border: 1px solid gray; */
@@ -51,7 +51,7 @@
   /* border-radius: 20px; */
   border-radius: 10px;
   background: #fff;
-  box-shadow: 0px 39px 104px 0px rgba(0, 94, 255, 0.09);
+  box-shadow: 0px 39px 104px 0px rgb(0 0 0 / 37%);
 }
 .loginSign-div {
   border-radius: 20px;
@@ -213,7 +213,8 @@
     );
   }
   .Sig-full-div {
-    height: 149vh;
+    height: 169vh;
+    box-shadow: 0px 39px 104px 0px rgb(0 0 0 / 37%)
   }
   .login-full-div {
     /* margin: 10% 0 0 0; */
@@ -264,6 +265,7 @@
   .Sig-full-div {
     height: 176vh;
     width: 100%;
+    box-shadow: 0px 39px 104px 0px rgb(0 0 0 / 37%)
   }
 
   .log-full-div {
@@ -275,7 +277,7 @@
     /* border-radius: 20px; */
     border-radius: 10px;
     background: #fff;
-    box-shadow: 0px 39px 104px 0px rgba(0, 94, 255, 0.09);
+    box-shadow: 0px 39px 104px 0px rgb(0 0 0 / 37%);
   }
   .social-logSig-div {
     display: flex;

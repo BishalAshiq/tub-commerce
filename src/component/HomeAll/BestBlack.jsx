@@ -74,7 +74,7 @@ const BestBlack = () => {
         <div className='container' data-aos='fade-up'>
           <div className='  '>
             <div className='best-tag-div'>
-              <h1>Best Selling <span className="bS-Dolls-span">Dolls</span></h1>
+              <h1 className="bS-Dolls-tag">Best Selling <span className="bS-Dolls-span">Toys</span></h1>
               <p>
                 Bring your products and services to the world. Get started with
                 selling on one channel and expand everywhere online and in

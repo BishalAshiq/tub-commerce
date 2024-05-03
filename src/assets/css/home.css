@@ -302,7 +302,7 @@ a:hover {
   position: relative;
   width: 100% !important;
   border: none;
-  /* border: 1px solid gray; */
+  border: 1px solid #c1c1c1;
   height: 38vh;
   border-radius: 10px;
   /* border: 1px solid gray; */
@@ -444,13 +444,13 @@ a:hover {
   color: var(--dark-1, #81879d);
   text-align: center;
   font-family: "Poppins", sans-serif;
-  font-size: 14px;
+  font-size: 11px;
   font-style: normal;
   font-weight: 400;
-  line-height: 120%;
+  /* line-height: 120%; */
   /* 16.8px */
   /* border: 1px solid gray; */
-  height: 5vh;
+  height: 20px;
 }
 
 .card-text-rating {
@@ -481,7 +481,7 @@ a:hover {
 
 .card-t-div {
   margin: 7px 0 0 0;
-  line-height: 1;
+  /* line-height: 1; */
   display: flex;
   flex-direction: column;
   text-align: justify;
@@ -658,10 +658,10 @@ a:hover {
   width: 93% !important;
   border: none;
   margin: 20px 0;
-  height: 37vh;
+  height: 35vh;
 
   background-color: white !important;
-  /* box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px; */
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   border-radius: 10px;
 }
 
@@ -801,7 +801,7 @@ a:hover {
 }
 
 .established-full-div {
-  padding: 50px 0;
+  /* padding: 50px 0; */
   /* margin: 20px 0; */
   /* border-top-right-radius: 10%; */
   /* border-top-right-radius: 10%; */
@@ -1364,6 +1364,7 @@ a:hover {
 
 .card-header-text-div {
   display: flex;
+  align-items: center;
   gap: 20px;
 }
 
@@ -1777,6 +1778,29 @@ a:hover {
     line-height: 60px;
     /* 120% */
   }
+.children-mob{
+ 
+  visibility: hidden;
+  display: none;
+}
+.brudal-toy-Img-div{
+  visibility: hidden;
+  display: none;
+}
+.subscribe-text{
+  visibility: hidden;
+  display: none;
+}
+.footer-ratio-div{
+  visibility: hidden;
+  display: none;
+}
+.best-tag-div h1{
+  font-size: 18px;
+}
+.bS-Dolls-span{
+  font-size: 18px;
+}
 
   .ong-estab-tags {
     font-size: 30px;
@@ -1845,7 +1869,7 @@ a:hover {
     align-items: center;
     width: 30px;
     /* padding: 10px; */
-    height: 6vh;
+    height: 4vh;
   }
 
   .sale-text {
@@ -2313,10 +2337,10 @@ a:hover {
     width: 93% !important;
     border: none;
     margin: 20px 0;
-    height: 41vh;
+    height: 44vh;
 
     background-color: white !important;
-    /* box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px; */
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
     border-radius: 10px;
   }
 

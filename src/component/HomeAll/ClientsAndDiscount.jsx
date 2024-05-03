@@ -6,6 +6,42 @@ import Discount from "../../../public/discountpng.png";
 import axiosInstance from "@/utils/axios";
 // import React, { } from "react";
 
+const CountingAnimation = ({ finalValue }) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let animationFrameId;
+
+    const startCounting = () => {
+      animationFrameId = requestAnimationFrame(incrementCount);
+    };
+
+    const incrementCount = () => {
+      setCount((prevCount) => {
+        const increment = Math.ceil((finalValue - prevCount) / 10); // Adjust the increment based on your preference
+        const nextCount = prevCount + increment;
+
+        if (nextCount < finalValue) {
+          animationFrameId = requestAnimationFrame(incrementCount);
+        } else {
+          setCount(finalValue);
+        }
+
+        return nextCount;
+      });
+    };
+
+    startCounting();
+
+    return () => {
+      cancelAnimationFrame(animationFrameId);
+    };
+  }, [finalValue]);
+
+  return <span>{count}</span>;
+};
+
+
 const ClientsAndDiscount = () => {
 
   const [userTrust, setUserTrust] = useState(0);
@@ -64,25 +100,25 @@ const ClientsAndDiscount = () => {
           <div className="row">
             <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
               <div className="review-num-div">
-                <h3 className="review-number">{userTrust}</h3>
+                <h3 className="review-number"> <CountingAnimation finalValue={userTrust} /></h3>
                 <p className="review-numberp">User Trust</p>
               </div>
             </div>
             <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
               <div className="review-num-div">
-                <h3 className="review-number1">{brandVision}</h3>
+                <h3 className="review-number1"><CountingAnimation finalValue={brandVision} /></h3>
                 <p className="review-numberp">Brand Vision</p>
               </div>
             </div>
             <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
               <div className="review-num-div">
-                <h3 className="review-number2">{achievement}</h3>
+                <h3 className="review-number2"><CountingAnimation finalValue={achievement} /></h3>
                 <p className="review-numberp">Achievement</p>
               </div>
             </div>
             <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
               <div className="review-num-div">
-                <h3 className="review-number3">{products}</h3>
+                <h3 className="review-number3"> <CountingAnimation finalValue={products} /></h3>
                 <p className="review-numberp">Products</p>
               </div>
             </div>

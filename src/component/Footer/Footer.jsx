@@ -101,14 +101,14 @@ const Footer = () => {
               <div>
                 <div>
                   <div className='footer-search-div'>
-                    <p>
+                    <p className='subscribe-text'>
                       <strong>Subscribe</strong>
                     </p>
                     <div className='f-subscribe-inputs-div'>
                       <input
                         className='footer-Inputs'
                         type='email'
-                        placeholder='Email address'
+                        placeholder='Subscribe'
                       />
                       <span>
                         <svg

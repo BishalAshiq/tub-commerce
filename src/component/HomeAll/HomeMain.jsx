@@ -1,11 +1,13 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from 'react';
+import axios from 'axios';
+// import axiosInstance from '@/utils/axios';
 import BleftIcon from "../../../public/Blefttoy.png";
 import BRightIcon from "../../../public/BRighttoy.png";
 import EcomBanner from "../../../public/e-comBanner.png";
 import PopularProducts from "./PopularProducts";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import AOS from "aos";
 import axiosInstance from "@/utils/axios";
 import { Skeleton } from "@mui/material";
@@ -19,6 +21,46 @@ const Homebanner = () => {
       setBanners(res.data.data);
     });
   }, []);
+
+
+
+  const [searchTerm, setSearchTerm] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
+  const autoCompleteRef = useRef(null);
+
+  useEffect(() => {
+      document.addEventListener('click', handleClickOutside);
+      return () => {
+          document.removeEventListener('click', handleClickOutside);
+      };
+  }, []);
+
+  const handleChange = async (e) => {
+      const term = e.target.value;
+      setSearchTerm(term);
+
+      try {
+          const response = axiosInstance.get(`/products/search?name=${term}`).then((res) => {
+
+              setSearchResults(res.data.data);
+          });
+
+      } catch (error) {
+          console.error('Error fetching search results:', error);
+      }
+  };
+
+  const handleSelectResult = (result) => {
+      setSearchTerm(result.name);
+      setSearchResults([]);
+      // Do something with the selected result, like redirecting to a details page or updating state
+  };
+
+  const handleClickOutside = (event) => {
+      if (autoCompleteRef.current && !autoCompleteRef.current.contains(event.target)) {
+          setSearchResults([]);
+      }
+  };
 
 
 
@@ -59,13 +101,24 @@ const Homebanner = () => {
                   </svg>
                 </span>
                 <span className="find-p"> Find your product</span>
-                <div>
+               <form role='search'>
+               <div className='nav-search-input-div' ref={autoCompleteRef}>
                   <input
                     className="banner-search-input"
                     placeholder="Search"
                     type="search"
+                    value={searchTerm}
+                    onChange={handleChange}
                   />
                 </div>
+                <ul className="autocomplete-results-banner">
+                {searchResults.map((result) => (
+                    <li key={result.id} onClick={() => handleSelectResult(result)}>
+                        {result.name}
+                    </li>
+                ))}
+            </ul>
+               </form>
               </div>
             </div>
           </div>
