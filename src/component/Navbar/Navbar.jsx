@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import AutoCompleteSearch from "./AutoCompleteSearch";
 import axiosInstance from "@/utils/axios";
+import { Skeleton } from "@mui/material";
 
 const Navbar = () => {
     const [categories, setCategories] = useState([]);
@@ -12,7 +13,6 @@ const Navbar = () => {
     useEffect(() => {
         if (typeof window !== "undefined") {
             const category = localStorage.getItem("category");
-           
             if (category == null) {
                 axiosInstance.get("/categories/featured").then((res) => {
                     setCategories(res.data.data);
@@ -159,10 +159,22 @@ const Navbar = () => {
                         <div className='row '>
                             <div className='col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9'>
                                 <div className='sec-navbar-links'>
-                                    {categories.length > 0 &&
+                                    {categories.length > 0 ?
                                         categories.map((item, i) => (
-                                            <Link href='/'>{item.name}</Link>
-                                        ))}
+                                            <>
+                                                <Link href='/'>{item.name}</Link>
+                                            </>
+                                        )) :
+                                        <>
+                                            <Skeleton width={'10%'} variant="text" sx={{ fontSize: '1rem' }} />
+                                            <Skeleton width={'10%'} variant="text" sx={{ fontSize: '1rem' }} />
+                                            <Skeleton width={'10%'} variant="text" sx={{ fontSize: '1rem' }} />
+                                            <Skeleton width={'10%'} variant="text" sx={{ fontSize: '1rem' }} />
+                                            <Skeleton width={'10%'} variant="text" sx={{ fontSize: '1rem' }} />
+
+                                        </>
+
+                                    }
 
                                     <Link href='/'>About Us</Link>
                                     <Link href='/'>Contact Us</Link>

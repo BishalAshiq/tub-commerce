@@ -8,6 +8,7 @@ import PopularProducts from "./PopularProducts";
 import { useEffect } from "react";
 import AOS from "aos";
 import axiosInstance from "@/utils/axios";
+import { Skeleton } from "@mui/material";
 
 const Homebanner = () => {
   const [banners, setBanners] = useState([]);
@@ -20,15 +21,15 @@ const Homebanner = () => {
   }, []);
 
 
-  
+
   return (
     <div className=" banner-full-div">
       <div className="container">
         <div className="row ">
           <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
             <div className="banner-icon-div" data-aos="fade-right"
-     data-aos-offset="300"
-     data-aos-easing="ease-in-sine">
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine">
               <img className="banner-icon" src={BleftIcon.src} alt="" />
             </div>
           </div>
@@ -106,19 +107,22 @@ const Homebanner = () => {
               ></button>
             </div>
             <div className="carousel-inner">
-              {banners.length > 0 &&
+              {banners.length > 0 ?
                 banners.map((item) => (
                   <div className="carousel-item active caro-img-div">
                     <img src={item.photo} className="caro-img" alt="..." />
-                  </div>
-                ))}
 
-              {/* <div className='carousel-item caro-img-div'>
-                <img src={EcomBanner.src} className='caro-img' alt='...' />
-              </div>
-              <div className='carousel-item caro-img-div'>
-                <img src={EcomBanner.src} className='caro-img' alt='...' />
-              </div> */}
+
+                  </div>
+                )) :
+
+                <Skeleton sx={{ height: 450 }} animation="wave" variant="rectangular" />
+
+
+
+              }
+
+
             </div>
             <button
               class="carousel-control-prev"

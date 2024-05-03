@@ -9,6 +9,7 @@ import Toytwo from "../../../public/all-p-2.png";
 import Toythre from "../../../public/all-p-3.png";
 import { useEffect, useState } from "react";
 import axiosInstance from "@/utils/axios";
+import ProductCardLoader from "../skeleton-loader/ProductCardLoader";
 
 const ProductsCard = () => {
   const [age, setAge] = React.useState("");
@@ -54,7 +55,7 @@ const ProductsCard = () => {
 
         <div>
           <div className='AllProduct-Caard-div'>
-            {products.length > 0 &&
+            {products.length > 0 ?
               products.map((item, i) => (
                 <div>
                   <div className='single-toy-div'>
@@ -174,7 +175,9 @@ const ProductsCard = () => {
                     </div>
                   </div>
                 </div>
-              ))}
+              )) :
+              <ProductCardLoader />
+            }
           </div>
         </div>
       </div>

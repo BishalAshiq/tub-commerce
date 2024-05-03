@@ -6,9 +6,14 @@ const ProductReview = ({ productId }) => {
   const [review, setReview] = useState(0);
 
   const saveReview = () => {
-    axiosInstance.post('/reviews/submit',{
-      
-    })
+    const formData = {
+      product_id: productId,
+      comment: description,
+      rating: review,
+    }
+    // axiosInstance.post('/reviews/submit', formData).then((res)=>{
+    //   if
+    // })
   }
 
   return (

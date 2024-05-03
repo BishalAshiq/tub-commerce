@@ -10,6 +10,7 @@ import ProductReviewer from "./ProductReviewer";
 import MoreProduct from "./MoreProduct";
 import Footer from "../Footer/Footer";
 import ProductReview from "./ProductReview";
+import toast from "react-hot-toast";
 
 const style = {
   position: "absolute",
@@ -25,7 +26,16 @@ const style = {
 
 const ProductInformation = ({ product }) => {
   const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
+  const handleOpen = () => {
+    if (typeof window !== "undefined") {
+      const token = localStorage.getItem("token");
+      if (token == null) {
+        toast.error("Please login first");
+      } else {
+        setOpen(true)
+      }
+    }
+  };
   const handleClose = () => setOpen(false);
   return (
     <div>
@@ -66,8 +76,8 @@ const ProductInformation = ({ product }) => {
           <p className='product-ptext'>AP401RBK 12 RG</p>
         </div> */}
         <div>
-          <p className='product-ptext'>
-            <strong>Note:</strong> {product?.description}
+          <h5 className='product-tagh5'>Note</h5>
+          <p className='product-ptext' dangerouslySetInnerHTML={{ __html: product?.description }}>
           </p>
         </div>
       </div>
