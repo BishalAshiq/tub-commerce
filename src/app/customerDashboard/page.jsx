@@ -146,7 +146,11 @@ const page = () => {
           <div className='table-head-tags-div'>
             <span className='ur-order-tags'>Your Order</span>
 
-            <button className='track-btn'>Track Your Order </button>
+            <button className='track-btn'>
+              <Link href={'/trackOrder'} >
+                Track Your Order
+              </Link>
+            </button>
           </div>
 
           <div className="">
@@ -194,7 +198,7 @@ const page = () => {
       <div>
         <Footer />
       </div>
-    </div>
+    </div >
   );
 };
 

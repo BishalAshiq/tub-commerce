@@ -131,7 +131,7 @@ const ProductInformation = ({ product }) => {
               aria-describedby='modal-modal-description'>
               <Box sx={style}>
                 <div>
-                  <ProductReview productId={product?.id} />
+                  <ProductReview productId={product?.id} handleClose={handleClose} />
                 </div>
               </Box>
             </Modal>
@@ -141,7 +141,7 @@ const ProductInformation = ({ product }) => {
       </div>
 
       <div>
-        <ProductReviewer />
+        <ProductReviewer productId={product?.id} />
       </div>
 
       <div>

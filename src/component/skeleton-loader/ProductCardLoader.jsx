@@ -3,6 +3,7 @@ import Skeleton from '@mui/material/Skeleton';
 import Box from '@mui/material/Box';
 import { Grid } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Author from "../../../public/authoravatar.jpg";
 
 export default function ProductCardLoader() {
 

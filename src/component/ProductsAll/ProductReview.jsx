@@ -1,7 +1,8 @@
 import axiosInstance from "@/utils/axios";
 import React, { useState } from "react";
+import toast from "react-hot-toast";
 
-const ProductReview = ({ productId }) => {
+const ProductReview = ({ productId, handleClose }) => {
   const [description, setDescription] = useState();
   const [review, setReview] = useState(0);
 
@@ -11,9 +12,14 @@ const ProductReview = ({ productId }) => {
       comment: description,
       rating: review,
     }
-    // axiosInstance.post('/reviews/submit', formData).then((res)=>{
-    //   if
-    // })
+    axiosInstance.post('/reviews/submit', formData).then((res) => {
+      if (res.data.status == 200) {
+        toast.success(res.data.message)
+      } else {
+        toast.error(res.data.message)
+      }
+      handleClose();
+    })
   }
 
   return (
