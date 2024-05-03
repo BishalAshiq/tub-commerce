@@ -159,6 +159,7 @@ const page = () => {
                   <th scope='col'>Order Date</th>
                   <th scope='col'>Delivery Status</th>
                   <th scope='col'>Total</th>
+                  <th scope='col'>Action</th>
                 </tr>
               </thead>
 
@@ -178,6 +179,9 @@ const page = () => {
                       <td>{formatDate(item.date)}</td>
                       <td ><span className="paid-custo-table">{item.delivery_status}</span></td>
                       <td>{item.grand_total}</td>
+                      <td>
+                        <Link href={`https://tub-backend.nodetechit.com/invoice/${item.combined_order_id}`}>View Invoice</Link>
+                      </td>
                     </tr>
                   ))
                 }

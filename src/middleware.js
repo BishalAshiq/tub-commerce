@@ -12,7 +12,7 @@ export function middleware(request) {
     }
     else {
         // console.log(request.cookies.get('refreshToken')?.value);
-        if (request.cookies.get('refreshToken')?.value != undefined) {
+        if (request.cookies.get('token')?.value != undefined) {
             return NextResponse.next();
         } else {
             return NextResponse.redirect(new URL('/login', request.url).toString(), { status: 307 });
