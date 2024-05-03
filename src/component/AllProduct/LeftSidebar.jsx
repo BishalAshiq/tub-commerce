@@ -224,7 +224,7 @@ const LeftSidebar = () => {
                     aria-expanded={isAccordionExpanded1(`collapse`)}
                     aria-controls={`collapse`}
                     onClick={() => handleAccordionClicks1(`collapse`)}>
-                    <span className='kwy'>Price ( .)</span>
+                    <span className='kwy'>Price</span>
                   </div>
                   {/* </h6> */}
                 </div>

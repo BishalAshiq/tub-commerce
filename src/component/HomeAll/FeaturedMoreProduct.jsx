@@ -1041,9 +1041,9 @@ const FeaturedMoreProduct = () => {
                 {productsMiddle[0] != "undefined" && (
                   <div className='col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 '>
                     <h4 className='ong-estab-tags'>{productsMiddle[0].name}</h4>
-                    <p className='ong-estab-text'>
+                    {/* <p className='ong-estab-text'>
                       {productsMiddle[0].description}
-                    </p>
+                    </p> */}
 
                     <span className='ong-estab-review'>
                       <svg

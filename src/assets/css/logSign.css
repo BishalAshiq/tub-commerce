@@ -199,7 +199,7 @@
   .Sign-full-div {
     margin: 150px 0 69px 0;
     padding: 0 0 10% 0;
-    height: 160vh;
+    height: 174vh;
     background: linear-gradient(
       to bottom,
       white,
@@ -241,7 +241,7 @@
 
 @media only screen and (max-width: 500px) {
   .Sign-full-div {
-    height: 295vh;
+    height: 311vh;
     width: 157%;
     margin: 50px 0 ;
   }
@@ -250,7 +250,8 @@
   }
   .loginSign-logo-div {
     width: 100%;
-    margin: 10px 0;
+    margin: 40px 0;
+    padding: 20px 0 0 0
   }
   .loginSign-div {
     width: 100%;
@@ -262,6 +263,7 @@
   }
   .Sig-full-div {
     height: 176vh;
+    width: 100%;
   }
 
   .log-full-div {
@@ -277,6 +279,7 @@
   }
   .social-logSig-div {
     display: flex;
+    justify-content: center;
     gap: 50px;
     border-radius: 6px;
     border: 1px solid #e8e8e8;
@@ -287,6 +290,7 @@
   }
   .socialapp-logSig-div {
     display: flex;
+    justify-content: center;
     gap: 50px;
     border-radius: 6px;
     border: 1px solid #e8e8e8;
