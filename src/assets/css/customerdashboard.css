@@ -76,7 +76,8 @@
   flex-shrink: 0;
 }
 .custodash-card-order {
-  display: flex;
+  display: flex !important;
+  flex-wrap: wrap;
   gap: 20px;
   align-items: center;
   justify-content: space-around;
@@ -561,5 +562,27 @@ color: rgba(89, 99, 106, 1);
     );
     height: 88vh; /* Set the height to 100% of the viewport height */
     overflow: hidden;
+  }
+}
+
+
+
+
+@media only screen and (max-width: 500px) {
+  .custodash-card-order {
+    display: flex;
+  /* flex-wrap: nowrap; */
+    gap: 10px;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .custodash-card-order a {
+    text-decoration: none;
+    color: #475569;
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
   }
 }
