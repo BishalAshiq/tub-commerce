@@ -48,9 +48,9 @@
 
 .product-counting-div {
   display: flex;
+  justify-content: space-around;
   gap: 20px;
-
-  /* width: 100px; */
+  width: 177px;
   border: 1px solid gray;
   /* border-radius: 20px; */
   padding: 5px 10px;
@@ -255,7 +255,7 @@
   width: 93% !important;
   border: none;
   border-radius: 10px;
-  border: 1px solid gray;
+  box-shadow: rgba(212, 212, 212, 0.1) 0px 4px 12px;
   background: white;
   margin: 30px 0;
   padding: 10px 0 14px 0;
@@ -279,13 +279,7 @@
   width: 100px;
   height: 90px;
 }
-.footer-div {
-  margin: -5% 0 0 0;
-  padding: 25px 0;
-  border-top-right-radius: 30px;
-  border-top-left-radius: 30px;
-  background-color: white;
-}
+
 .footer-imgs {
   width: 15px;
   height: 19px;
@@ -474,7 +468,7 @@ img {
 
 .AllProducts-div {
   margin: 141px 0 50px 0;
-  padding: 2% 0% 5% 0;
+  padding: 2% 0% 141px 0;
   background: linear-gradient(
     to bottom,
     white,
@@ -496,6 +490,8 @@ img {
     #70c4ff,
     #51b4fa
   );
+  
+  /* overflow-x: hidden; */
 }
 .accordion-item {
   border: none !important;
@@ -570,9 +566,12 @@ img {
 .single-toy-div {
   position: relative;
   width: 96% !important;
+  height: 363px;
   border: none;
   margin: 30px 0;
   border-radius: 10px;
+  background: white;
+  box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
 }
 .all-pro-btn-div {
   margin: 0 60px;
@@ -863,12 +862,21 @@ color: white;
 
 @media only screen and (max-width: 500px) {
 
+  .how-text{
+    font-size: 18px;
+  }
+  .rev-modal-des{
+    font-size: 12px;
+    line-height: 1.5;
+  }
   .product-single-header-div {
     margin: 80px 0 0 0;
   }
   .AllProducts-div {
-    width: 110%;
-    margin: 15px 0 0 0;
+    width: 100%;
+    
+    margin: 15px 0 29px 0;
+    /* padding: 0 0 30px 0; */
   }
 
   .single-small-pic-div{
@@ -925,7 +933,7 @@ color: white;
     display: flex;
     justify-content: center;
     height: 234px;
-    margin: 0 0 27px 49px;
+    margin: 0 0 27px 26px;
   }
   .singl-big-product{
     margin: 0px 0 0 9px;
@@ -938,7 +946,7 @@ color: white;
   .AllProduct-Caard-div {
     display: grid;
     gap: 0;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     place-items: center;
   }
   .all-filter-header-div {

@@ -306,7 +306,7 @@ a:hover {
   height: 38vh;
   border-radius: 10px;
   /* border: 1px solid gray; */
-  margin: 10px 0;
+  margin: 10px 5px;
   box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
 }
 
@@ -328,7 +328,20 @@ a:hover {
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
   width: 100%;
-  height: 15vh;
+  height: 12vh;
+  /* border: 1px solid gray; */
+  display: flex;
+  box-shadow: rgba(212, 212, 212, 0.1) 0px 4px 12px;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.tpickbrudal-img-div {
+  position: relative;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  width: 100%;
+  height: 12vh;
   /* border: 1px solid gray; */
   display: flex;
   box-shadow: rgba(212, 212, 212, 0.1) 0px 4px 12px;
@@ -422,6 +435,11 @@ a:hover {
 }
 
 .categories-img {
+  margin: 0 0 0 0;
+  width: 130px;
+  height: 90px;
+}
+.categories-pick-img {
   margin: 0 0 0 0;
   width: 130px;
   height: 90px;
@@ -657,6 +675,17 @@ a:hover {
 }
 
 .Top-single-toy {
+  position: relative;
+  width: 93% !important;
+  border: none;
+  margin: 20px 0;
+  height: 27vh;
+
+  background-color: white !important;
+  box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
+  border-radius: 10px;
+}
+.Top-pick-toy {
   position: relative;
   width: 93% !important;
   border: none;
@@ -1657,6 +1686,14 @@ a:hover {
   visibility: visible;
 }
 
+
+.footer-div {
+  margin: -5% 0 0 0;
+  padding: 25px 0;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  background-color: white;
+}
 @media only screen and (max-width: 1366px) {
   .price-num-div {
     line-height: 29px;
@@ -1672,7 +1709,7 @@ a:hover {
     width: 98% !important;
     border: none;
     margin: 20px 0;
-    height: 34vh;
+    height: 33vh;
     background-color: white !important;
     box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
     border-radius: 10px;
@@ -1949,9 +1986,47 @@ a:hover {
     /* 120% */
   }
   .Top-single-toy{
-    width: 100% !important;
+    width: 162px !important;
+    height: 227px;
+    padding: 20px 3px;
   }
-
+  .categories-img {
+    margin: 0 0 0 0;
+    width: 83%;
+    height: 117px;
+  }
+  .categories-pick-img {
+    margin: 0 0 0 0;
+    width: 130px;
+    height: 90px;
+  }
+  .tbrudal-img-div {
+    position: relative;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    width: 100%;
+    height: 12vh;
+    /* border: 1px solid gray; */
+    display: flex;
+    box-shadow: rgba(212, 212, 212, 0.1) 0px 4px 12px;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+  .tpickbrudal-img-div {
+    position: relative;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    width: 100%;
+    height: 20vh;
+    /* border: 1px solid gray; */
+    display: flex;
+    box-shadow: rgba(212, 212, 212, 0.1) 0px 4px 12px;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+  
 .children-mob{
  
   visibility: hidden;
@@ -2216,7 +2291,8 @@ a:hover {
 
   .top-brud-tag {
     color: var(--Dark, #1f2326);
-
+    display: flex;
+    justify-content: center;
     /* H2 */
     font-family: "Poppins", sans-serif;
     font-size: 30px;
@@ -2320,7 +2396,9 @@ a:hover {
         background-color: white;
   }
 
-
+  .footer-div {
+    width: 100%;
+  }
 
 }
 

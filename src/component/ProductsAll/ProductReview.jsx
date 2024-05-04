@@ -62,7 +62,7 @@ const ProductReview = ({ productId, handleClose }) => {
         <div className='row'>
           <div className='col-12 col-sm-12 col-md-12 col-lg-12 col-lx-12'>
             <div>
-              <h3>
+              <h3 className="how-text">
                 How was the Ordering Experience, Product & Customer Support?
               </h3>
               <p className="rev-modal-des">

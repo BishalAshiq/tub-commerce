@@ -263,10 +263,10 @@ const TopBruderToys = () => {
                   {categories.length > 0 &&
                     categories.map((item, i) => (
                       <SwiperSlide key={i}>
-                        <div className="Top-single-toy">
-                          <div className="tbrudal-img-div">
+                        <div className="Top-pick-toy">
+                          <div className="tpickbrudal-img-div">
                             <img
-                              className="categories-img"
+                              className="categories-pick-img"
                               src={item.icon}
                               alt=""
                             />

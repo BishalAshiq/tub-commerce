@@ -446,7 +446,13 @@ const LeftSidebar = () => {
                           Custom
                         </label>
                       </div>
-
+                      <TextField
+                size='small'
+                className='text-filter-area'
+                id='outlined-basic'
+                label='Enter location'
+                variant='outlined'
+              />
                       {/* <div className='low-high-div'>
                         <p className='lh-p'>Low</p>
                         <p>to</p>
@@ -459,13 +465,7 @@ const LeftSidebar = () => {
             </div>
 
             <div className='text-area-btns-div'>
-              <TextField
-                size='small'
-                className='text-filter-area'
-                id='outlined-basic'
-                label='Enter location'
-                variant='outlined'
-              />
+             
               <div className='filter-btn-div'>
                 {/* <button className='cancelfiltter-btn'>Cancel</button> */}
                 {/* <button className='applyfiltter-btn'>Apply</button> */}
