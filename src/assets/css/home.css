@@ -302,12 +302,12 @@ a:hover {
   position: relative;
   width: 100% !important;
   border: none;
-  border: 1px solid #c1c1c1;
+  /* border: 1px solid #c1c1c1; */
   height: 38vh;
   border-radius: 10px;
   /* border: 1px solid gray; */
   margin: 10px 0;
-
+  box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
 }
 
 .toy-img-div {
@@ -328,7 +328,7 @@ a:hover {
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
   width: 100%;
-  height: 22vh;
+  height: 15vh;
   /* border: 1px solid gray; */
   display: flex;
   box-shadow: rgba(212, 212, 212, 0.1) 0px 4px 12px;
@@ -661,10 +661,10 @@ a:hover {
   width: 93% !important;
   border: none;
   margin: 20px 0;
-  height: 35vh;
+  height: 28vh;
 
   background-color: white !important;
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
   border-radius: 10px;
 }
 
@@ -1099,9 +1099,7 @@ a:hover {
       #a3f8e0bb);
 }
 
-.product-single-header-div {
-  margin: 160px 0 0 0;
-}
+
 
 .best-tag-div {
   display: grid;
@@ -1632,13 +1630,12 @@ a:hover {
 
   .Top-single-toy {
     position: relative;
-    width: 93% !important;
+    width: 98% !important;
     border: none;
     margin: 20px 0;
-    height: 44vh;
-
+    height: 34vh;
     background-color: white !important;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
     border-radius: 10px;
   }
 

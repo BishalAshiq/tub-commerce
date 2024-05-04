@@ -58,13 +58,14 @@ position: relative;
 
 .autocomplete-results {
   position: absolute;
-  top: 100%;
+  top: 80%;
   /* left: 0; */
   z-index: 999;
-  width: 30%;
+  width: 24%;
   background-color: #fff;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   border-top: none;
+  border: none;
   border-radius: 0 0 5px 5px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   list-style-type: none;
@@ -86,7 +87,7 @@ position: relative;
   z-index: 999;
   width: 16%;
   background-color: #fff;
-  border: 1px solid #ccc;
+  border: none;
   border-top: none;
   border-radius: 0 0 5px 5px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -183,6 +184,21 @@ position: relative;
   .login-img {
     width: 100%;
   }
+  .autocomplete-results {
+    position: absolute;
+    top: 80%;
+    right: 308px;
+    z-index: 999;
+    width: 25%;
+    background-color: #fff;
+    /* border: 1px solid #ccc; */
+    border-top: none;
+    border: none;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    list-style-type: none;
+    padding: 0;
+}
   .autocomplete-results-banner {
     position: absolute;
     top: 65%;
@@ -190,7 +206,7 @@ position: relative;
     z-index: 999;
     width: 20%;
     background-color: #fff;
-    border: 1px solid #ccc;
+    border: none;
     border-top: none;
     border-radius: 0 0 5px 5px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -238,7 +254,7 @@ position: relative;
     z-index: 999;
     width: 54%;
     background-color: #fff;
-    border: 1px solid #ccc;
+    border: none;
     border-top: none;
     border-radius: 0 0 5px 5px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -260,7 +276,7 @@ position: relative;
     z-index: 999;
     width: 61%;
     background-color: #fff;
-    border: 1px solid #ccc;
+    border: none;
     border-top: none;
     border-radius: 0 0 5px 5px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
