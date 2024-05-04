@@ -162,6 +162,16 @@ position: relative;
   display: none;
   visibility: hidden;
 }
+.loading-text{
+  font-size: 20px;
+  font-weight: 700;
+  color: linear-gradient(45deg, #09009f, #00ff95 80%)
+}
+.loading-pages{
+  margin: 140px 0 0 0;
+  display:grid;
+  place-items: center;
+}
 
 @media only screen and (max-width: 1367px) {
   .banner-text-div {

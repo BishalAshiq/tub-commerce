@@ -613,6 +613,9 @@ a:hover {
   place-items: center;
   /* width: 50px; */
 }
+.countss {
+  margin: 15px 0 0 0;
+}
 
 .backgrad {
   background: linear-gradient(to top right,
@@ -2377,9 +2380,7 @@ a:hover {
   
 }
 
-.countss {
-  margin: 15px 0 0 0;
-}
+
 
 .tub-img-footer {
   width: 52px;
