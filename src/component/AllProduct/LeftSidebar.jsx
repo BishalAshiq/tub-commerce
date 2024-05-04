@@ -129,8 +129,8 @@ const LeftSidebar = () => {
                 width: "100%",
                 border: "1px solid white",
               }}>
-              <InputLabel id='demo-multiple-name-label'>
-                All Categories
+              <InputLabel id='demo-multiple-name-label' >
+                <p className="all-catgories-texts">All Categories</p>
               </InputLabel>
               <Select
                 className='selectinp'
@@ -467,8 +467,14 @@ const LeftSidebar = () => {
                 variant='outlined'
               />
               <div className='filter-btn-div'>
-                <button className='cancelfiltter-btn'>Cancel</button>
-                <button className='applyfiltter-btn'>Apply</button>
+                {/* <button className='cancelfiltter-btn'>Cancel</button> */}
+                {/* <button className='applyfiltter-btn'>Apply</button> */}
+                <div className='all-pro-btn-div'>
+                      <button className='all-pro-btn'>cancel</button>
+                    </div>
+                <div className='all-pro-btn-div'>
+                      <button className='all-pro-btn'>Apply</button>
+                    </div>
               </div>
             </div>
           </div>

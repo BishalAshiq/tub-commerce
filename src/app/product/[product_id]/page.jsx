@@ -114,9 +114,32 @@ const page = () => {
                       alt=''
                     />
                   </div>
+                  <div className='singl-small-mob-full-product-div'>
+                    {product?.photos.length > 0 &&
+                      product.photos.map((item) => (
+                        <div
+                          className='singl-small-img-product-div'
+                          onClick={() => handleSmallImageClick(item.path)}>
+                          <img src={item.path} alt='' />
+                        </div>
+                      ))}
+                      </div>
                 </div>
+             
               </div>
             </div>
+            {/* <div className='col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12'>
+                  <div className='singl-small-mob-full-product-div'>
+                    {product?.photos.length > 0 &&
+                      product.photos.map((item) => (
+                        <div
+                          className='singl-small-img-product-div'
+                          onClick={() => handleSmallImageClick(item.path)}>
+                          <img src={item.path} alt='' />
+                        </div>
+                      ))}
+                  </div>
+                </div> */}
             <div className='col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5'>
               <div>
                 <h4 className='product-estab-tags'>{product?.name}</h4>

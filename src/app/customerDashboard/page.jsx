@@ -6,10 +6,24 @@ import toyicon from "../../../public/order-table-icon.png";
 import Link from "next/link";
 import Footer from "@/component/Footer/Footer";
 import axiosInstance from "@/utils/axios";
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import TextField from '@mui/material/TextField';
+import Modal from "@mui/material/Modal";
+
+const theme = createTheme();
 
 const page = () => {
   const [userInfo, setUserInfo] = useState({});
   const [order, setOrder] = useState([]);
+
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("user"))
     setUserInfo(user);
@@ -24,6 +38,21 @@ const page = () => {
     const date = new Date(timestamp * 1000);
     return date.toLocaleDateString();
   }
+
+
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
+  const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: isMobile ? '90%' : 800, // Adjust the width for mobile view
+    bgcolor: 'background.paper',
+    border: 'none',
+    boxShadow: 24,
+    p: 4,
+  };
   return (
     <div>
       <div>
@@ -114,9 +143,58 @@ const page = () => {
                 <div className='individiualsec-info-card-div'>
                   <div className='individiual-Personalinfo-tags '>
                     <span className='defaut-tags'>Default Address</span>
-                    <div className='edit-info-text'>
+                    {/* <div className='edit-info-text'>
                       <Link href='/'>Edit</Link>
-                    </div>
+                    </div> */}
+                    <div>
+            <strong onClick={handleOpen} className='edit-info-text'>
+            Edit
+            </strong>
+            <ThemeProvider theme={theme}> {/* Provide the theme */}
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby='modal-modal-title'
+        aria-describedby='modal-modal-description'>
+        <Box sx={style}>
+          <div className="edit-modal-inputs">
+          <TextField
+          label="Name"
+          id="outlined-size-small"
+          defaultValue=""
+          size="small"
+        />  
+          <TextField
+          label="Area"
+          id="outlined-size-small"
+          defaultValue=""
+          size="small"
+        />  
+          <TextField
+          label="Country"
+          id="outlined-size-small"
+          defaultValue=""
+          size="small"
+        />  
+          <TextField
+          label="Zip"
+          type="number"
+          id="outlined-size-small"
+          defaultValue=""
+          size="small"
+        />  
+          <TextField
+          label="Number"
+          type="number"
+          id="outlined-size-small"
+          defaultValue=""
+          size="small"
+        />  
+          </div>
+        </Box>
+      </Modal>
+    </ThemeProvider>
+          </div>
                   </div>
 
                   <div className='tags-div'>

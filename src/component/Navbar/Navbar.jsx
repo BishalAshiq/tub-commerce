@@ -147,10 +147,28 @@ const Navbar = () => {
 
 
                                 </li>
+
+                                <li className='nav-item loginSignup-mob'>
+                                    <Link
+                                        className='nav-link active'
+                                        aria-current='page'
+                                        href='/login'>
+                                        Login
+                                    </Link>
+                                </li>
+                                <li className='nav-item loginSignup-mob'>
+                                    <Link
+                                        className='nav-link active'
+                                        aria-current='page'
+                                        href='/signUp'>
+                                        Sign Up
+                                    </Link>
+                                </li>
+
                             </ul>
 
 
-                            <AutoCompleteSearch />
+                            <AutoCompleteSearch  />
                         </div>
                     </div>
                 </nav>

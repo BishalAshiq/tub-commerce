@@ -2,6 +2,9 @@ import axiosInstance from "@/utils/axios";
 import React, { useState } from "react";
 import toast from "react-hot-toast";
 
+import Rating from '@mui/material/Rating';
+import Stack from '@mui/material/Stack';
+
 const ProductReview = ({ productId, handleClose }) => {
   const [description, setDescription] = useState();
   const [review, setReview] = useState(0);
@@ -71,9 +74,15 @@ const ProductReview = ({ productId, handleClose }) => {
           </div>
           <div className='col-12 col-sm-12 col-md-6 col-lg-6 col-lx-6'>
             <div>
-              <svg onChange={(e) => {
+
+            <Stack spacing={1}>
+                        <Rating name="size-small" defaultValue={2} size="small" onChange={(e) => {
                 setReview(1)
-              }}
+              }}/>
+
+                    </Stack>
+
+              {/* <svg 
                 xmlns='http://www.w3.org/2000/svg'
                 width='22'
                 height='22'
@@ -186,7 +195,7 @@ const ProductReview = ({ productId, handleClose }) => {
                     />
                   </filter>
                 </defs>
-              </svg>
+              </svg> */}
             </div>
           </div>
           <div className='col-12 col-sm-12 col-md-6 col-lg-6 col-lx-6'>

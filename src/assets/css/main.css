@@ -158,6 +158,10 @@ position: relative;
 .login-img {
   width: 100%;
 }
+.loginSignup-mob{
+  display: none;
+  visibility: hidden;
+}
 
 @media only screen and (max-width: 1367px) {
   .banner-text-div {
@@ -198,6 +202,14 @@ position: relative;
 @media only screen and (max-width: 500px) {
   .sec-navbar-links-acc-div {
     display: none;
+  }
+  .nav-search-input-form{
+    display: none;
+    visibility: hidden;
+  }
+  .loginSignup-mob{
+    display: block;
+    visibility: visible;
   }
   .nav-search-input-div {
     display: flex;

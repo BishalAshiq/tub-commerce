@@ -1618,6 +1618,136 @@ a:hover {
 }
 
 @media only screen and (max-width: 1366px) {
+  .price-num-div {
+    line-height: 29px;
+    margin: 0 0 0 10px;
+  }
+
+  .countss {
+    margin: 5px 0 0 0;
+  }
+
+  .Top-single-toy {
+    position: relative;
+    width: 93% !important;
+    border: none;
+    margin: 20px 0;
+    height: 44vh;
+
+    background-color: white !important;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    border-radius: 10px;
+  }
+
+  .cart-dropdown {
+    position: absolute;
+    top: 0;
+    /* bottom: 50px; */
+    right: 100%;
+    /* Position the dropdown to the left of the cart icon */
+    margin: -9px 0 0 0;
+    min-width: 1280px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .add-to-cart {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    margin: 0 0 10px 0;
+    z-index: 999;
+    background-color: white;
+  }
+
+  .cart-amount-div {
+    display: flex;
+    justify-content: end;
+    color: black;
+    align-items: center;
+    border: 1px solid rgb(207, 206, 206);
+    border-radius: 20px;
+    width: 200px;
+    padding: 15px 30px 0 0;
+    gap: 20px;
+  }
+
+  .cart-amount-pone {
+    color: var(--Texts-Dark, var(--title, #171d22));
+
+    /* Button 1 */
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+    /* 166.667% */
+  }
+
+  .cart-amount-pTwo {
+    color: var(--Texts-Dark, var(--title, #171d22));
+
+    /* Button 1 */
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+    /* 166.667% */
+  }
+
+  .cart-amount-full-div {
+    display: flex;
+    justify-content: end;
+    color: black;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .floating-add-cart-img {
+    width: 60px;
+    height: 40;
+  }
+
+  .floating-add-cart-img-div {
+    position: relative;
+    display: inline-block;
+  }
+
+  .floating-add-cart-img {
+    /* width: 100%; */
+    /* Adjust the width as needed */
+    height: auto;
+    margin: 0 10px 0 10px;
+  }
+
+  .cart-icon {
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    /* align-items: center; */
+    justify-content: center;
+    text-align: center;
+    margin: 20px 0 0 0;
+    transition: all 0.4s;
+  }
+
+  .cart-icons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    /* Adjust padding as needed */
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 1366px) {
   .full-body {
     margin-top: 8%;
   }
@@ -1778,6 +1908,10 @@ a:hover {
     line-height: 60px;
     /* 120% */
   }
+  .Top-single-toy{
+    width: 100% !important;
+  }
+
 .children-mob{
  
   visibility: hidden;
@@ -1794,6 +1928,13 @@ a:hover {
 .footer-ratio-div{
   visibility: hidden;
   display: none;
+}
+.autocom-input-mobile{
+  visibility: hidden;
+  display: none;
+}
+.footer-div-firstportion {
+  padding: 40px 0 0 0;
 }
 .best-tag-div h1{
   font-size: 18px;
@@ -2118,14 +2259,7 @@ a:hover {
     background-color: white;
   }
 
-  .footer-ratio-div {
-    display: flex;
-    /* flex-direction: column; */
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 30px 0 0 0;
-  }
+
 }
 
 @media only screen and (max-width: 760px) {
@@ -2168,7 +2302,7 @@ a:hover {
   top: -27px;
   right: 100%;
   /* Position the dropdown to the left of the cart icon */
-  min-width: 1650px;
+  min-width: 1280px;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border: 1px solid #ccc;
@@ -2322,135 +2456,7 @@ a:hover {
 
 /* Responsiveness  */
 
-@media only screen and (max-width: 1366px) {
-  .price-num-div {
-    line-height: 29px;
-    margin: 0 0 0 10px;
-  }
 
-  .countss {
-    margin: 5px 0 0 0;
-  }
-
-  .Top-single-toy {
-    position: relative;
-    width: 93% !important;
-    border: none;
-    margin: 20px 0;
-    height: 44vh;
-
-    background-color: white !important;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-    border-radius: 10px;
-  }
-
-  .cart-dropdown {
-    position: absolute;
-    top: 0;
-    /* bottom: 50px; */
-    right: 100%;
-    /* Position the dropdown to the left of the cart icon */
-    margin: -9px 0 0 0;
-    min-width: 1116px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .add-to-cart {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    margin: 0 0 10px 0;
-    z-index: 999;
-    background-color: white;
-  }
-
-  .cart-amount-div {
-    display: flex;
-    justify-content: end;
-    color: black;
-    align-items: center;
-    border: 1px solid rgb(207, 206, 206);
-    border-radius: 20px;
-    width: 200px;
-    padding: 15px 30px 0 0;
-    gap: 20px;
-  }
-
-  .cart-amount-pone {
-    color: var(--Texts-Dark, var(--title, #171d22));
-
-    /* Button 1 */
-    font-family: "Poppins", sans-serif;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 30px;
-    /* 166.667% */
-  }
-
-  .cart-amount-pTwo {
-    color: var(--Texts-Dark, var(--title, #171d22));
-
-    /* Button 1 */
-    font-family: "Poppins", sans-serif;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 30px;
-    /* 166.667% */
-  }
-
-  .cart-amount-full-div {
-    display: flex;
-    justify-content: end;
-    color: black;
-    align-items: center;
-    cursor: pointer;
-  }
-
-  .floating-add-cart-img {
-    width: 60px;
-    height: 40;
-  }
-
-  .floating-add-cart-img-div {
-    position: relative;
-    display: inline-block;
-  }
-
-  .floating-add-cart-img {
-    /* width: 100%; */
-    /* Adjust the width as needed */
-    height: auto;
-    margin: 0 10px 0 10px;
-  }
-
-  .cart-icon {
-    cursor: pointer;
-    display: flex;
-    gap: 10px;
-    /* align-items: center; */
-    justify-content: center;
-    text-align: center;
-    margin: 20px 0 0 0;
-    transition: all 0.4s;
-  }
-
-  .cart-icons {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 5px;
-    /* Adjust padding as needed */
-    cursor: pointer;
-  }
-}
 
 .bg-red {
   background-color: red;
