@@ -141,6 +141,7 @@
   display: flex;
   gap: 10px;
   align-items: center;
+  flex-wrap: wrap;
 }
 .seller-btn {
   color: #fff;
@@ -234,7 +235,7 @@
     rgb(240, 253, 253),
     rgb(197, 248, 245)
   );
-  height: 100vh; /* Set the height to 100% of the viewport height */
+  height: 83vh; /* Set the height to 100% of the viewport height */
   overflow: hidden;
 }
 .track-order {
@@ -545,5 +546,20 @@ color: rgba(89, 99, 106, 1);
     font-style: normal;
     font-weight: 400;
     line-height: 24px; /* 150% */
+  }
+  .track-full-order {
+    background: linear-gradient(
+      to bottom,
+      white,
+      white,
+      white,
+      white,
+      /* white, */ rgb(202, 233, 255),
+      /* white, */ rgba(81, 180, 250, 1),
+      rgb(240, 253, 253),
+      rgb(197, 248, 245)
+    );
+    height: 88vh; /* Set the height to 100% of the viewport height */
+    overflow: hidden;
   }
 }
