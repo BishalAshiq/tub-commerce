@@ -231,17 +231,17 @@ const page = () => {
             </button>
           </div>
 
-          <div className="">
+          <div className="table-responsive">
             <table className='table table-borderless table-sm customer-dasboard-table'>
               <thead className='thead-tabl-customer-dash'>
                 <tr>
-                  <th scope='col'>Order ID</th>
-                  <th scope='col'>Customer</th>
-                  <th scope='col'>No. Order</th>
-                  <th scope='col'>Order Date</th>
-                  <th scope='col'>Delivery Status</th>
-                  <th scope='col'>Total</th>
-                  <th scope='col'>Action</th>
+                  <th className="tabl-nav" scope='col'>Order ID</th>
+                  <th className="tabl-nav" scope='col'>Customer</th>
+                  <th className="tabl-nav" scope='col'>No. Order</th>
+                  <th className="tabl-nav" scope='col'>Order Date</th>
+                  <th className="tabl-nav" scope='col'>Delivery Status</th>
+                  <th className="tabl-nav" scope='col'>Total</th>
+                  <th className="tabl-nav" scope='col'>Action</th>
                 </tr>
               </thead>
 

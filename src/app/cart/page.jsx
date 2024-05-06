@@ -57,22 +57,22 @@ const page = () => {
                     <div className='col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3'>
                       <div className="cart-name-remove-div">
                       <div>
-                      <h6>{item.name}</h6>
-                        <span>{item.calculable_price}</span>
+                      <h6 className="calculable-name">{item.name}</h6>
+                        <span className="calculable-price">{item.calculable_price}</span>
                       </div>
-                      <span>Remove</span>
+                      <span className="calculable-remove">Remove</span>
                       </div>
                     </div>
                     <div className='col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3'>
                       <div>
                         <div className='add-to-cart-div'>
-                          <div className='counting-div'>
+                          <div className='counting-cart-div'>
                             <button
                               className='count-bten'
                               onClick={decrementCount}>
                               -
                             </button>
-                            <div className='mt-1'>{count}</div>
+                            <div className='cart-count'>{count}</div>
                             <button
                               className='count-bten'
                               onClick={incrementCount}>
