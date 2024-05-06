@@ -38,7 +38,7 @@ const page = () => {
         <Navbar />
       </div>
       <div className='cart-full-div'>
-        <div className='container'>
+        <div className='container cart-mob-div'>
           <div className='row'>
             <div className='col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8'>
               <div>
@@ -49,19 +49,21 @@ const page = () => {
               <div>
                 {cartItems.map((item, i) => (
                   <div className='row cart-product-div'>
-                    <div className='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4'>
-                      <div>
-                        <img src={item.thumbnail_image} alt='' />
+                    <div className='col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3'>
+                      <div className="cart-selected-img-div">
+                        <img className="cart-selected-img" src={item.thumbnail_image} alt='' />
                       </div>
                     </div>
-                    <div className='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4'>
+                    <div className='col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3'>
+                      <div className="cart-name-remove-div">
                       <div>
-                        <h6>{item.name}</h6>
+                      <h6>{item.name}</h6>
                         <span>{item.calculable_price}</span>
                       </div>
                       <span>Remove</span>
+                      </div>
                     </div>
-                    <div className='col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2'>
+                    <div className='col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3'>
                       <div>
                         <div className='add-to-cart-div'>
                           <div className='counting-div'>
@@ -70,7 +72,7 @@ const page = () => {
                               onClick={decrementCount}>
                               -
                             </button>
-                            <div className='mt-3'>{count}</div>
+                            <div className='mt-1'>{count}</div>
                             <button
                               className='count-bten'
                               onClick={incrementCount}>
@@ -80,9 +82,9 @@ const page = () => {
                         </div>
                       </div>
                     </div>
-                    <div className='col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2'>
-                      <div>
-                        <span>৳ {item.calculable_price}</span>
+                    <div className='col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3'>
+                      <div className="products-price">
+                        <span >৳ {item.calculable_price}</span>
                       </div>
                     </div>
                   </div>
