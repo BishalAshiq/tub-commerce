@@ -240,11 +240,11 @@ position: relative;
   .nav-search-input-div {
     display: flex;
     align-items: center;
-    border-radius: 6px;
+    border-radius: 15px;
     padding: 0 0 0 10px;
-    width: 185px;
+    width: 182px;
+    margin: 0 0 0 -321px;
     border: 1px solid #cfcfcf;
-  
     background: #fff;
   }
   .autocomplete-results {

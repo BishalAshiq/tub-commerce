@@ -1990,6 +1990,10 @@ a:hover {
     line-height: 60px;
     /* 120% */
   }
+  .card-t-div {
+    height: 8vh;
+  }
+
   .Top-single-toy{
     width: 162px !important;
     height: 273px;
@@ -1999,6 +2003,9 @@ a:hover {
     margin: 0 0 0 0;
     width: 83%;
     height: 117px;
+  }
+  .black-look-ptext{
+    font-size: 14px;
   }
   .categories-pick-img {
     margin: 0 0 0 0;
@@ -2037,7 +2044,8 @@ a:hover {
     font-size: 15px;
   }
   .f-anchortext-div a{
-    font-size: 13px;
+    font-size: 12px;
+    line-height: 1;
   }
   
 .children-mob{
@@ -2138,7 +2146,7 @@ a:hover {
     align-items: center;
     width: 30px;
     /* padding: 10px; */
-    height: 4vh;
+    height: 3.4vh;
   }
 
   .sale-text {
@@ -2279,7 +2287,7 @@ a:hover {
   }
 
   .banner-search-input {
-    margin: 0 0 0 -329px;
+    /* margin: 0 0 0 -329px; */
   }
 
   .find-p {
