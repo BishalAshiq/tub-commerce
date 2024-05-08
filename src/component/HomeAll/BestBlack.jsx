@@ -94,7 +94,7 @@ const BestBlack = () => {
                   breakpoints={{
                     // Define your breakpoints here
                     0: {
-                      slidesPerView: 1,
+                      slidesPerView: 2,
                       spaceBetween: 10,
                     },
                     768: {

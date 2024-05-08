@@ -9,7 +9,7 @@ const Footer = () => {
     <div>
       <div className='footer-div'>
         <div className='container'>
-          <div className='row footer-div-firstportion'>
+          <div className='row footer-div-firstportion no-gutter'>
             <div className='col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3'>
               <div className='foter-tag-img-div'>
                 <img className='tub-img-footer' src={footerImg.src} alt='' />
@@ -19,7 +19,7 @@ const Footer = () => {
             <div className='col-4 col-sm-2 col-md-2 col-lg-2 col-xl-2'>
               <div>
                 <div className='f-anchortext-div'>
-                  <p>
+                  <p className= "footr-p">
                     <strong>Product</strong>
                   </p>
                   <a href='#' className='f-anchortext'>
@@ -46,7 +46,7 @@ const Footer = () => {
             <div className='col-4 col-sm-6 col-md-2 col-lg-2 col-xl-2'>
               <div>
                 <div className='f-anchortext-div'>
-                  <p>
+                  <p className= "footr-p">
                     <strong>For Customer</strong>
                   </p>
                   <a href='#' className='f-anchortext'>
@@ -73,7 +73,7 @@ const Footer = () => {
             <div className='col-4 col-sm-6 col-md-2 col-lg-2 col-xl-2'>
               <div>
                 <div className='f-anchortext-div'>
-                  <p>
+                  <p className= "footr-p">
                     <strong>Resources</strong>
                   </p>
                   <a href='#' className='f-anchortext'>
