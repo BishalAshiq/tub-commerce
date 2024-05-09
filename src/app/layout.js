@@ -5,11 +5,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../assets/css/main.css";
 import "../assets/css/home.css";
 import "../assets/css/products.css";
+import "../assets/css/bottomnav.css";
 import "../assets/css/logSign.css";
 import "../assets/css/customerdashboard.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import AddToCart from "@/component/CartFloating/AddToCart";
+import BottomNav from './../component/Navbar/BottomNav';
 import StoreProvider from "@/redux/provider";
 import { Toaster } from "react-hot-toast";
 import SwiperCore, { Navigation } from "swiper";
@@ -28,7 +30,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   // useEffect(() => {
   //   import("aos").then((aos) => {
-  //     aos.default.init();
+  //  
+  // aos.default.init();
   //   });
   // }, []);
   return (
@@ -52,6 +55,8 @@ export default function RootLayout({ children }) {
           <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
           <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
           <script>AOS.init();</script>
+
+          <BottomNav/>
         </body>
       </StoreProvider>
     </html>

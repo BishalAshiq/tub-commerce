@@ -89,7 +89,7 @@ const Page = () => {
           {products.length > 0 &&
             products.map((item, i) => (
               <div>
-                <div className="single-toy-div">
+                <div className="flash-single-toy-div">
                   <div className="toy-img-div">
                     <div className="text-overlay">
                       <div className="top-left-text">

@@ -578,6 +578,16 @@ img {
 .single-toy-div {
   position: relative;
   width: 96% !important;
+  height: 478px;
+  border: none;
+  margin: 30px 0;
+  border-radius: 10px;
+  background: white;
+  box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
+}
+.flash-single-toy-div {
+  position: relative;
+  width: 96% !important;
   height: 363px;
   border: none;
   margin: 30px 0;
@@ -898,6 +908,16 @@ color: white;
   .rev-modal-des{
     font-size: 12px;
     line-height: 1.5;
+  }
+  .flash-single-toy-div {
+    position: relative;
+    width: 96% !important;
+    height: 453px;
+    border: none;
+    margin: 30px 0;
+    border-radius: 10px;
+    background: white;
+    box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
   }
   .product-single-header-div {
     margin: 80px 0 0 0;
