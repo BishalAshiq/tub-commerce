@@ -10,6 +10,7 @@ import Toythre from "../../../public/all-p-3.png";
 import { useEffect, useState } from "react";
 import axiosInstance from "@/utils/axios";
 import ProductCardLoader from "../skeleton-loader/ProductCardLoader";
+import Link from "next/link";
 
 const ProductsCard = () => {
   const [age, setAge] = React.useState("");
@@ -111,7 +112,9 @@ const ProductsCard = () => {
                       />
                     </div>
                     <div className='card-t-div'>
-                      <span className='card-text'>{item.name}</span>
+                      <Link href={`/product/${item.id}`}>
+                        <span className='card-text'>{item.name}</span>
+                      </Link>
                       <span className='card-text-rating'>
                         4.9/5{" "}
                         <span>
