@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../assets/css/main.css";
 import "../assets/css/home.css";
+import "../assets/css/chatbot.css";
 import "../assets/css/products.css";
 import "../assets/css/bottomnav.css";
 import "../assets/css/logSign.css";
@@ -11,6 +12,7 @@ import "../assets/css/customerdashboard.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import AddToCart from "@/component/CartFloating/AddToCart";
+import Chatbot from "@/component/Chatbot/Chatbot";
 import BottomNav from './../component/Navbar/BottomNav';
 import StoreProvider from "@/redux/provider";
 import { Toaster } from "react-hot-toast";
@@ -30,7 +32,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   // useEffect(() => {
   //   import("aos").then((aos) => {
-  //  
+  //  import Chatbot from './../component/Chatbot/Chatbot';
+
   // aos.default.init();
   //   });
   // }, []);
@@ -41,6 +44,7 @@ export default function RootLayout({ children }) {
         <body>
           {children}
           <AddToCart />
+          <Chatbot/>
           <Toaster />
           <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

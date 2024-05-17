@@ -242,7 +242,7 @@ position: relative;
     align-items: center;
     border-radius: 15px;
     padding: 0 0 0 10px;
-    width: 182px;
+    width: 156px;
     margin: 0 0 0 -321px;
     border: 1px solid #cfcfcf;
     background: #fff;
@@ -271,7 +271,7 @@ position: relative;
   }
   .autocomplete-results-banner {
     position: absolute;
-    top: 27%;
+    top: 42.5%;
     left: 79px;
     z-index: 999;
     width: 61%;
